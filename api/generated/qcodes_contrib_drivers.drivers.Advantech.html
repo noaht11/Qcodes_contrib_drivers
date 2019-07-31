@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Advantech package &mdash; qcodes_contrib_drivers 0+untagged.38.g4b6edad documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Advantech package &mdash; qcodes_contrib_drivers 0+untagged.43.gda2b2df documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0+untagged.38.g4b6edad
+                0+untagged.43.gda2b2df
               </div>
             
           
@@ -85,7 +85,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples of how to use drivers</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html">qcodes_contrib_drivers.drivers package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.Advantech package</a><ul>
@@ -198,8 +198,8 @@
 <span id="qcodes-contrib-drivers-drivers-advantech-pcie-1751-module"></span><h2>qcodes_contrib_drivers.drivers.Advantech.PCIE_1751 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Advantech.PCIE_1751" title="Permalink to this headline">¶</a></h2>
 <dl class="class">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751">
-<em class="property">class </em><code class="descclassname">qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.</code><code class="descname">Advantech_PCIE_1751</code><span class="sig-paren">(</span><em>name</em>, <em>device_description='PCIE-1751</em>, <em>BID#0'</em>, <em>**kw</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.4.0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.</code><code class="sig-name descname">Advantech_PCIE_1751</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">device_description='PCIE-1751</em>, <em class="sig-param">BID#0'</em>, <em class="sig-param">**kw</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.4.0+211.ga62a22f17)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
 <p>Driver for DIO card from Advantech. The card has six 8255 PPI mode
 C DI/O ports, each containing 8 pins, that can be configured for either
 input or output in groups of four.</p>
@@ -221,18 +221,18 @@ implemented.</p>
 <p>Tested with driver version 3.1.10.0 and ddl version 3.1.12.1.</p>
 <dl class="attribute">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.ERRORMSG">
-<code class="descname">ERRORMSG</code><em class="property"> = {0: 'The operation is completed successfully.', 2684354560: 'The interrupt resource is not available.', 2684354561: 'The parameter is out of the range.', 2684354562: 'The property value is out of range.', 2684354563: 'The property value is not supported.', 2684354564: 'The property value conflicts with the current state.', 2684354565: 'The value range of all channels in a group should be same, such as 4~20mA of PCI-1724.', 3758096384: &quot;The handle is NULL or its type doesn't match the required operation.&quot;, 3758096385: 'The parameter value is out of range.', 3758096386: 'The parameter value is not supported.', 3758096387: 'The parameter value format is not the expected.', 3758096388: 'Not enough memory is available to complete the operation.', 3758096389: 'The data buffer is null.', 3758096390: 'The data buffer is too small for the operation.', 3758096391: 'The data length exceeded the limitation.', 3758096392: 'The required function is not supported.', 3758096393: 'The required event is not supported.', 3758096394: 'The required property is not supported.', 3758096395: 'The required property is read-only.', 3758096396: 'The specified property value conflicts with the current state.', 3758096397: 'The specified property value is out of range.', 3758096398: 'The specified property value is not supported.', 3758096399: &quot;The handle hasn't own the privilege of the operation the user wanted.&quot;, 3758096400: 'The required privilege is not available because someone else had own it.', 3758096401: 'The driver of specified device was not found.', 3758096402: 'The driver version of the specified device mismatched.', 3758096403: 'The loaded driver count exceeded the limitation.', 3758096404: 'The device is not opened.', 3758096405: 'The required device does not exist.', 3758096406: 'The required device is unrecognized by driver.', 3758096407: 'The configuration data of the specified device is lost or unavailable.', 3758096408: &quot;The function is not initialized and can't be started.&quot;, 3758096409: 'The function is busy.', 3758096410: 'The interrupt resource is not available.', 3758096411: 'The DMA channel is not available.', 3758096412: 'Time out when reading/writing the device.', 3758096413: 'The given signature does not match with the device current one.', 3758096414: 'The function cannot be executed while the buffered AI is running.', 3758096415: 'The value range is not available in single-ended mode.', 3758161919: 'Undefined error.'}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.ERRORMSG" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ERRORMSG</code><em class="property"> = {0: 'The operation is completed successfully.', 2684354560: 'The interrupt resource is not available.', 2684354561: 'The parameter is out of the range.', 2684354562: 'The property value is out of range.', 2684354563: 'The property value is not supported.', 2684354564: 'The property value conflicts with the current state.', 2684354565: 'The value range of all channels in a group should be same, such as 4~20mA of PCI-1724.', 3758096384: &quot;The handle is NULL or its type doesn't match the required operation.&quot;, 3758096385: 'The parameter value is out of range.', 3758096386: 'The parameter value is not supported.', 3758096387: 'The parameter value format is not the expected.', 3758096388: 'Not enough memory is available to complete the operation.', 3758096389: 'The data buffer is null.', 3758096390: 'The data buffer is too small for the operation.', 3758096391: 'The data length exceeded the limitation.', 3758096392: 'The required function is not supported.', 3758096393: 'The required event is not supported.', 3758096394: 'The required property is not supported.', 3758096395: 'The required property is read-only.', 3758096396: 'The specified property value conflicts with the current state.', 3758096397: 'The specified property value is out of range.', 3758096398: 'The specified property value is not supported.', 3758096399: &quot;The handle hasn't own the privilege of the operation the user wanted.&quot;, 3758096400: 'The required privilege is not available because someone else had own it.', 3758096401: 'The driver of specified device was not found.', 3758096402: 'The driver version of the specified device mismatched.', 3758096403: 'The loaded driver count exceeded the limitation.', 3758096404: 'The device is not opened.', 3758096405: 'The required device does not exist.', 3758096406: 'The required device is unrecognized by driver.', 3758096407: 'The configuration data of the specified device is lost or unavailable.', 3758096408: &quot;The function is not initialized and can't be started.&quot;, 3758096409: 'The function is busy.', 3758096410: 'The interrupt resource is not available.', 3758096411: 'The DMA channel is not available.', 3758096412: 'Time out when reading/writing the device.', 3758096413: 'The given signature does not match with the device current one.', 3758096414: 'The function cannot be executed while the buffered AI is running.', 3758096415: 'The value range is not available in single-ended mode.', 3758161919: 'Undefined error.'}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.ERRORMSG" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.check">
-<code class="descname">check</code><span class="sig-paren">(</span><em>errorcode</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.check" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">check</code><span class="sig-paren">(</span><em class="sig-param">errorcode</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.check" title="Permalink to this definition">¶</a></dt>
 <dd><p>Checks the errorcode and raises an Exception if error occurred.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.close">
-<code class="descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Irreversibly stop this instrument and free its resources.</p>
 <p>Subclasses should override this if they have other specific
 resources to close.</p>
@@ -240,7 +240,7 @@ resources to close.</p>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.get_idn">
-<code class="descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.get_idn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.get_idn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse a standard VISA <code class="docutils literal notranslate"><span class="pre">*IDN?</span></code> response into an ID dict.</p>
 <p>Even though this is the VISA standard, it applies to various other
 types as well, such as IPInstruments, so it is included here in the
@@ -259,20 +259,20 @@ as well.</p>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.port_count">
-<code class="descname">port_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.port_count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.port_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">port_count</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.port_count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.port_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of ports on the device. Each port contains 8 input
 or output pins.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.read_pin">
-<code class="descname">read_pin</code><span class="sig-paren">(</span><em>port</em>, <em>pin</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.read_pin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.read_pin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read_pin</code><span class="sig-paren">(</span><em class="sig-param">port</em>, <em class="sig-param">pin</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.read_pin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.read_pin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads and returns the value pin pin of port port.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.read_port">
-<code class="descname">read_port</code><span class="sig-paren">(</span><em>i</em>, <em>n=1</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.read_port"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.read_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">read_port</code><span class="sig-paren">(</span><em class="sig-param">i</em>, <em class="sig-param">n=1</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.read_port"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.read_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads and returns the values of ports i, …, i+n-1.
 For n=1 returns a single integer which encodes the 8 bit values,
 for n&gt;1 returns a list of integers.</p>
@@ -280,13 +280,13 @@ for n&gt;1 returns a list of integers.</p>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.write_pin">
-<code class="descname">write_pin</code><span class="sig-paren">(</span><em>port</em>, <em>pin</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.write_pin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.write_pin" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">write_pin</code><span class="sig-paren">(</span><em class="sig-param">port</em>, <em class="sig-param">pin</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.write_pin"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.write_pin" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets pin pin of port port to 1 if value != 0, and to 0 otherwise.</p>
 </dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.write_port">
-<code class="descname">write_port</code><span class="sig-paren">(</span><em>i</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.write_port"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.write_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">write_port</code><span class="sig-paren">(</span><em class="sig-param">i</em>, <em class="sig-param">value</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#Advantech_PCIE_1751.write_port"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.Advantech_PCIE_1751.write_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes values to output ports. If value is an integer, writes its
 binary representation to the pins of port i. If value is a list of
 integers, writes the binary representations of their values to the pins
@@ -297,7 +297,7 @@ of ports i, …, i+len(value)-1 respectively.</p>
 
 <dl class="exception">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.DAQNaviException">
-<em class="property">exception </em><code class="descclassname">qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.</code><code class="descname">DAQNaviException</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#DAQNaviException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.DAQNaviException" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.</code><code class="sig-name descname">DAQNaviException</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#DAQNaviException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.DAQNaviException" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#Exception" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <p>Exception raised if one of the Advantech’s DAQNavi library’s functions
 encounters an error.</p>
@@ -305,7 +305,7 @@ encounters an error.</p>
 
 <dl class="exception">
 <dt id="qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.DAQNaviWarning">
-<em class="property">exception </em><code class="descclassname">qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.</code><code class="descname">DAQNaviWarning</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#DAQNaviWarning"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.DAQNaviWarning" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.</code><code class="sig-name descname">DAQNaviWarning</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Advantech/PCIE_1751.html#DAQNaviWarning"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Advantech.PCIE_1751.DAQNaviWarning" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#Warning" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Warning</span></code></a></p>
 <p>Warning raised if one of the Advantech’s DAQNavi library’s functions
 encounters a warning condition.</p>

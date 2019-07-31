@@ -6,12 +6,12 @@ Subpackages
 
 .. toctree::
 
-    qcodes_contrib_drivers.drivers.Advantech
+   qcodes_contrib_drivers.drivers.Advantech
 
 Module contents
 ---------------
 
 .. automodule:: qcodes_contrib_drivers.drivers
-    :members:
-    :undoc-members:
-    :show-inheritance:
+   :members:
+   :undoc-members:
+   :show-inheritance:

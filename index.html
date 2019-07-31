@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to qcodes_contrib_drivers’s documentation! &mdash; qcodes_contrib_drivers 0+untagged.38.g4b6edad documentation</title>
+  <title>Welcome to QCoDeS Contributed Drivers’s documentation! &mdash; qcodes_contrib_drivers 0+untagged.43.gda2b2df documentation</title>
   
 
   
@@ -35,7 +35,7 @@
   <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Examples" href="examples/index.html" /> 
+    <link rel="next" title="Examples of how to use drivers" href="examples/index.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0+untagged.38.g4b6edad
+                0+untagged.43.gda2b2df
               </div>
             
           
@@ -85,7 +85,7 @@
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples of how to use drivers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="api/generated/qcodes_contrib_drivers.drivers.html">qcodes_contrib_drivers.drivers package</a></li>
 </ul>
 
@@ -132,7 +132,7 @@
     
       <li><a href="#">Docs</a> &raquo;</li>
         
-      <li>Welcome to qcodes_contrib_drivers’s documentation!</li>
+      <li>Welcome to QCoDeS Contributed Drivers’s documentation!</li>
     
     
       <li class="wy-breadcrumbs-aside">
@@ -175,12 +175,30 @@
     text-align: unset;
 }
 </style>
-<div class="section" id="welcome-to-qcodes-contrib-drivers-s-documentation">
-<h1>Welcome to qcodes_contrib_drivers’s documentation!<a class="headerlink" href="#welcome-to-qcodes-contrib-drivers-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p><a class="reference internal" href="_images/qcodes_logo.png"><img alt="qcodes logo" src="_images/qcodes_logo.png" style="width: 193.60000000000002px; height: 49.0px;" /></a></p>
+<div class="section" id="welcome-to-qcodes-contributed-drivers-s-documentation">
+<h1>Welcome to QCoDeS Contributed Drivers’s documentation!<a class="headerlink" href="#welcome-to-qcodes-contributed-drivers-s-documentation" title="Permalink to this headline">¶</a></h1>
+<p>This repository contains drivers developed by members of the QCoDeS community.
+These drivers are not supported by the QCoDeS developers but supported on a best effort basis
+by the developers of the individual drivers.</p>
+<p>How to contribute a driver:</p>
+<p>This repository is open for contribution of new drivers. Each driver should
+contain an implementation of the driver and a Jupyter notebook showing how the
+drivers should be used. In addition we strongly encourage writing tests for the drivers.
+An intruduction for wrting tests with PyVISA-sim can be found in the QCoDeS documentation linked
+below.</p>
+<p>Drivers are expected to be added to <code class="docutils literal notranslate"><span class="pre">qcodes_contrib_drivers/drivers/MakeofInstrument/</span></code> folder
+while examples should be added to the <code class="docutils literal notranslate"><span class="pre">docs/examples</span></code> folder and tests placed in the
+<code class="docutils literal notranslate"><span class="pre">qcodes_contrib_drivers/tests</span></code> folder.</p>
+<p>For general information about writing drivers and how to write tests refer to the QCoDeS documentation.
+Especially the examples <a class="reference external" href="https://qcodes.github.io/Qcodes/examples/index.html#writing-drivers">here</a>
+are useful.</p>
+<p>The documentation here contains API documentation of the individual drivers as well as examples of how
+to use the drivers. For general documentation please refer to the QCoDeS documentation.</p>
 <div class="toctree-wrapper compound">
 <p class="caption"><span class="caption-text">Contents:</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/index.html">Examples of how to use drivers</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="examples/Some_example.html">Some Example</a></li>
 </ul>
 </li>
@@ -209,7 +227,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="examples/index.html" class="btn btn-neutral float-right" title="Examples" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="examples/index.html" class="btn btn-neutral float-right" title="Examples of how to use drivers" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
