@@ -8,6 +8,7 @@ Subpackages
 
    qcodes_contrib_drivers.drivers.Advantech
    qcodes_contrib_drivers.drivers.QuTech
+   qcodes_contrib_drivers.drivers.Spectrum
 
 Module contents
 ---------------
