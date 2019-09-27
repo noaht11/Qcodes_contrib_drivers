@@ -10,6 +10,7 @@ Subpackages
    qcodes_contrib_drivers.drivers.Cryocon
    qcodes_contrib_drivers.drivers.Cryogenic
    qcodes_contrib_drivers.drivers.Gentec
+   qcodes_contrib_drivers.drivers.Newport
    qcodes_contrib_drivers.drivers.QuTech
    qcodes_contrib_drivers.drivers.Spectrum
 
