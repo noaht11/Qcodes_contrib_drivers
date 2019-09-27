@@ -14,6 +14,7 @@ Subpackages
    qcodes_contrib_drivers.drivers.Newport
    qcodes_contrib_drivers.drivers.Oxford
    qcodes_contrib_drivers.drivers.QuTech
+   qcodes_contrib_drivers.drivers.RohdeSchwarz
    qcodes_contrib_drivers.drivers.Spectrum
 
 Module contents
