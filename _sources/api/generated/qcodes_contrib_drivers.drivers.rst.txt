@@ -17,6 +17,7 @@ Subpackages
    qcodes_contrib_drivers.drivers.RohdeSchwarz
    qcodes_contrib_drivers.drivers.Spectrum
    qcodes_contrib_drivers.drivers.Tektronix
+   qcodes_contrib_drivers.drivers.ZurichInstruments
 
 Module contents
 ---------------
