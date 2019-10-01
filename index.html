@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Welcome to QCoDeS Contributed Drivers’s documentation! &mdash; qcodes_contrib_drivers 0+untagged.671.gdd8cf66 documentation</title>
+  <title>Welcome to QCoDeS Contributed Drivers’s documentation! &mdash; qcodes_contrib_drivers 0+untagged.675.g8b2ea38 documentation</title>
   
 
   
@@ -25,6 +25,7 @@
         <script type="text/javascript" src="_static/underscore.js"></script>
         <script type="text/javascript" src="_static/doctools.js"></script>
         <script type="text/javascript" src="_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
     
     <script type="text/javascript" src="_static/js/theme.js"></script>
 
@@ -59,7 +60,7 @@
             
             
               <div class="version">
-                0+untagged.671.gdd8cf66
+                0+untagged.675.g8b2ea38
               </div>
             
           
@@ -178,19 +179,38 @@
 <p><a class="reference internal" href="_images/qcodes_logo.png"><img alt="qcodes logo" src="_images/qcodes_logo.png" style="width: 193.60000000000002px; height: 49.0px;" /></a></p>
 <div class="section" id="welcome-to-qcodes-contributed-drivers-s-documentation">
 <h1>Welcome to QCoDeS Contributed Drivers’s documentation!<a class="headerlink" href="#welcome-to-qcodes-contributed-drivers-s-documentation" title="Permalink to this headline">¶</a></h1>
-<p>This repository contains drivers developed by members of the QCoDeS community.
-These drivers are not supported by the QCoDeS developers but supported on a best effort basis
+<div class="section" id="qcodes-contrib-drivers">
+<h2>QCoDeS contrib drivers<a class="headerlink" href="#qcodes-contrib-drivers" title="Permalink to this headline">¶</a></h2>
+<p>This repository contains QCoDeS instrument drivers developed by members of the QCoDeS community.
+These drivers are not supported by the QCoDeS developers but instead supported on a best effort basis
 by the developers of the individual drivers.</p>
-<p>How to contribute a driver:</p>
-<p>This repository is open for contribution of new drivers. Each driver should
+<div class="section" id="getting-started">
+<h3>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="prerequisites">
+<h4>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this headline">¶</a></h4>
+<p>The drivers in this repository work with and heavily depend on QCoDeS. Start by installing <a class="reference external" href="https://github.com/QCoDeS/Qcodes">QCoDeS</a> .</p>
+</div>
+<div class="section" id="installation">
+<h4>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h4>
+<p>Install the contrib drivers with <code class="docutils literal notranslate"><span class="pre">pip</span></code></p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">qcodes_contrib_drivers</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="contributing">
+<h3>Contributing<a class="headerlink" href="#contributing" title="Permalink to this headline">¶</a></h3>
+<p>This repository is open for contribution of new drivers,
+as well as improvements to existing drivers. Each driver should
 contain an implementation of the driver and a Jupyter notebook showing how the
-drivers should be used. In addition we strongly encourage writing tests for the drivers.
-An intruduction for writing tests with PyVISA-sim can be found in the QCoDeS documentation linked
+driver should be used. In addition we strongly encourage writing tests for the drivers.
+An introduction for writing tests with PyVISA-sim can be found in the QCoDeS documentation linked
 below.</p>
-<p>Drivers are expected to be added to <code class="docutils literal notranslate"><span class="pre">qcodes_contrib_drivers/drivers/MakeofInstrument/</span></code> folder
+<p>Drivers are expected to be added to <code class="docutils literal notranslate"><span class="pre">qcodes_contrib_drivers/drivers/MakerOfInstrument/</span></code> folder
 while examples should be added to the <code class="docutils literal notranslate"><span class="pre">docs/examples</span></code> folder and tests placed in the
-<code class="docutils literal notranslate"><span class="pre">qcodes_contrib_drivers/tests</span></code> folder.</p>
-<p>For general information about writing drivers and how to write tests refer to the QCoDeS documentation.
+<code class="docutils literal notranslate"><span class="pre">qcodes_contrib_drivers/tests/MakerOfInstrument</span></code> folder. Please follow naming conventions for
+consistency.</p>
+<p>For general information about writing drivers and how to write tests refer to the <a class="reference external" href="http://qcodes.github.io/Qcodes/">QCoDeS documentation</a>.
 Especially the examples <a class="reference external" href="https://qcodes.github.io/Qcodes/examples/index.html#writing-drivers">here</a>
 are useful.</p>
 <p>The documentation here contains API documentation of the individual drivers as well as examples of how
@@ -208,6 +228,8 @@ to use the drivers. For general documentation please refer to the QCoDeS documen
 </ul>
 </li>
 </ul>
+</div>
+</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
