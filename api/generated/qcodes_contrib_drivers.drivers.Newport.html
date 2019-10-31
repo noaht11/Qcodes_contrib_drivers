@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Newport package &mdash; qcodes_contrib_drivers 0.2.0+2.g6ce3101 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Newport package &mdash; qcodes_contrib_drivers 0.2.0+7.g0195aa7 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.2.0+2.g6ce3101
+                0.2.0+7.g0195aa7
               </div>
             
           
@@ -214,7 +214,7 @@
 <dl class="class">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8">
 <em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">address: str</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.7.0+142.g611d9ea9f)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.7.0+393.g3f4c4b5e0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>QCoDeS driver for the Newport AGILIS AG-UC8 Piezo Stepper Controller.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -326,7 +326,7 @@ hardware communication should instead override <code class="docutils literal not
 <dl class="class">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis">
 <em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8_Axis</code><span class="sig-paren">(</span><em class="sig-param">parent: qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel</em>, <em class="sig-param">axis: int</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS v0.7.0+142.g611d9ea9f)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS v0.7.0+393.g3f4c4b5e0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
 <p>Represents one of the 2 axes of one channel of an AG-UC8 controller.</p>
 <dl class="attribute">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.SPEED_TABLE">
@@ -421,7 +421,7 @@ Newport_AG_UC8_Axis.SPEED_TABLE.</p>
 <dl class="class">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel">
 <em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8_Channel</code><span class="sig-paren">(</span><em class="sig-param">parent: qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8</em>, <em class="sig-param">channel_number: int</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS v0.7.0+142.g611d9ea9f)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS v0.7.0+393.g3f4c4b5e0)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
 <p>Represents one of the 4 channels of an AG-UC8 controller.</p>
 <p>Each channel drives 2 axes of an optical mount.</p>
 <dl class="method">
