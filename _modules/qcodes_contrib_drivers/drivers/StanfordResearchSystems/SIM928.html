@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928 &mdash; qcodes_contrib_drivers 0.2.0+7.g0195aa7 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928 &mdash; qcodes_contrib_drivers 0.2.0+9.gf4153e7 documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.2.0+7.g0195aa7
+                0.2.0+9.gf4153e7
               </div>
             
           
@@ -206,7 +206,7 @@
                                      <span class="s2">&quot;</span><span class="si">{}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">module_name</span><span class="p">),</span>
                                <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Numbers</span><span class="p">(</span><span class="o">-</span><span class="mi">20</span><span class="p">,</span> <span class="mi">20</span><span class="p">),</span>
                                <span class="n">get_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">get_voltage</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span>
-                               <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">set_voltage</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+                               <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_voltage</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;volt_</span><span class="si">{}</span><span class="s1">_step&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">module_name</span><span class="p">),</span> <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;V&#39;</span><span class="p">,</span>
                                <span class="n">label</span><span class="o">=</span><span class="s2">&quot;Step size when changing the voltage &quot;</span>
                                      <span class="s2">&quot;smoothly on module &quot;</span>
@@ -312,8 +312,17 @@
             <span class="n">i</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">module_nr</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">slot_names</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">i</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;volt_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)]</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="n">voltage</span><span class="p">)</span></div>
+
+    <span class="k">def</span> <span class="nf">_set_voltage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="n">voltage</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Set the output voltage of a module.</span>
+
+<span class="sd">        Args:</span>
+<span class="sd">            i (int): Slot number of the module to set the voltage of.</span>
+<span class="sd">            voltage (float): The value to set the voltage to.</span>
+<span class="sd">        &quot;&quot;&quot;</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write_module</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="s1">&#39;VOLT </span><span class="si">{:.3f}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">voltage</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="s1">&#39;volt_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">)]</span><span class="o">.</span><span class="n">_save_val</span><span class="p">(</span><span class="n">voltage</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="SIM928.get_voltage"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.StanfordResearchSystems.html#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.get_voltage">[docs]</a>    <span class="k">def</span> <span class="nf">get_voltage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">i</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;</span>
