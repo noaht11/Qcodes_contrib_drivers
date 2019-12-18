@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Oxford.IPS120 &mdash; qcodes_contrib_drivers 0.2.0+9.gf4153e7 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Oxford.IPS120 &mdash; qcodes_contrib_drivers 0.3.0+2.g42d3c1c documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.2.0+9.gf4153e7
+                0.3.0+2.g42d3c1c
               </div>
             
           
@@ -162,9 +162,9 @@
 
 
 <span class="kn">import</span> <span class="nn">logging</span>
-<span class="kn">from</span> <span class="nn">qcodes</span> <span class="k">import</span> <span class="n">VisaInstrument</span>
-<span class="kn">from</span> <span class="nn">qcodes</span> <span class="k">import</span> <span class="n">validators</span> <span class="k">as</span> <span class="n">vals</span>
-<span class="kn">from</span> <span class="nn">time</span> <span class="k">import</span> <span class="n">sleep</span>
+<span class="kn">from</span> <span class="nn">qcodes</span> <span class="kn">import</span> <span class="n">VisaInstrument</span>
+<span class="kn">from</span> <span class="nn">qcodes</span> <span class="kn">import</span> <span class="n">validators</span> <span class="k">as</span> <span class="n">vals</span>
+<span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
 <span class="kn">import</span> <span class="nn">visa</span>
 
 
@@ -247,7 +247,7 @@
 
     <span class="n">_WRITE_WAIT</span> <span class="o">=</span> <span class="mf">100e-3</span> <span class="c1"># seconds</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">use_gpib</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">use_gpib</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">number</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initializes the Oxford Instruments IPS 120 Magnet Power Supply.</span>
 
 <span class="sd">        Args:</span>

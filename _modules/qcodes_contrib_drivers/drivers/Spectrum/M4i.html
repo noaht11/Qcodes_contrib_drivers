@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Spectrum.M4i &mdash; qcodes_contrib_drivers 0.2.0+9.gf4153e7 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Spectrum.M4i &mdash; qcodes_contrib_drivers 0.3.0+2.g42d3c1c documentation</title>
   
 
   
@@ -59,7 +59,7 @@
             
             
               <div class="version">
-                0.2.0+9.gf4153e7
+                0.3.0+2.g42d3c1c
               </div>
             
           
@@ -168,11 +168,11 @@
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">ctypes</span> <span class="k">as</span> <span class="nn">ct</span>
-<span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">partial</span>
-<span class="kn">from</span> <span class="nn">typing</span> <span class="k">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Type</span>
+<span class="kn">from</span> <span class="nn">functools</span> <span class="kn">import</span> <span class="n">partial</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Union</span><span class="p">,</span> <span class="n">Type</span>
 
-<span class="kn">from</span> <span class="nn">qcodes.utils.validators</span> <span class="k">import</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">Numbers</span><span class="p">,</span> <span class="n">Anything</span><span class="p">,</span> <span class="n">Ints</span>
-<span class="kn">from</span> <span class="nn">qcodes.instrument.base</span> <span class="k">import</span> <span class="n">Instrument</span>
+<span class="kn">from</span> <span class="nn">qcodes.utils.validators</span> <span class="kn">import</span> <span class="n">Enum</span><span class="p">,</span> <span class="n">Numbers</span><span class="p">,</span> <span class="n">Anything</span><span class="p">,</span> <span class="n">Ints</span>
+<span class="kn">from</span> <span class="nn">qcodes.instrument.base</span> <span class="kn">import</span> <span class="n">Instrument</span>
 
 <span class="n">log</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 
@@ -220,7 +220,7 @@
 
     <span class="n">_NO_HF_MODE</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cardid</span><span class="o">=</span><span class="s1">&#39;spcm0&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="n">cardid</span><span class="o">=</span><span class="s1">&#39;spcm0&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot; Driver for the Spectrum M4i.44xx-x8 cards.</span>
 
 <span class="sd">        For more information see: http://spectrum-instrumentation.com/en/m4i-platform-overview</span>
@@ -495,7 +495,7 @@
                                <span class="n">docstring</span><span class="o">=</span><span class="s1">&#39;if 1 sets termination to 50 Ohm, otherwise 1 MOhm for channel </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 
             <span class="c1"># input coupling</span>
-            <span class="n">ACDC_coupling_docstring</span> <span class="o">=</span> <span class="n">f</span><span class="s1">&#39;if 1 sets the AC coupling, otherwise sets the DC coupling for channel </span><span class="si">{i}</span><span class="s1">&#39;</span>
+            <span class="n">ACDC_coupling_docstring</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;if 1 sets the AC coupling, otherwise sets the DC coupling for channel </span><span class="si">{i}</span><span class="s1">&#39;</span>
             <span class="n">ACDC_coupling_docstring</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">The AC coupling only works if the card is in HF mode.&#39;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;ACDC_coupling_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
                                <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ACDC coupling </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
@@ -512,7 +512,7 @@
                                <span class="n">get_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_compensation</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span>
                                <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_compensation</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span>
                                <span class="n">vals</span><span class="o">=</span><span class="n">Enum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">M4i</span><span class="o">.</span><span class="n">_NO_HF_MODE</span><span class="p">),</span>
-                               <span class="n">docstring</span><span class="o">=</span><span class="n">f</span><span class="s1">&#39;if 1 enables compensation, if 0 disables compensation for channel </span><span class="si">{i}</span><span class="s1">. Value </span><span class="si">{M4i._NO_HF_MODE}</span><span class="s1"> means the card is not in HF mode&#39;</span><span class="p">)</span>
+                               <span class="n">docstring</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;if 1 enables compensation, if 0 disables compensation for channel </span><span class="si">{i}</span><span class="s1">. Value </span><span class="si">{M4i._NO_HF_MODE}</span><span class="s1"> means the card is not in HF mode&#39;</span><span class="p">)</span>
 
             <span class="c1"># anti aliasing filter (Bandwidth limit)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;anti_aliasing_filter_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
@@ -708,6 +708,7 @@
                                    <span class="n">pyspcm</span><span class="p">,</span> <span class="s1">&#39;SPC_TRIG_EXT0_LEVEL</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">))),</span>
                                <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_param32bit</span><span class="p">,</span> <span class="nb">getattr</span><span class="p">(</span>
                                    <span class="n">pyspcm</span><span class="p">,</span> <span class="s1">&#39;SPC_TRIG_EXT0_LEVEL</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">))),</span>
+                               <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;mV&#39;</span><span class="p">,</span>
                                <span class="n">docstring</span><span class="o">=</span><span class="s1">&#39;trigger level </span><span class="si">{}</span><span class="s1"> for external trigger&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">l</span><span class="p">))</span>
 
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">]:</span>
