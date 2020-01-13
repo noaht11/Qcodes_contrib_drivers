@@ -1,0 +1,301 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qcodes_contrib_drivers.drivers.Thorlabs.APT &mdash; qcodes_contrib_drivers 0.3.0+13.g3897acb documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../../_static/doctools.js"></script>
+        <script type="text/javascript" src="../../../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    
+    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../../search.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../../../index.html" class="icon icon-home"> qcodes_contrib_drivers
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0+13.g3897acb
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../../examples/index.html">Examples of how to use drivers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../api/generated/qcodes_contrib_drivers.drivers.html">qcodes_contrib_drivers.drivers package</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../../../index.html">qcodes_contrib_drivers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="../../../index.html">Module code</a> &raquo;</li>
+        
+      <li>qcodes_contrib_drivers.drivers.Thorlabs.APT</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <h1>Source code for qcodes_contrib_drivers.drivers.Thorlabs.APT</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">ctypes</span>
+<span class="kn">from</span> <span class="nn">typing</span> <span class="kn">import</span> <span class="n">Optional</span>
+
+
+<div class="viewcode-block" id="Thorlabs_APT"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT">[docs]</a><span class="k">class</span> <span class="nc">Thorlabs_APT</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Wrapper class for the APT.dll Thorlabs APT Server library.</span>
+<span class="sd">    The class has been tested for a Thorlabs MFF10x mirror flipper and a Thorlabs PRM1Z8 Polarizer Wheel.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        dll_path: Path to the APT.dll file. If not set, a default path is used.</span>
+<span class="sd">        verbose: Flag for the verbose behaviour. If true, successful events are printed.</span>
+<span class="sd">        event_dialog: Flag for the event dialog. If true, event dialog pops up for information.</span>
+
+<span class="sd">    Attributes:</span>
+<span class="sd">        verbose: Flag for the verbose behaviour.</span>
+<span class="sd">        dll: WinDLL object for APT.dll.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+    <span class="c1"># default dll path</span>
+    <span class="n">_dll_path</span> <span class="o">=</span> <span class="s1">&#39;C:</span><span class="se">\\</span><span class="s1">Program Files</span><span class="se">\\</span><span class="s1">Thorlabs</span><span class="se">\\</span><span class="s1">APT</span><span class="se">\\</span><span class="s1">APT Server</span><span class="se">\\</span><span class="s1">APT.dll&#39;</span>
+
+    <span class="c1"># success and error codes</span>
+    <span class="n">_success_code</span> <span class="o">=</span> <span class="mi">0</span>
+
+    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">dll_path</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span> <span class="n">verbose</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span> <span class="n">event_dialog</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">):</span>
+
+        <span class="c1"># save attributes</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">=</span> <span class="n">verbose</span>
+
+        <span class="c1"># connect to the DLL</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">dll</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">CDLL</span><span class="p">(</span><span class="n">dll_path</span> <span class="ow">or</span> <span class="bp">self</span><span class="o">.</span><span class="n">_dll_path</span><span class="p">)</span>
+
+        <span class="c1"># initialize APT server</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">apt_init</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">enable_event_dlg</span><span class="p">(</span><span class="n">event_dialog</span><span class="p">)</span>
+
+<div class="viewcode-block" id="Thorlabs_APT.error_check"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.error_check">[docs]</a>    <span class="k">def</span> <span class="nf">error_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">function_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">code</span> <span class="o">==</span> <span class="bp">self</span><span class="o">.</span><span class="n">_success_code</span><span class="p">:</span>
+            <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
+                <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;APT: [</span><span class="si">%s</span><span class="s2">]: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">function_name</span><span class="p">,</span> <span class="s1">&#39;OK - no error&#39;</span><span class="p">))</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;APT: [</span><span class="si">%s</span><span class="s2">]: Unknown code: </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">function_name</span><span class="p">,</span> <span class="n">code</span><span class="p">))</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">()</span></div>
+
+<div class="viewcode-block" id="Thorlabs_APT.apt_clean_up"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.apt_clean_up">[docs]</a>    <span class="k">def</span> <span class="nf">apt_clean_up</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dll</span><span class="o">.</span><span class="n">APTCleanUp</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_check</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">&#39;APTCleanUp&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Thorlabs_APT.apt_init"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.apt_init">[docs]</a>    <span class="k">def</span> <span class="nf">apt_init</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dll</span><span class="o">.</span><span class="n">APTInit</span><span class="p">()</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_check</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">&#39;APTInit&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Thorlabs_APT.enable_event_dlg"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.enable_event_dlg">[docs]</a>    <span class="k">def</span> <span class="nf">enable_event_dlg</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">enable</span><span class="p">):</span>
+        <span class="n">c_enable</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_bool</span><span class="p">(</span><span class="n">enable</span><span class="p">)</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dll</span><span class="o">.</span><span class="n">EnableEventDlg</span><span class="p">(</span><span class="n">c_enable</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_check</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">&#39;EnableEventDlg&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Thorlabs_APT.get_hw_info"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.get_hw_info">[docs]</a>    <span class="k">def</span> <span class="nf">get_hw_info</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serial_number</span><span class="p">):</span>
+        <span class="n">c_serial_number</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">(</span><span class="n">serial_number</span><span class="p">)</span>
+        <span class="n">c_sz_model</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">create_string_buffer</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+        <span class="n">c_sz_sw_ver</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">create_string_buffer</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+        <span class="n">c_sz_hw_notes</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">create_string_buffer</span><span class="p">(</span><span class="mi">64</span><span class="p">)</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dll</span><span class="o">.</span><span class="n">GetHWInfo</span><span class="p">(</span><span class="n">c_serial_number</span><span class="p">,</span> <span class="n">c_sz_model</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">c_sz_sw_ver</span><span class="p">,</span> <span class="mi">64</span><span class="p">,</span> <span class="n">c_sz_hw_notes</span><span class="p">,</span> <span class="mi">64</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_check</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">&#39;GetHWInfo&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">c_sz_model</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">),</span> <span class="n">c_sz_sw_ver</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">),</span> <span class="n">c_sz_hw_notes</span><span class="o">.</span><span class="n">value</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Thorlabs_APT.get_hw_serial_num_ex"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.get_hw_serial_num_ex">[docs]</a>    <span class="k">def</span> <span class="nf">get_hw_serial_num_ex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">hw_type</span><span class="p">,</span> <span class="n">index</span><span class="p">):</span>
+        <span class="n">c_hw_type</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">(</span><span class="n">hw_type</span><span class="p">)</span>
+        <span class="n">c_index</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">(</span><span class="n">index</span><span class="p">)</span>
+        <span class="n">c_serial_number</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">()</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dll</span><span class="o">.</span><span class="n">GetHWSerialNumEx</span><span class="p">(</span><span class="n">c_hw_type</span><span class="p">,</span> <span class="n">c_index</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">byref</span><span class="p">(</span><span class="n">c_serial_number</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_check</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">&#39;GetHWSerialNumEx&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">c_serial_number</span><span class="o">.</span><span class="n">value</span></div>
+
+<div class="viewcode-block" id="Thorlabs_APT.init_hw_device"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.init_hw_device">[docs]</a>    <span class="k">def</span> <span class="nf">init_hw_device</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serial_number</span><span class="p">):</span>
+        <span class="n">c_serial_number</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">(</span><span class="n">serial_number</span><span class="p">)</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dll</span><span class="o">.</span><span class="n">InitHWDevice</span><span class="p">(</span><span class="n">c_serial_number</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_check</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">&#39;InitHWDevice&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Thorlabs_APT.mot_get_position"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_position">[docs]</a>    <span class="k">def</span> <span class="nf">mot_get_position</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serial_number</span><span class="p">):</span>
+        <span class="n">c_serial_number</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">(</span><span class="n">serial_number</span><span class="p">)</span>
+        <span class="n">c_position</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_float</span><span class="p">()</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dll</span><span class="o">.</span><span class="n">MOT_GetPosition</span><span class="p">(</span><span class="n">c_serial_number</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">byref</span><span class="p">(</span><span class="n">c_position</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_check</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">&#39;MOT_GetPosition&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">c_position</span><span class="o">.</span><span class="n">value</span></div>
+
+<div class="viewcode-block" id="Thorlabs_APT.mot_get_status_bits"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_status_bits">[docs]</a>    <span class="k">def</span> <span class="nf">mot_get_status_bits</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serial_number</span><span class="p">):</span>
+        <span class="n">c_serial_number</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">(</span><span class="n">serial_number</span><span class="p">)</span>
+        <span class="n">c_status_bits</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">()</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dll</span><span class="o">.</span><span class="n">MOT_GetStatusBits</span><span class="p">(</span><span class="n">c_serial_number</span><span class="p">,</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">byref</span><span class="p">(</span><span class="n">c_status_bits</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_check</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">&#39;MOT_GetStatusBits&#39;</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">c_status_bits</span><span class="o">.</span><span class="n">value</span></div>
+
+<div class="viewcode-block" id="Thorlabs_APT.mot_move_absolute_ex"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_absolute_ex">[docs]</a>    <span class="k">def</span> <span class="nf">mot_move_absolute_ex</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serial_number</span><span class="p">,</span> <span class="n">absolute_position</span><span class="p">,</span> <span class="n">wait</span><span class="p">):</span>
+        <span class="n">c_serial_number</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">(</span><span class="n">serial_number</span><span class="p">)</span>
+        <span class="n">c_absolute_position</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_float</span><span class="p">(</span><span class="n">absolute_position</span><span class="p">)</span>
+        <span class="n">c_wait</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_bool</span><span class="p">(</span><span class="n">wait</span><span class="p">)</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dll</span><span class="o">.</span><span class="n">MOT_MoveAbsoluteEx</span><span class="p">(</span><span class="n">c_serial_number</span><span class="p">,</span> <span class="n">c_absolute_position</span><span class="p">,</span> <span class="n">c_wait</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_check</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">&#39;MOT_MoveAbsoluteEx&#39;</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="Thorlabs_APT.mot_move_jog"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_jog">[docs]</a>    <span class="k">def</span> <span class="nf">mot_move_jog</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">serial_number</span><span class="p">,</span> <span class="n">direction</span><span class="p">,</span> <span class="n">wait</span><span class="p">):</span>
+        <span class="n">c_serial_number</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">(</span><span class="n">serial_number</span><span class="p">)</span>
+        <span class="n">c_direction</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_long</span><span class="p">(</span><span class="n">direction</span><span class="p">)</span>
+        <span class="n">c_wait</span> <span class="o">=</span> <span class="n">ctypes</span><span class="o">.</span><span class="n">c_bool</span><span class="p">(</span><span class="n">wait</span><span class="p">)</span>
+        <span class="n">code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dll</span><span class="o">.</span><span class="n">MOT_MoveJog</span><span class="p">(</span><span class="n">c_serial_number</span><span class="p">,</span> <span class="n">c_direction</span><span class="p">,</span> <span class="n">c_wait</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">error_check</span><span class="p">(</span><span class="n">code</span><span class="p">,</span> <span class="s1">&#39;MOT_MoveJog&#39;</span><span class="p">)</span></div></div>
+</pre></div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, QCoDeS Users
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
