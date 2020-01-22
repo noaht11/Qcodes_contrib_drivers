@@ -7,6 +7,7 @@ Subpackages
 .. toctree::
 
    qcodes_contrib_drivers.drivers.Advantech
+   qcodes_contrib_drivers.drivers.Andor
    qcodes_contrib_drivers.drivers.Aviosys
    qcodes_contrib_drivers.drivers.Cryocon
    qcodes_contrib_drivers.drivers.Cryogenic
@@ -19,6 +20,7 @@ Subpackages
    qcodes_contrib_drivers.drivers.RohdeSchwarz
    qcodes_contrib_drivers.drivers.Shamrock
    qcodes_contrib_drivers.drivers.Spectrum
+   qcodes_contrib_drivers.drivers.Standa
    qcodes_contrib_drivers.drivers.StanfordResearchSystems
    qcodes_contrib_drivers.drivers.Tektronix
    qcodes_contrib_drivers.drivers.Thorlabs

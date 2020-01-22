@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Aviosys package &mdash; qcodes_contrib_drivers 0.3.0+21.g7e91067 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Aviosys package &mdash; qcodes_contrib_drivers 0.3.0+40.ge8268ed documentation</title>
   
 
   
@@ -26,6 +26,8 @@
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -37,7 +39,7 @@
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="qcodes_contrib_drivers.drivers.Cryocon package" href="qcodes_contrib_drivers.drivers.Cryocon.html" />
-    <link rel="prev" title="qcodes_contrib_drivers.drivers.Advantech package" href="qcodes_contrib_drivers.drivers.Advantech.html" /> 
+    <link rel="prev" title="qcodes_contrib_drivers.drivers.Andor package" href="qcodes_contrib_drivers.drivers.Andor.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -61,7 +63,7 @@
             
             
               <div class="version">
-                0.3.0+21.g7e91067
+                0.3.0+40.ge8268ed
               </div>
             
           
@@ -91,6 +93,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html">qcodes_contrib_drivers.drivers package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Advantech.html">qcodes_contrib_drivers.drivers.Advantech package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Andor.html">qcodes_contrib_drivers.drivers.Andor package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.Aviosys package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S">qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S module</a></li>
@@ -108,6 +111,7 @@
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.RohdeSchwarz.html">qcodes_contrib_drivers.drivers.RohdeSchwarz package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Shamrock.html">qcodes_contrib_drivers.drivers.Shamrock package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Spectrum.html">qcodes_contrib_drivers.drivers.Spectrum package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Standa.html">qcodes_contrib_drivers.drivers.Standa package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.StanfordResearchSystems.html">qcodes_contrib_drivers.drivers.StanfordResearchSystems package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Tektronix.html">qcodes_contrib_drivers.drivers.Tektronix package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Thorlabs.html">qcodes_contrib_drivers.drivers.Thorlabs package</a></li>
@@ -217,7 +221,7 @@
 <dl class="class">
 <dt id="qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S.Aviosys_IP_Power_9258S">
 <em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S.</code><code class="sig-name descname">Aviosys_IP_Power_9258S</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">address: str</em>, <em class="sig-param">login_name: str</em>, <em class="sig-param">login_password: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Aviosys/IP_Power_9258S.html#Aviosys_IP_Power_9258S"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S.Aviosys_IP_Power_9258S" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.9.0rc1+102.g03c77a63a)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.9.0rc1+120.g61eb02f46)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
 <p>Instrument driver for the Aviosys IP Power 9258S. The IP Power 9258S is a network power controller. The device
 controls up to four power channels, that can be turned on and off. With this instrument also non-smart instruments
 can be controlled remotely.</p>
@@ -261,7 +265,7 @@ as well.</p>
 <dl class="class">
 <dt id="qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S.PowerChannel">
 <em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S.</code><code class="sig-name descname">PowerChannel</code><span class="sig-paren">(</span><em class="sig-param">parent: qcodes.instrument.base.Instrument</em>, <em class="sig-param">name: str</em>, <em class="sig-param">channel: str</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Aviosys/IP_Power_9258S.html#PowerChannel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S.PowerChannel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS v0.9.0rc1+102.g03c77a63a)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS v0.9.0rc1+120.g61eb02f46)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
 <p>Channel class for a socket on the Aviosys IP Power 9258S.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -279,7 +283,7 @@ as well.</p>
 
 <dl class="attribute">
 <dt id="qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S.PowerChannel.CHANNEL_NAMES">
-<code class="sig-name descname">CHANNEL_NAMES</code><em class="property"> = &lt;Enum: {'D', 'C', 'B', 'A'}&gt;</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S.PowerChannel.CHANNEL_NAMES" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">CHANNEL_NAMES</code><em class="property"> = &lt;Enum: {'C', 'B', 'D', 'A'}&gt;</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S.PowerChannel.CHANNEL_NAMES" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -301,7 +305,7 @@ as well.</p>
         <a href="qcodes_contrib_drivers.drivers.Cryocon.html" class="btn btn-neutral float-right" title="qcodes_contrib_drivers.drivers.Cryocon package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="qcodes_contrib_drivers.drivers.Advantech.html" class="btn btn-neutral float-left" title="qcodes_contrib_drivers.drivers.Advantech package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="qcodes_contrib_drivers.drivers.Andor.html" class="btn btn-neutral float-left" title="qcodes_contrib_drivers.drivers.Andor package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

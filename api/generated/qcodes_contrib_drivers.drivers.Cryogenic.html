@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Cryogenic package &mdash; qcodes_contrib_drivers 0.3.0+21.g7e91067 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Cryogenic package &mdash; qcodes_contrib_drivers 0.3.0+40.ge8268ed documentation</title>
   
 
   
@@ -26,6 +26,8 @@
         <script type="text/javascript" src="../../_static/doctools.js"></script>
         <script type="text/javascript" src="../../_static/language_data.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -61,7 +63,7 @@
             
             
               <div class="version">
-                0.3.0+21.g7e91067
+                0.3.0+40.ge8268ed
               </div>
             
           
@@ -91,6 +93,7 @@
 <li class="toctree-l1 current"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html">qcodes_contrib_drivers.drivers package</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html#subpackages">Subpackages</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Advantech.html">qcodes_contrib_drivers.drivers.Advantech package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Andor.html">qcodes_contrib_drivers.drivers.Andor package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Aviosys.html">qcodes_contrib_drivers.drivers.Aviosys package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryocon.html">qcodes_contrib_drivers.drivers.Cryocon package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.Cryogenic package</a><ul>
@@ -108,6 +111,7 @@
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.RohdeSchwarz.html">qcodes_contrib_drivers.drivers.RohdeSchwarz package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Shamrock.html">qcodes_contrib_drivers.drivers.Shamrock package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Spectrum.html">qcodes_contrib_drivers.drivers.Spectrum package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Standa.html">qcodes_contrib_drivers.drivers.Standa package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.StanfordResearchSystems.html">qcodes_contrib_drivers.drivers.StanfordResearchSystems package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Tektronix.html">qcodes_contrib_drivers.drivers.Tektronix package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Thorlabs.html">qcodes_contrib_drivers.drivers.Thorlabs package</a></li>
@@ -231,7 +235,7 @@ SMS60C are: coil_constant=0.0380136, current_rating=52.61</p>
 <dl class="class">
 <dt id="qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C">
 <em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.</code><code class="sig-name descname">CryogenicSMS120C</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">address</em>, <em class="sig-param">coil_constant=0.113375</em>, <em class="sig-param">current_rating=105.84</em>, <em class="sig-param">current_ramp_limit=0.0506</em>, <em class="sig-param">reset=False</em>, <em class="sig-param">timeout=5</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Cryogenic/CryogenicSMS120C.html#CryogenicSMS120C"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.9.0rc1+102.g03c77a63a)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.9.0rc1+120.g61eb02f46)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>The following hard-coded, default values for Cryogenic magnets are safety limits
 and should not be modified.
 - these values should be set using the corresponding arguments when the class is called.</p>
