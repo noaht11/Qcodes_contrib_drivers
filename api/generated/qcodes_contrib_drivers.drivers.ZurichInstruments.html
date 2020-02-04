@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.ZurichInstruments package &mdash; qcodes_contrib_drivers 0.4.0+20.gf3cff4e documentation</title>
+  <title>qcodes_contrib_drivers.drivers.ZurichInstruments package &mdash; qcodes_contrib_drivers 0.4.0+32.g0cc6104 documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                0.4.0+20.gf3cff4e
+                0.4.0+32.g0cc6104
               </div>
             
           
@@ -111,6 +111,7 @@
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Thorlabs.html">qcodes_contrib_drivers.drivers.Thorlabs package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.ZurichInstruments package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI">qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8">qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.ZurichInstruments">Module contents</a></li>
 </ul>
@@ -214,6 +215,46 @@
 <h1>qcodes_contrib_drivers.drivers.ZurichInstruments package<a class="headerlink" href="#qcodes-contrib-drivers-drivers-zurichinstruments-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI">
+<span id="qcodes-contrib-drivers-drivers-zurichinstruments-hf2li-module"></span><h2>qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.</code><code class="sig-name descname">HF2LI</code><span class="sig-paren">(</span><em class="sig-param">name: str, device: str, demod: int, sigout: int, auxouts: Dict[str, int], num_sigout_mixer_channels: int = 1, **kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/HF2LI.html#HF2LI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.10.0+47.g1ce7a23c5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
+<p>Qcodes driver for Zurich Instruments HF2LI lockin amplifier.</p>
+<p>This driver is meant to emulate a single-channel lockin amplifier,
+so one instance has a single demodulator, a single sigout channel,
+and multiple auxout channels (for X, Y, R, Theta, or an arbitrary manual value).
+Multiple instances can be run simultaneously as independent lockin amplifiers.</p>
+<p>This instrument has a great deal of additional functionality that is
+not currently supported by this driver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Name of instrument.</p></li>
+<li><p><strong>device</strong> – Device name, e.g. “dev204”, used to create zhinst API session.</p></li>
+<li><p><strong>demod</strong> – Index of the demodulator to use.</p></li>
+<li><p><strong>sigout</strong> – Index of the sigout channel to use as excitation source.</p></li>
+<li><p><strong>auxouts</strong> – Dict of the form {output: index},
+where output is a key of HF2LI.OUTPUT_MAPPING, for example {“X”: 0, “Y”: 3}
+to use the instrument as a lockin amplifier in X-Y mode with auxout channels 0 and 3.</p></li>
+<li><p><strong>num_sigout_mixer_channels</strong> – Number of mixer channels to enable on the sigouts. Default: 1.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI.OUTPUT_MAPPING">
+<code class="sig-name descname">OUTPUT_MAPPING</code><em class="property"> = {-1: 'manual', 0: 'X', 1: 'Y', 2: 'R', 3: 'Theta'}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI.OUTPUT_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI.sample">
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/HF2LI.html#HF2LI.sample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI.sample" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8">
 <span id="qcodes-contrib-drivers-drivers-zurichinstruments-zihdawg8-module"></span><h2>qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8" title="Permalink to this headline">¶</a></h2>
