@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Qcodes example with Standa 10MWA168 &mdash; qcodes_contrib_drivers 0.4.0+20.gf3cff4e documentation</title>
+  <title>National Instruments Multifunction DAQ example &mdash; qcodes_contrib_drivers 0.4.0+20.gf3cff4e documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Qcodes example with Thorlabs MFF10x" href="Thorlabs_MFF10x.html" />
-    <link rel="prev" title="Qcodes example with Shamrock SR750" href="Shamrock_SR750.html" /> 
+    <link rel="next" title="QCoDeS Example with Newport AG-UC8 Piezo Motion Controller" href="Newport_AG-UC8.html" />
+    <link rel="prev" title="Qcodes example with Lakeshore 311" href="Lakeshore_311.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -95,14 +95,15 @@
 <li class="toctree-l2"><a class="reference internal" href="Aviosys_IP_Power_9258S.html">Qcodes example with Aviosys IP Power 9258S</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Gentec_Maestro.html">QCoDeS Example with Gentec Maestro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Lakeshore_311.html">Qcodes example with Lakeshore 311</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NationalInstruments_DAQ.html">National Instruments Multifunction DAQ example</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">National Instruments Multifunction DAQ example</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#DAQAnalogInputs"><code class="docutils literal notranslate"><span class="pre">DAQAnalogInputs</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#DAQAnalogOutputs"><code class="docutils literal notranslate"><span class="pre">DAQAnalogOutputs</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Newport_AG-UC8.html">QCoDeS Example with Newport AG-UC8 Piezo Motion Controller</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Rohde_Schwarx_HMC8043.html">QCoDeS Example with R&amp;S HMC 8043 Power Supply</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Shamrock_SR750.html">Qcodes example with Shamrock SR750</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Qcodes example with Standa 10MWA168</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Initialize-instrument">Initialize instrument</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="Standa_10MWA168.html">Qcodes example with Standa 10MWA168</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Thorlabs_MFF10x.html">Qcodes example with Thorlabs MFF10x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Thorlabs_PRM1Z8.html">Qcodes example with Thorlabs PRM1Z8</a></li>
 </ul>
@@ -155,13 +156,13 @@
         
           <li><a href="index.html">Examples of how to use drivers</a> &raquo;</li>
         
-      <li>Qcodes example with Standa 10MWA168</li>
+      <li>National Instruments Multifunction DAQ example</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/examples/Standa_10MWA168.ipynb.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/examples/NationalInstruments_DAQ.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -416,42 +417,73 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Qcodes-example-with-Standa-10MWA168">
-<h1>Qcodes example with Standa 10MWA168<a class="headerlink" href="#Qcodes-example-with-Standa-10MWA168" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="National-Instruments-Multifunction-DAQ-example">
+<h1>National Instruments Multifunction DAQ example<a class="headerlink" href="#National-Instruments-Multifunction-DAQ-example" title="Permalink to this headline">¶</a></h1>
+<p>This was written for/tested with <a class="reference external" href="https://www.ni.com/en-us/support/model.usb-6363.html">National Instruments USB-6363 DAQ</a>, but the <a class="reference external" href="https://nidaqmx-python.readthedocs.io/en/latest/">nidaqmx</a> API is pretty general, so I expect it will work with other devices with minimal changes. The driver currently only supports analog inputs and outputs, no digital I/O.</p>
 <div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">qcodes_contrib_drivers.drivers.Standa.Standa_10MWA168</span> <span class="kn">import</span> <span class="n">Standa_10MWA168</span>
+<span></span><span class="kn">import</span> <span class="nn">nidaqmx</span>
+<span class="kn">from</span> <span class="nn">qcodes_contrib_drivers.drivers.NationalInstruments.DAQ</span> <span class="kn">import</span> <span class="n">DAQAnalogInputs</span><span class="p">,</span> <span class="n">DAQAnalogOutputs</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="Initialize-instrument">
-<h2>Initialize instrument<a class="headerlink" href="#Initialize-instrument" title="Permalink to this headline">¶</a></h2>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
+<div class="section" id="DAQAnalogInputs">
+<h2><code class="docutils literal notranslate"><span class="pre">DAQAnalogInputs</span></code><a class="headerlink" href="#DAQAnalogInputs" title="Permalink to this headline">¶</a></h2>
+<p>Acquire 1 million points simultaneously on <code class="docutils literal notranslate"><span class="pre">num_ai_channels</span></code> with a sample rate of 1 MHz, averaging the acquired data down to 100 thousand points.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">standa</span> <span class="o">=</span> <span class="n">Standa_10MWA168</span><span class="p">(</span><span class="s2">&quot;Standa_10MWA168&quot;</span><span class="p">,</span> <span class="s1">&#39;37866131&#39;</span><span class="p">)</span>
+<span></span><span class="n">devname</span> <span class="o">=</span> <span class="s1">&#39;Dev0&#39;</span> <span class="c1"># can be found with NI-MAX</span>
+<span class="n">sample_rate_per_channel</span> <span class="o">=</span> <span class="mf">1e6</span> <span class="c1"># Hz</span>
+<span class="n">num_ai_channels</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="n">ai_channels</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;meas</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_ai_channels</span><span class="p">)}</span>
+<span class="n">num_samples_raw</span> <span class="o">=</span> <span class="mf">1e6</span>
+<span class="n">num_samples_averaged</span> <span class="o">=</span> <span class="mf">1e5</span>
 </pre></div>
 </div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Connected to: None Standa_10MWA168 (serial:None, firmware:None) in 0.06s
-</pre></div></div>
 </div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span>
+<span></span><span class="k">with</span> <span class="n">nidaqmx</span><span class="o">.</span><span class="n">Task</span><span class="p">(</span><span class="s1">&#39;ai_task&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">ai_task</span><span class="p">:</span>
+    <span class="n">daq_ai</span> <span class="o">=</span> <span class="n">DAQAnalogInputs</span><span class="p">(</span>
+        <span class="s1">&#39;daq_ai&#39;</span><span class="p">,</span>
+        <span class="n">devname</span><span class="p">,</span>
+        <span class="n">sample_rate_per_channel</span><span class="p">,</span>
+        <span class="n">ai_channels</span><span class="p">,</span>
+        <span class="n">ai_task</span><span class="p">,</span>
+        <span class="n">samples_to_read</span><span class="o">=</span><span class="n">num_samples_raw</span><span class="p">,</span>
+        <span class="n">target_points</span><span class="o">=</span><span class="n">num_samples_averaged</span><span class="p">,</span>
+    <span class="p">)</span>
+    <span class="n">ai_task</span><span class="o">.</span><span class="n">start</span><span class="p">()</span>
+    <span class="n">result</span> <span class="o">=</span> <span class="n">daq_ai</span><span class="o">.</span><span class="n">voltage</span><span class="p">()</span> <span class="c1"># result.shape == (num_ai_channels, num_samples_averaged)</span>
+    <span class="n">ai_task</span><span class="o">.</span><span class="n">wait_until_done</span><span class="p">()</span>
+    <span class="n">ai_task</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<p>For an example of synchronously writing and acquiring data on many channels, see the <code class="docutils literal notranslate"><span class="pre">`scanning-squid</span></code> docs &lt;<a class="reference external" href="https://scanning-squid.readthedocs.io/en/latest/">https://scanning-squid.readthedocs.io/en/latest/</a>&gt;`__, in particular <code class="docutils literal notranslate"><span class="pre">`microscope.susceptometer.Susceptometer.scan_surface</span></code> &lt;<a class="reference external" href="https://scanning-squid.readthedocs.io/en/latest/_modules/microscope/susceptometer.html#SusceptometerMicroscope.scan_surface">https://scanning-squid.readthedocs.io/en/latest/_modules/microscope/susceptometer.html#SusceptometerMicroscope.scan_surface</a>&gt;`__ and <code class="docutils literal notranslate"><span class="pre">`scanner.Scanner.scan_line</span></code> &lt;<a class="reference external" href="https://scanning-squid.readthedocs.io/en/latest/_modules/scanner.html#Scanner.scan_line">https://scanning-squid.readthedocs.io/en/latest/_modules/scanner.html#Scanner.scan_line</a>&gt;`__.</p>
+</div>
+<div class="section" id="DAQAnalogOutputs">
+<h2><code class="docutils literal notranslate"><span class="pre">DAQAnalogOutputs</span></code><a class="headerlink" href="#DAQAnalogOutputs" title="Permalink to this headline">¶</a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">DAQAnalogOutputs</span></code> functions as a simple multichannel DC DAC.</p>
+<div class="nbinput nblast docutils container">
+<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[ ]:
+</pre></div>
+</div>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
+<span></span><span class="n">devname</span> <span class="o">=</span> <span class="s1">&#39;Dev0&#39;</span> <span class="c1"># can be found with NI-MAX</span>
+<span class="n">ao_channels</span> <span class="o">=</span> <span class="p">{</span><span class="nb">str</span><span class="p">(</span><span class="n">i</span><span class="p">):</span> <span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)}</span>
+<span class="n">daq_ao</span> <span class="o">=</span> <span class="n">DAQAnalogOutputs</span><span class="p">(</span><span class="s1">&#39;daq_ao&#39;</span><span class="p">,</span> <span class="n">devname</span><span class="p">,</span> <span class="n">ao_channels</span><span class="p">)</span>
+<span class="n">daq_ao</span><span class="o">.</span><span class="n">voltage_0</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+<span class="n">daq_ao</span><span class="o">.</span><span class="n">voltage_4</span><span class="p">(</span><span class="mf">2.2</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -466,10 +498,10 @@ Connected to: None Standa_10MWA168 (serial:None, firmware:None) in 0.06s
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Thorlabs_MFF10x.html" class="btn btn-neutral float-right" title="Qcodes example with Thorlabs MFF10x" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Newport_AG-UC8.html" class="btn btn-neutral float-right" title="QCoDeS Example with Newport AG-UC8 Piezo Motion Controller" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Shamrock_SR750.html" class="btn btn-neutral float-left" title="Qcodes example with Shamrock SR750" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Lakeshore_311.html" class="btn btn-neutral float-left" title="Qcodes example with Lakeshore 311" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
