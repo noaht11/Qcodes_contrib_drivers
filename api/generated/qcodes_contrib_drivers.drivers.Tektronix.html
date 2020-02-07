@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Tektronix package &mdash; qcodes_contrib_drivers 0.4.0+32.g0cc6104 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Tektronix package &mdash; qcodes_contrib_drivers 0.4.0+39.gb18477a documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.4.0+32.g0cc6104
+                0.4.0+39.gb18477a
               </div>
             
           
@@ -110,6 +110,7 @@
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.StanfordResearchSystems.html">qcodes_contrib_drivers.drivers.StanfordResearchSystems package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.Tektronix package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Tektronix.AFG3000">qcodes_contrib_drivers.drivers.Tektronix.AFG3000 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Tektronix.AWG520">qcodes_contrib_drivers.drivers.Tektronix.AWG520 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Tektronix.Keithley_2700">qcodes_contrib_drivers.drivers.Tektronix.Keithley_2700 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Tektronix">Module contents</a></li>
@@ -216,6 +217,63 @@
 <h1>qcodes_contrib_drivers.drivers.Tektronix package<a class="headerlink" href="#qcodes-contrib-drivers-drivers-tektronix-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Tektronix.AFG3000">
+<span id="qcodes-contrib-drivers-drivers-tektronix-afg3000-module"></span><h2>qcodes_contrib_drivers.drivers.Tektronix.AFG3000 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Tektronix.AFG3000" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Tektronix.AFG3000.</code><code class="sig-name descname">AFG3000</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">address</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/AFG3000.html#AFG3000"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.10.0+47.g1ce7a23c5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<p>Qcodes driver for Tektronix AFG3000 series arbitrary function generator.</p>
+<p>Not all instrument functionality is included here.</p>
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.abort">
+<code class="sig-name descname">abort</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/AFG3000.html#AFG3000.abort"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.abort" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.recall">
+<code class="sig-name descname">recall</code><span class="sig-paren">(</span><em class="sig-param">location: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/AFG3000.html#AFG3000.recall"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.recall" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/AFG3000.html#AFG3000.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.reset" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.save">
+<code class="sig-name descname">save</code><span class="sig-paren">(</span><em class="sig-param">location: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/AFG3000.html#AFG3000.save"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.save" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.self_calibrate">
+<code class="sig-name descname">self_calibrate</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/AFG3000.html#AFG3000.self_calibrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.self_calibrate" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.self_test">
+<code class="sig-name descname">self_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/AFG3000.html#AFG3000.self_test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.self_test" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.synchronize_phase">
+<code class="sig-name descname">synchronize_phase</code><span class="sig-paren">(</span><em class="sig-param">src: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/AFG3000.html#AFG3000.synchronize_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.synchronize_phase" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.wait">
+<code class="sig-name descname">wait</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/AFG3000.html#AFG3000.wait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000.wait" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3252">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Tektronix.AFG3000.</code><code class="sig-name descname">AFG3252</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">address</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/AFG3000.html#AFG3252"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3252" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000" title="qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes_contrib_drivers.drivers.Tektronix.AFG3000.AFG3000</span></code></a></p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.Tektronix.AWG520">
 <span id="qcodes-contrib-drivers-drivers-tektronix-awg520-module"></span><h2>qcodes_contrib_drivers.drivers.Tektronix.AWG520 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Tektronix.AWG520" title="Permalink to this headline">¶</a></h2>
