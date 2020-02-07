@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.StanfordResearchSystems package &mdash; qcodes_contrib_drivers 0.4.0+39.gb18477a documentation</title>
+  <title>qcodes_contrib_drivers.drivers.StanfordResearchSystems package &mdash; qcodes_contrib_drivers 0.4.0+45.gac307a2 documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.4.0+39.gb18477a
+                0.4.0+45.gac307a2
               </div>
             
           
@@ -109,6 +109,7 @@
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Standa.html">qcodes_contrib_drivers.drivers.Standa package</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.StanfordResearchSystems package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645">qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928">qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.StanfordResearchSystems">Module contents</a></li>
 </ul>
@@ -215,6 +216,99 @@
 <h1>qcodes_contrib_drivers.drivers.StanfordResearchSystems package<a class="headerlink" href="#qcodes-contrib-drivers-drivers-stanfordresearchsystems-package" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645">
+<span id="qcodes-contrib-drivers-drivers-stanfordresearchsystems-dg645-module"></span><h2>qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.</code><code class="sig-name descname">DG645</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">address</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.10.0+47.g1ce7a23c5)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<p>Qcodes driver for SRS DG645 digital delay generator.</p>
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.CHANNEL_MAPPING">
+<code class="sig-name descname">CHANNEL_MAPPING</code><em class="property"> = {'A': 2, 'B': 3, 'C': 4, 'D': 5, 'E': 6, 'F': 7, 'G': 8, 'H': 9, 'T0': 0, 'T1': 1}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.CHANNEL_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.DISPLAY_MAPPING">
+<code class="sig-name descname">DISPLAY_MAPPING</code><em class="property"> = {'advanced_trig_enable': 4, 'burst_T0_config': 14, 'burst_count': 9, 'burst_delay': 8, 'burst_mode': 7, 'burst_period': 10, 'channel_delay': 11, 'channel_output_levels': 12, 'channel_output_polarity': 13, 'prescale_config': 6, 'trig_holdoff': 5, 'trig_line': 3, 'trig_rate': 0, 'trig_single_shot': 2, 'trig_thresh': 1}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.DISPLAY_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.OUTPUT_MAPPING">
+<code class="sig-name descname">OUTPUT_MAPPING</code><em class="property"> = {'AB': 1, 'CD': 2, 'EF': 3, 'GH': 4, 'T0': 0}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.OUTPUT_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.POLARITY_MAPPING">
+<code class="sig-name descname">POLARITY_MAPPING</code><em class="property"> = {'+': 1, '-': 0}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.POLARITY_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.PRESCALE_MAPPING">
+<code class="sig-name descname">PRESCALE_MAPPING</code><em class="property"> = {'AB': 1, 'CD': 2, 'EF': 3, 'GH': 4, 'trig': 0}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.PRESCALE_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.TRIGGER_MAPPING">
+<code class="sig-name descname">TRIGGER_MAPPING</code><em class="property"> = {'ext_falling': 2, 'ext_rising': 1, 'internal': 0, 'line': 6, 'single': 5, 'single_ext_falling': 4, 'single_ext_rising': 3}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.TRIGGER_MAPPING" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.local">
+<code class="sig-name descname">local</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.local"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.local" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go to local.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.remote">
+<code class="sig-name descname">remote</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.remote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.remote" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go to remote.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reset instrument.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.save_settings">
+<code class="sig-name descname">save_settings</code><span class="sig-paren">(</span><em class="sig-param">location: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.save_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.save_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save instrument settings to given location.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>location</strong> – Location to which to save the settings (in [1..9]).</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.self_calibrate">
+<code class="sig-name descname">self_calibrate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.self_calibrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.self_calibrate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run auto-calibration routine.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.self_test">
+<code class="sig-name descname">self_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.self_test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.self_test" title="Permalink to this definition">¶</a></dt>
+<dd><p>Run self-test routine.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.trigger">
+<code class="sig-name descname">trigger</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.trigger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initiates a single trigger if instrument is in single shot mode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.wait">
+<code class="sig-name descname">wait</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.wait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.wait" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wait for all prior commands to execute before continuing.</p>
+</dd></dl>
+
+</dd></dl>
+
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928">
 <span id="qcodes-contrib-drivers-drivers-stanfordresearchsystems-sim928-module"></span><h2>qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928" title="Permalink to this headline">¶</a></h2>
