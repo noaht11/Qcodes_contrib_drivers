@@ -1,0 +1,493 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qcodes_contrib_drivers.drivers.Attocube package &mdash; qcodes_contrib_drivers 0.4.0+57.gdc878cd documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="qcodes_contrib_drivers.drivers.Aviosys package" href="qcodes_contrib_drivers.drivers.Aviosys.html" />
+    <link rel="prev" title="qcodes_contrib_drivers.drivers.Andor package" href="qcodes_contrib_drivers.drivers.Andor.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home"> qcodes_contrib_drivers
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.4.0+57.gdc878cd
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples of how to use drivers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html">qcodes_contrib_drivers.drivers package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Advantech.html">qcodes_contrib_drivers.drivers.Advantech package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Andor.html">qcodes_contrib_drivers.drivers.Andor package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.Attocube package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Attocube.ANC300">qcodes_contrib_drivers.drivers.Attocube.ANC300 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Attocube.ANC300sim">qcodes_contrib_drivers.drivers.Attocube.ANC300sim module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Attocube">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Aviosys.html">qcodes_contrib_drivers.drivers.Aviosys package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryocon.html">qcodes_contrib_drivers.drivers.Cryocon package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryogenic.html">qcodes_contrib_drivers.drivers.Cryogenic package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Gentec.html">qcodes_contrib_drivers.drivers.Gentec package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.html">qcodes_contrib_drivers.drivers.Keysight package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Lakeshore.html">qcodes_contrib_drivers.drivers.Lakeshore package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Newport.html">qcodes_contrib_drivers.drivers.Newport package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Oxford.html">qcodes_contrib_drivers.drivers.Oxford package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.QuTech.html">qcodes_contrib_drivers.drivers.QuTech package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.RohdeSchwarz.html">qcodes_contrib_drivers.drivers.RohdeSchwarz package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Shamrock.html">qcodes_contrib_drivers.drivers.Shamrock package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Spectrum.html">qcodes_contrib_drivers.drivers.Spectrum package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Standa.html">qcodes_contrib_drivers.drivers.Standa package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.StanfordResearchSystems.html">qcodes_contrib_drivers.drivers.StanfordResearchSystems package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Tektronix.html">qcodes_contrib_drivers.drivers.Tektronix package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Thorlabs.html">qcodes_contrib_drivers.drivers.Thorlabs package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.ZurichInstruments.html">qcodes_contrib_drivers.drivers.ZurichInstruments package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html#module-qcodes_contrib_drivers.drivers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qcodes_contrib_drivers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="qcodes_contrib_drivers.drivers.html">qcodes_contrib_drivers.drivers package</a> &raquo;</li>
+        
+      <li>qcodes_contrib_drivers.drivers.Attocube package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/generated/qcodes_contrib_drivers.drivers.Attocube.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="qcodes-contrib-drivers-drivers-attocube-package">
+<h1>qcodes_contrib_drivers.drivers.Attocube package<a class="headerlink" href="#qcodes-contrib-drivers-drivers-attocube-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Attocube.ANC300">
+<span id="qcodes-contrib-drivers-drivers-attocube-anc300-module"></span><h2>qcodes_contrib_drivers.drivers.Attocube.ANC300 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Attocube.ANC300" title="Permalink to this headline">¶</a></h2>
+<p>QCoDeS- Driver for the Attocube ANC300 controller.</p>
+<p>This driver can be used with a simulation class (ANC300sim.py) to generate
+reasonable answers to all requests. The only thing is to change two times
+the comments as shown below (real mode/simulation mode).</p>
+<p>Attention - the device has not feedback from the motor. That means, the current position is
+not known. The driver can send a move command and the controller behaves like there is a motor
+connected to it, even if there is no motor available.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Michael Wagener, FZJ / ZEA-2, <a class="reference external" href="mailto:m&#46;wagener&#37;&#52;&#48;fz-juelich&#46;de">m<span>&#46;</span>wagener<span>&#64;</span>fz-juelich<span>&#46;</span>de</a></p>
+</dd>
+</dl>
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Attocube.ANC300.</code><code class="sig-name descname">ANC300</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">address</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#ANC300"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.12.0rc1+2.gbf756c8ad)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<p>This is the qcodes driver for the Attocube ANC300.</p>
+<p>Be careful to correct the parameters if not useing the USB port.</p>
+<dl class="simple">
+<dt>Status:</dt><dd><p>coding: finished
+communication tests: done
+usage in experiment: not yet</p>
+</dd>
+</dl>
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.ask_raw">
+<code class="sig-name descname">ask_raw</code><span class="sig-paren">(</span><em class="sig-param">cmd: str</em><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#ANC300.ask_raw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.ask_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Query instrument with cmd and return response.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cmd</strong> – Command to write to controller.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Response of Attocube controller to the query.</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#RuntimeError" title="(in Python v3.6)"><strong>RuntimeError</strong></a> – if Error-Message from the device is read.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#ANC300.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Override of the base class’ close function</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.getall">
+<code class="sig-name descname">getall</code><span class="sig-paren">(</span><em class="sig-param">submod='*'</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#ANC300.getall"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.getall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read all parameters and retun them to the caller. This will scan all
+submodules with all parameters, so in this function no changes are
+necessary for new modules or parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>submod</strong> – (optional) returns only the parameters for this submodule</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>dict with all parameters, the key is the modulename and the parametername</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.stopall">
+<code class="sig-name descname">stopall</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#ANC300.stopall"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.stopall" title="Permalink to this definition">¶</a></dt>
+<dd><p>Routine to stop all axis, regardless if the axis is available</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.version">
+<code class="sig-name descname">version</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#ANC300.version"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read all possible version informations.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>None</strong> – </p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Dict with all version informations</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.write_raw">
+<code class="sig-name descname">write_raw</code><span class="sig-paren">(</span><em class="sig-param">cmd: str</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#ANC300.write_raw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300.write_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write cmd and wait until the ‘OK’ or ‘ERROR’ comes back from the device.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>cmd</strong> – Command to write to controller.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None</p>
+</dd>
+<dt class="field-odd">Raises</dt>
+<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#RuntimeError" title="(in Python v3.6)"><strong>RuntimeError</strong></a> – if Error-Message from the device is read.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.Anc300Axis">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Attocube.ANC300.</code><code class="sig-name descname">Anc300Axis</code><span class="sig-paren">(</span><em class="sig-param">parent: qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300</em>, <em class="sig-param">name: str</em>, <em class="sig-param">axis: int</em>, <em class="sig-param">sn: str</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#Anc300Axis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.Anc300Axis" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS v0.12.0rc1+2.gbf756c8ad)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.Anc300Axis.stopMove">
+<code class="sig-name descname">stopMove</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#Anc300Axis.stopMove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.Anc300Axis.stopMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Global function to stop the movement.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.Anc300Axis.waitMove">
+<code class="sig-name descname">waitMove</code><span class="sig-paren">(</span><em class="sig-param">wait=1.0</em>, <em class="sig-param">timeout=0</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#Anc300Axis.waitMove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.Anc300Axis.waitMove" title="Permalink to this definition">¶</a></dt>
+<dd><p>Global function to wait until the movement is finished.</p>
+<p>The commandinterface has the function ‘stepw n’ to wait until the axis stops moving. The
+controller sends the ‘OK’ after the axis stops, so the communication is hanging. In the
+former version with the pyserial interface, it will work fine. But the visa library
+throws an error if the communication timed out. After this, the read function didn’t
+get the needed ‘OK’. To avoid this, this routine asks the current output voltage. This
+voltage will be zero if the axis has stopped.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>wait</strong> – time to wait between the checks</p></li>
+<li><p><strong>timeout</strong> – number of seconds to generate a RuntimeError if not finished moving</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>None. This function will block, until the motion of this axis has been stopped.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300.Anc300TriggerOut">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Attocube.ANC300.</code><code class="sig-name descname">Anc300TriggerOut</code><span class="sig-paren">(</span><em class="sig-param">parent: qcodes_contrib_drivers.drivers.Attocube.ANC300.ANC300</em>, <em class="sig-param">name: str</em>, <em class="sig-param">num: int</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300.html#Anc300TriggerOut"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300.Anc300TriggerOut" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS v0.12.0rc1+2.gbf756c8ad)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Attocube.ANC300sim">
+<span id="qcodes-contrib-drivers-drivers-attocube-anc300sim-module"></span><h2>qcodes_contrib_drivers.drivers.Attocube.ANC300sim module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Attocube.ANC300sim" title="Permalink to this headline">¶</a></h2>
+<p>QCoDeS- Simulation for the Attocube ANC300 controller.</p>
+<p>Simulation for the Attocube ANC300 driver in the same way as it is used in our lab.</p>
+<dl class="simple">
+<dt>Author:</dt><dd><p>Michael Wagener, FZJ / ZEA-2, <a class="reference external" href="mailto:m&#46;wagener&#37;&#52;&#48;fz-juelich&#46;de">m<span>&#46;</span>wagener<span>&#64;</span>fz-juelich<span>&#46;</span>de</a></p>
+</dd>
+</dl>
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisa">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Attocube.ANC300sim.</code><code class="sig-name descname">MockVisa</code><span class="sig-paren">(</span><em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300sim.html#MockVisa"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisa" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.12.0rc1+2.gbf756c8ad)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisa.set_address">
+<code class="sig-name descname">set_address</code><span class="sig-paren">(</span><em class="sig-param">address</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300sim.html#MockVisa.set_address"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisa.set_address" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set the address for this instrument.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>address</strong> – The visa resource name to use to connect. The address
+should be the actual address and just that. If you wish to
+change the backend for VISA, use the self.visalib attribute
+(and then call this function).</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Attocube.ANC300sim.</code><code class="sig-name descname">MockVisaHandle</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300sim.html#MockVisaHandle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
+<p>Simulate the API needed for the communication.</p>
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.ask">
+<code class="sig-name descname">ask</code><span class="sig-paren">(</span><em class="sig-param">cmd</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300sim.html#MockVisaHandle.ask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.ask" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.clear">
+<code class="sig-name descname">clear</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300sim.html#MockVisaHandle.clear"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.clear" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300sim.html#MockVisaHandle.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.close" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.cmddef">
+<code class="sig-name descname">cmddef</code><em class="property"> = {'geta 1': ['voltage = 0.000000 V'], 'geta 2': ['voltage = 0.000000 V'], 'geta 3': ['Wrong axis type', 'ERROR'], 'geta 4': ['Wrong axis type', 'ERROR'], 'geta 5': ['Wrong axis type', 'ERROR'], 'geta 6': ['Wrong axis type', 'ERROR'], 'geta 7': ['Wrong axis type', 'ERROR'], 'getaci 1': ['acin = off'], 'getaci 2': ['acin = off'], 'getaci 3': ['Wrong axis type', 'ERROR'], 'getaci 4': ['Wrong axis type', 'ERROR'], 'getaci 5': ['Wrong axis type', 'ERROR'], 'getaci 6': ['Wrong axis type', 'ERROR'], 'getaci 7': ['Wrong axis type', 'ERROR'], 'getc 1': ['cap = 5 nF'], 'getc 2': ['cap = 5 nF'], 'getc 3': ['Wrong axis type', 'ERROR'], 'getc 4': ['Wrong axis type', 'ERROR'], 'getc 5': ['Wrong axis type', 'ERROR'], 'getc 6': ['Wrong axis type', 'ERROR'], 'getc 7': ['Wrong axis type', 'ERROR'], 'getcser': ['ANC300B-C-1514-3006076'], 'getdci 1': ['dcin = off'], 'getdci 2': ['dcin = off'], 'getdci 3': ['Wrong axis type', 'ERROR'], 'getdci 4': ['Wrong axis type', 'ERROR'], 'getdci 5': ['Wrong axis type', 'ERROR'], 'getdci 6': ['Wrong axis type', 'ERROR'], 'getdci 7': ['Wrong axis type', 'ERROR'], 'getf 1': ['frequency = 210 Hz'], 'getf 2': ['frequency = 210 Hz'], 'getf 3': ['Wrong axis type', 'ERROR'], 'getf 4': ['Wrong axis type', 'ERROR'], 'getf 5': ['Wrong axis type', 'ERROR'], 'getf 6': ['Wrong axis type', 'ERROR'], 'getf 7': ['Wrong axis type', 'ERROR'], 'getm 1': ['mode = gnd'], 'getm 2': ['mode = gnd'], 'getm 3': ['Wrong axis type', 'ERROR'], 'getm 4': ['Wrong axis type', 'ERROR'], 'getm 5': ['Wrong axis type', 'ERROR'], 'getm 6': ['Wrong axis type', 'ERROR'], 'getm 7': ['Wrong axis type', 'ERROR'], 'getser 1': ['ANM150A-M-1545-3010045'], 'getser 2': ['ANM150A-M-1545-3010041'], 'getser 3': ['Wrong axis type', 'ERROR'], 'getser 4': ['Wrong axis type', 'ERROR'], 'getser 5': ['Wrong axis type', 'ERROR'], 'getser 6': ['Wrong axis type', 'ERROR'], 'getser 7': ['Wrong axis type', 'ERROR'], 'gettd 1': ['trigger = 1'], 'gettd 2': ['trigger = 3'], 'gettd 3': ['Wrong axis type', 'ERROR'], 'gettd 4': ['Wrong axis type', 'ERROR'], 'gettd 5': ['Wrong axis type', 'ERROR'], 'gettd 6': ['Wrong axis type', 'ERROR'], 'gettd 7': ['Wrong axis type', 'ERROR'], 'gettu 1': ['trigger = off'], 'gettu 2': ['trigger = 2'], 'gettu 3': ['Wrong axis type', 'ERROR'], 'gettu 4': ['Wrong axis type', 'ERROR'], 'gettu 5': ['Wrong axis type', 'ERROR'], 'gettu 6': ['Wrong axis type', 'ERROR'], 'gettu 7': ['Wrong axis type', 'ERROR'], 'getv 1': ['voltage = 20.000000 V'], 'getv 2': ['voltage = 20.000000 V'], 'getv 3': ['Wrong axis type', 'ERROR'], 'getv 4': ['Wrong axis type', 'ERROR'], 'getv 5': ['Wrong axis type', 'ERROR'], 'getv 6': ['Wrong axis type', 'ERROR'], 'getv 7': ['Wrong axis type', 'ERROR'], 'stepd 1': ['0'], 'stepd 2': ['0'], 'stepu 1': ['0'], 'stepu 2': ['0'], 'ver': ['attocube ANC300 controller version 1.1.0-1304 2013-10-17 08:16', 'ANC150 compatibillity console']}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.cmddef" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.query">
+<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">cmd</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300sim.html#MockVisaHandle.query"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.query" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.read">
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300sim.html#MockVisaHandle.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Reads data from device or interface synchronously.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.write">
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param">data</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Attocube/ANC300sim.html#MockVisaHandle.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Attocube.ANC300sim.MockVisaHandle.write" title="Permalink to this definition">¶</a></dt>
+<dd><p>Writes data to device or interface synchronously.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Attocube">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Attocube" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qcodes_contrib_drivers.drivers.Aviosys.html" class="btn btn-neutral float-right" title="qcodes_contrib_drivers.drivers.Aviosys package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qcodes_contrib_drivers.drivers.Andor.html" class="btn btn-neutral float-left" title="qcodes_contrib_drivers.drivers.Andor package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, QCoDeS Users
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
