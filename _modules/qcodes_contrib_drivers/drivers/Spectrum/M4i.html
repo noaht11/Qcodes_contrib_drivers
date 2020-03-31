@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Spectrum.M4i &mdash; qcodes_contrib_drivers 0.4.0+59.g6bbaefb documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Spectrum.M4i &mdash; qcodes_contrib_drivers 0.4.0+85.g1022f87 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.4.0+59.g6bbaefb
+                0.4.0+85.g1022f87
               </div>
             
           
@@ -497,7 +497,7 @@
                                <span class="n">docstring</span><span class="o">=</span><span class="s1">&#39;if 1 sets termination to 50 Ohm, otherwise 1 MOhm for channel </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">))</span>
 
             <span class="c1"># input coupling</span>
-            <span class="n">ACDC_coupling_docstring</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;if 1 sets the AC coupling, otherwise sets the DC coupling for channel </span><span class="si">{i}</span><span class="s1">&#39;</span>
+            <span class="n">ACDC_coupling_docstring</span> <span class="o">=</span> <span class="sa">f</span><span class="s1">&#39;if 1 sets the AC coupling, otherwise sets the DC coupling for channel </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span>
             <span class="n">ACDC_coupling_docstring</span> <span class="o">+=</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">The AC coupling only works if the card is in HF mode.&#39;</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;ACDC_coupling_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
                                <span class="n">label</span><span class="o">=</span><span class="s1">&#39;ACDC coupling </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
@@ -514,7 +514,7 @@
                                <span class="n">get_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_get_compensation</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span>
                                <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_set_compensation</span><span class="p">,</span> <span class="n">i</span><span class="p">),</span>
                                <span class="n">vals</span><span class="o">=</span><span class="n">Enum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="n">M4i</span><span class="o">.</span><span class="n">_NO_HF_MODE</span><span class="p">),</span>
-                               <span class="n">docstring</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;if 1 enables compensation, if 0 disables compensation for channel </span><span class="si">{i}</span><span class="s1">. Value </span><span class="si">{M4i._NO_HF_MODE}</span><span class="s1"> means the card is not in HF mode&#39;</span><span class="p">)</span>
+                               <span class="n">docstring</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;if 1 enables compensation, if 0 disables compensation for channel </span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">. Value </span><span class="si">{</span><span class="n">M4i</span><span class="o">.</span><span class="n">_NO_HF_MODE</span><span class="si">}</span><span class="s1"> means the card is not in HF mode&#39;</span><span class="p">)</span>
 
             <span class="c1"># anti aliasing filter (Bandwidth limit)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;anti_aliasing_filter_</span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>

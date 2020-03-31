@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645 &mdash; qcodes_contrib_drivers 0.4.0+59.g6bbaefb documentation</title>
+  <title>qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645 &mdash; qcodes_contrib_drivers 0.4.0+85.g1022f87 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.4.0+59.g6bbaefb
+                0.4.0+85.g1022f87
               </div>
             
           
@@ -208,11 +208,11 @@
         <span class="k">for</span> <span class="n">channel</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">PRESCALE_MAPPING</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="k">if</span> <span class="n">idx</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s1">&#39;phase_</span><span class="si">{channel}</span><span class="s1">&#39;</span><span class="p">,</span>
-                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{channel}</span><span class="s1"> prescale phase factor </span><span class="si">{k}</span><span class="s1">&#39;</span><span class="p">,</span>
-                    <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;PHAS?</span><span class="si">{idx}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;phase_</span><span class="si">{</span><span class="n">channel</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">channel</span><span class="si">}</span><span class="s1"> prescale phase factor </span><span class="si">{</span><span class="n">k</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;PHAS?</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
                     <span class="n">get_parser</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
-                    <span class="n">set_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;PHAS </span><span class="si">{idx}</span><span class="s1">,{{}}&#39;</span><span class="p">,</span>
+                    <span class="n">set_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;PHAS </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">,</span><span class="se">{{}}</span><span class="s1">&#39;</span><span class="p">,</span>
                     <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
                     <span class="n">docstring</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
 <span class="s2">                    The prescale phase factor determines the phase at which the associated output is</span>
@@ -222,11 +222,11 @@
                 <span class="p">)</span>
 
             <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s1">&#39;prescale_</span><span class="si">{channel}</span><span class="s1">&#39;</span><span class="p">,</span>
-                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{channel}</span><span class="s1"> prescale factor&#39;</span><span class="p">,</span>
-                <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;PRES?</span><span class="si">{idx}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;prescale_</span><span class="si">{</span><span class="n">channel</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">channel</span><span class="si">}</span><span class="s1"> prescale factor&#39;</span><span class="p">,</span>
+                <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;PRES?</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
                 <span class="n">get_parser</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
-                <span class="n">set_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;PRES </span><span class="si">{idx}</span><span class="s1">,{{}}&#39;</span><span class="p">,</span>
+                <span class="n">set_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;PRES </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">,</span><span class="se">{{}}</span><span class="s1">&#39;</span><span class="p">,</span>
                 <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Ints</span><span class="p">(</span><span class="n">min_value</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span>
                 <span class="n">docstring</span><span class="o">=</span><span class="s2">&quot;&quot;&quot;</span><span class="se">\</span>
 <span class="s2">                A prescaler on the trigger input enables one to generate</span>
@@ -302,10 +302,10 @@
         <span class="k">for</span> <span class="n">ch</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL_MAPPING</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="k">if</span> <span class="n">idx</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">:</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s1">&#39;delay_</span><span class="si">{ch}</span><span class="s1">&#39;</span><span class="p">,</span>
-                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{ch}</span><span class="s1"> delay&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;delay_</span><span class="si">{</span><span class="n">ch</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;</span><span class="si">{</span><span class="n">ch</span><span class="si">}</span><span class="s1"> delay&#39;</span><span class="p">,</span>
                     <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span>
-                    <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;DLAY?</span><span class="si">{idx}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;DLAY?</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
                     <span class="n">get_parser</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
                     <span class="n">set_cmd</span><span class="o">=</span><span class="k">lambda</span> <span class="n">src_delay</span><span class="p">,</span> <span class="n">channel</span><span class="o">=</span><span class="n">ch</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_delay</span><span class="p">(</span><span class="n">src_delay</span><span class="p">,</span> <span class="n">channel</span><span class="p">),</span>
                     <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Strings</span><span class="p">(),</span>
@@ -318,9 +318,9 @@
 <span class="s2">                    &quot;&quot;&quot;</span>
                 <span class="p">)</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span>
-                    <span class="sa">f</span><span class="s1">&#39;channel_link_</span><span class="si">{ch}</span><span class="s1">&#39;</span><span class="p">,</span>
-                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Channel linked to </span><span class="si">{ch}</span><span class="s1">&#39;</span><span class="p">,</span>
-                    <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LINK?</span><span class="si">{idx}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="sa">f</span><span class="s1">&#39;channel_link_</span><span class="si">{</span><span class="n">ch</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Channel linked to </span><span class="si">{</span><span class="n">ch</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                    <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LINK?</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
                     <span class="n">get_parser</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
                     <span class="n">set_cmd</span><span class="o">=</span><span class="k">lambda</span> <span class="n">target</span><span class="p">,</span> <span class="n">source</span><span class="o">=</span><span class="n">ch</span><span class="p">:</span> <span class="bp">self</span><span class="o">.</span><span class="n">_set_link</span><span class="p">(</span><span class="n">target</span><span class="p">,</span> <span class="n">source</span><span class="p">),</span>
                     <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Enum</span><span class="p">(</span><span class="o">*</span><span class="nb">tuple</span><span class="p">(</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">CHANNEL_MAPPING</span> <span class="k">if</span> <span class="n">k</span> <span class="o">!=</span> <span class="s1">&#39;T1&#39;</span><span class="p">))</span>
@@ -329,29 +329,29 @@
         <span class="c1"># Output parameters</span>
         <span class="k">for</span> <span class="n">out</span><span class="p">,</span> <span class="n">idx</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">OUTPUT_MAPPING</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s1">&#39;amp_out_</span><span class="si">{out}</span><span class="s1">&#39;</span><span class="p">,</span>
-                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Output </span><span class="si">{out}</span><span class="s1"> amplitude&#39;</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;amp_out_</span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Output </span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s1"> amplitude&#39;</span><span class="p">,</span>
                 <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;V&#39;</span><span class="p">,</span>
-                <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LAMP?</span><span class="si">{idx}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LAMP?</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
                 <span class="n">get_parser</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
-                <span class="n">set_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LAMP </span><span class="si">{idx}</span><span class="s1">,{{}}&#39;</span><span class="p">,</span>
+                <span class="n">set_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LAMP </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">,</span><span class="se">{{}}</span><span class="s1">&#39;</span><span class="p">,</span>
                 <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Numbers</span><span class="p">()</span>
             <span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s1">&#39;offset_out_</span><span class="si">{out}</span><span class="s1">&#39;</span><span class="p">,</span>
-                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Output </span><span class="si">{out}</span><span class="s1"> offset&#39;</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;offset_out_</span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Output </span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s1"> offset&#39;</span><span class="p">,</span>
                 <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;V&#39;</span><span class="p">,</span>
-                <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LOFF?</span><span class="si">{idx}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LOFF?</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
                 <span class="n">get_parser</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
-                <span class="n">set_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LOFF </span><span class="si">{idx}</span><span class="s1">,{{}}&#39;</span><span class="p">,</span>
+                <span class="n">set_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LOFF </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">,</span><span class="se">{{}}</span><span class="s1">&#39;</span><span class="p">,</span>
                 <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Numbers</span><span class="p">()</span>
             <span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span>
-                <span class="sa">f</span><span class="s1">&#39;polarity_out_</span><span class="si">{out}</span><span class="s1">&#39;</span><span class="p">,</span>
-                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Output </span><span class="si">{out}</span><span class="s1"> polarity&#39;</span><span class="p">,</span>
-                <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LPOL?</span><span class="si">{idx}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="sa">f</span><span class="s1">&#39;polarity_out_</span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
+                <span class="n">label</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;Output </span><span class="si">{</span><span class="n">out</span><span class="si">}</span><span class="s1"> polarity&#39;</span><span class="p">,</span>
+                <span class="n">get_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LPOL?</span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">,</span>
                 <span class="n">get_parser</span><span class="o">=</span><span class="nb">int</span><span class="p">,</span>
-                <span class="n">set_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LPOL </span><span class="si">{idx}</span><span class="s1">,{{}}&#39;</span><span class="p">,</span>
+                <span class="n">set_cmd</span><span class="o">=</span><span class="sa">f</span><span class="s1">&#39;LPOL </span><span class="si">{</span><span class="n">idx</span><span class="si">}</span><span class="s1">,</span><span class="se">{{}}</span><span class="s1">&#39;</span><span class="p">,</span>
                 <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Enum</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span>
                 <span class="n">docstring</span><span class="o">=</span><span class="s1">&#39;0 -&gt; negative polarity, 1 -&gt; positive polarity.&#39;</span>
             <span class="p">)</span>
@@ -374,7 +374,7 @@
 <div class="viewcode-block" id="DG645.reset"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.StanfordResearchSystems.html#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.reset">[docs]</a>    <span class="k">def</span> <span class="nf">reset</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Reset instrument.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Resetting </span><span class="si">{self.name}</span><span class="s1">.&#39;</span><span class="p">)</span>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Resetting </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;*RST&#39;</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="DG645.save_settings"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.StanfordResearchSystems.html#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.save_settings">[docs]</a>    <span class="k">def</span> <span class="nf">save_settings</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">location</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -383,8 +383,8 @@
 <span class="sd">        Args:</span>
 <span class="sd">            location: Location to which to save the settings (in [1..9]).</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Saving instrument settings to location </span><span class="si">{location}</span><span class="s1">.&#39;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;*SAV </span><span class="si">{location}</span><span class="s1">&#39;</span><span class="p">)</span></div>
+        <span class="n">log</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;Saving instrument settings to location </span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s1">.&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;*SAV </span><span class="si">{</span><span class="n">location</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span></div>
 
 <div class="viewcode-block" id="DG645.trigger"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.StanfordResearchSystems.html#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.trigger">[docs]</a>    <span class="k">def</span> <span class="nf">trigger</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;Initiates a single trigger if instrument is in single shot mode.</span>
@@ -407,7 +407,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;REMT&#39;</span><span class="p">)</span></div>
 
     <span class="k">def</span> <span class="nf">_set_trigger_source</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">src</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>  
-        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;TSRC </span><span class="si">{self.TRIGGER_MAPPING[src]}</span><span class="s1">&#39;</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;TSRC </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">TRIGGER_MAPPING</span><span class="p">[</span><span class="n">src</span><span class="p">]</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
 
     <span class="k">def</span> <span class="nf">_get_trigger_source</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ask</span><span class="p">(</span><span class="s1">&#39;TSRC?&#39;</span><span class="p">)</span>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S &mdash; qcodes_contrib_drivers 0.4.0+59.g6bbaefb documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Aviosys.IP_Power_9258S &mdash; qcodes_contrib_drivers 0.4.0+85.g1022f87 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.4.0+59.g6bbaefb
+                0.4.0+85.g1022f87
               </div>
             
           
@@ -197,7 +197,7 @@
 
     <span class="c1"># set methods</span>
     <span class="k">def</span> <span class="nf">_set_power_enabled</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">power</span><span class="p">):</span>
-        <span class="n">request</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{self.parent.address}</span><span class="s2">/set.cmd?cmd=setpower+p6</span><span class="si">{self._id_number}</span><span class="s2">=</span><span class="si">{power}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="n">request</span> <span class="o">=</span> <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">Request</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">parent</span><span class="o">.</span><span class="n">address</span><span class="si">}</span><span class="s2">/set.cmd?cmd=setpower+p6</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_id_number</span><span class="si">}</span><span class="s2">=</span><span class="si">{</span><span class="n">power</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="n">urllib</span><span class="o">.</span><span class="n">request</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span><span class="n">request</span><span class="p">)</span></div>
 
 

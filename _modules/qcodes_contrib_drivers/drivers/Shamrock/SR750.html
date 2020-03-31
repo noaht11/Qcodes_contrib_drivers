@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Shamrock.SR750 &mdash; qcodes_contrib_drivers 0.4.0+59.g6bbaefb documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Shamrock.SR750 &mdash; qcodes_contrib_drivers 0.4.0+85.g1022f87 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.4.0+59.g6bbaefb
+                0.4.0+85.g1022f87
               </div>
             
           
@@ -212,13 +212,13 @@
 <div class="viewcode-block" id="ShamrockCIF.error_check"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Shamrock.html#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.error_check">[docs]</a>    <span class="k">def</span> <span class="nf">error_check</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">code</span><span class="p">,</span> <span class="n">function_name</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">):</span>
         <span class="k">if</span> <span class="n">code</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_success_codes</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
             <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span><span class="p">:</span>
-                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ShamrockCIF: [</span><span class="si">{function_name}</span><span class="s2">]: </span><span class="si">{self._success_codes[code]}</span><span class="s2">&quot;</span><span class="p">)</span>
+                <span class="n">logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;ShamrockCIF: [</span><span class="si">{</span><span class="n">function_name</span><span class="si">}</span><span class="s2">]: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_success_codes</span><span class="p">[</span><span class="n">code</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
         <span class="k">elif</span> <span class="n">code</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">_error_codes</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
-            <span class="n">error_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;ShamrockCIF: [</span><span class="si">{function_name}</span><span class="s2">]: </span><span class="si">{self._error_codes[code]}</span><span class="s2">&quot;</span>
+            <span class="n">error_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;ShamrockCIF: [</span><span class="si">{</span><span class="n">function_name</span><span class="si">}</span><span class="s2">]: </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">_error_codes</span><span class="p">[</span><span class="n">code</span><span class="p">]</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">error_string</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">error_string</span><span class="p">)</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="n">error_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;ShamrockCIF: [</span><span class="si">{function_name}</span><span class="s2">]: Unknown code: </span><span class="si">{code}</span><span class="s2">&quot;</span>
+            <span class="n">error_string</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;ShamrockCIF: [</span><span class="si">{</span><span class="n">function_name</span><span class="si">}</span><span class="s2">]: Unknown code: </span><span class="si">{</span><span class="n">code</span><span class="si">}</span><span class="s2">&quot;</span>
             <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">error_string</span><span class="p">)</span>
             <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="n">error_string</span><span class="p">)</span></div>
 

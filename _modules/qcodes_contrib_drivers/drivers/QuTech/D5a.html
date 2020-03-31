@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.QuTech.D5a &mdash; qcodes_contrib_drivers 0.4.0+59.g6bbaefb documentation</title>
+  <title>qcodes_contrib_drivers.drivers.QuTech.D5a &mdash; qcodes_contrib_drivers 0.4.0+85.g1022f87 documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.4.0+59.g6bbaefb
+                0.4.0+85.g1022f87
               </div>
             
           
@@ -257,8 +257,8 @@
         <span class="n">allowed_values</span><span class="o">.</span><span class="n">validate</span><span class="p">(</span><span class="n">unit</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_gain</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;V&#39;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span> <span class="s1">&#39;mV&#39;</span><span class="p">:</span> <span class="mf">1e3</span><span class="p">}[</span><span class="n">unit</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_number_dacs</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
-            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dac</span><span class="si">{i}</span><span class="s1">&#39;</span><span class="p">],</span> <span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span>
-            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dac</span><span class="si">{i}</span><span class="s1">&#39;</span><span class="p">],</span> <span class="s1">&#39;vals&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_validator</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span></div>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dac</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">],</span> <span class="s1">&#39;unit&#39;</span><span class="p">,</span> <span class="n">unit</span><span class="p">)</span>
+            <span class="nb">setattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parameters</span><span class="p">[</span><span class="sa">f</span><span class="s1">&#39;dac</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">],</span> <span class="s1">&#39;vals&#39;</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_get_validator</span><span class="p">(</span><span class="n">i</span> <span class="o">-</span> <span class="mi">1</span><span class="p">))</span></div>
 
     <span class="k">def</span> <span class="nf">_set_dacs_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_number_dacs</span><span class="p">):</span>
