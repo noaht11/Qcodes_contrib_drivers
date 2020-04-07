@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Keysight package &mdash; qcodes_contrib_drivers 0.4.0+85.g1022f87 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Keysight package &mdash; qcodes_contrib_drivers 0.5.0 documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.4.0+85.g1022f87
+                0.5.0
               </div>
             
           
@@ -102,6 +102,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.Keysight package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#subpackages">Subpackages</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A">qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D">qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_M3201A">qcodes_contrib_drivers.drivers.Keysight.Keysight_M3201A module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_M3300A">qcodes_contrib_drivers.drivers.Keysight.Keysight_M3300A module</a></li>
@@ -234,6 +235,41 @@
 </div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A">
+<span id="qcodes-contrib-drivers-drivers-keysight-keysight-e36313a-module"></span><h2>qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313A">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.</code><code class="sig-name descname">E36313A</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">address</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/Keysight_E36313A.html#E36313A"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<p>This is the qcodes driver for the Keysight E36313A programmable DC power supply</p>
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313A.get_idn">
+<code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/Keysight_E36313A.html#E36313A.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313A.get_idn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a standard VISA <code class="docutils literal notranslate"><span class="pre">*IDN?</span></code> response into an ID dict.</p>
+<p>Even though this is the VISA standard, it applies to various other
+types as well, such as IPInstruments, so it is included here in the
+Instrument base class.</p>
+<p>Override this if your instrument does not support <code class="docutils literal notranslate"><span class="pre">*IDN?</span></code> or
+returns a nonstandard IDN string. This string is supposed to be a
+comma-separated list of vendor, model, serial, and firmware, but
+semicolon and colon are also common separators so we accept them here
+as well.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dict containing vendor, model, serial, and firmware.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313AChannel">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.</code><code class="sig-name descname">E36313AChannel</code><span class="sig-paren">(</span><em class="sig-param">parent: qcodes.instrument.base.Instrument</em>, <em class="sig-param">name: str</em>, <em class="sig-param">chan: int</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/Keysight_E36313A.html#E36313AChannel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313AChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
+</dd></dl>
+
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D">
 <span id="qcodes-contrib-drivers-drivers-keysight-keysight-e8267d-module"></span><h2>qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D" title="Permalink to this headline">¶</a></h2>
