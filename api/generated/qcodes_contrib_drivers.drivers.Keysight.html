@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Keysight package &mdash; qcodes_contrib_drivers 0.5.0 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Keysight package &mdash; qcodes_contrib_drivers 0.5.0+12.ge5d59fe documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.5.0
+                0.5.0+12.ge5d59fe
               </div>
             
           
@@ -104,6 +104,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A">qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D">qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211">qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_M3201A">qcodes_contrib_drivers.drivers.Keysight.Keysight_M3201A module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_M3300A">qcodes_contrib_drivers.drivers.Keysight.Keysight_M3300A module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight">Module contents</a></li>
@@ -312,6 +313,27 @@ only the ones most commonly used.</p>
 <dt id="qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D.parse_on_off">
 <code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D.</code><code class="sig-name descname">parse_on_off</code><span class="sig-paren">(</span><em class="sig-param">stat</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/Keysight_E8267D.html#parse_on_off"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D.parse_on_off" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211">
+<span id="qcodes-contrib-drivers-drivers-keysight-keysight-j7211-module"></span><h2>qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211.Keysight_J7211">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211.</code><code class="sig-name descname">Keysight_J7211</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">address: str</em>, <em class="sig-param">attenuation: Optional[int] = None</em>, <em class="sig-param">terminator='r'</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/Keysight_J7211.html#Keysight_J7211"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211.Keysight_J7211" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<p>Qcodes driver for the Keysight J7211 Attenuation Control Unit.
+Tested with J7211B.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Instrument name</p></li>
+<li><p><strong>address</strong> – Address or VISA alias of instrument</p></li>
+<li><p><strong>attenuation</strong> – Optional attenuation level (in dB) to set on startup</p></li>
+<li><p><strong>terminator</strong> – Termination character in VISA communication.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.Keysight.Keysight_M3201A">
