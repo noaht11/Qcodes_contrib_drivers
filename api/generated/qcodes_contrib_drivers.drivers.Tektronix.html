@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Tektronix package &mdash; qcodes_contrib_drivers 0.5.0+40.g707bb46 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Tektronix package &mdash; qcodes_contrib_drivers 0.5.0+59.g8eb3401 documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.5.0+40.g707bb46
+                0.5.0+59.g8eb3401
               </div>
             
           
@@ -114,6 +114,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Tektronix.AFG3000">qcodes_contrib_drivers.drivers.Tektronix.AFG3000 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Tektronix.AWG520">qcodes_contrib_drivers.drivers.Tektronix.AWG520 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Tektronix.Keithley_2700">qcodes_contrib_drivers.drivers.Tektronix.Keithley_2700 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430">qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Tektronix">Module contents</a></li>
 </ul>
 </li>
@@ -625,6 +626,52 @@ Averaging=off</p>
 <dt id="qcodes_contrib_drivers.drivers.Tektronix.Keithley_2700.parsestr">
 <code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Tektronix.Keithley_2700.</code><code class="sig-name descname">parsestr</code><span class="sig-paren">(</span><em class="sig-param">v</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/Keithley_2700.html#parsestr"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.Keithley_2700.parsestr" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430">
+<span id="qcodes-contrib-drivers-drivers-tektronix-keithley-6430-module"></span><h2>qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.Keithley_6430">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.</code><code class="sig-name descname">Keithley_6430</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">address: str</em>, <em class="sig-param">terminator='n'</em>, <em class="sig-param">reset: bool = False</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/Keithley_6430.html#Keithley_6430"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.Keithley_6430" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<p>This is the Qcodes driver for the Keithley 6430 SMU.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – The name used internally by QCoDeS</p></li>
+<li><p><strong>address</strong> – Network address or alias of the instrument</p></li>
+<li><p><strong>terminator</strong> – Termination character in VISA communication</p></li>
+<li><p><strong>reset</strong> – resets to default values</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.Keithley_6430.init">
+<code class="sig-name descname">init</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/Keithley_6430.html#Keithley_6430.init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.Keithley_6430.init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Go into the arm/trigger layers from the idle mode.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.Keithley_6430.read">
+<code class="sig-name descname">read</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Tuple[float, float, float]<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/Keithley_6430.html#Keithley_6430.read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.Keithley_6430.read" title="Permalink to this definition">¶</a></dt>
+<dd><p>Arm, trigger, and readout. Note that the values may not be valid if
+sense mode doesn’t include them.
+:returns: tuple of (voltage (V), current (A), resistance (Ohm))</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.Keithley_6430.reset">
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/Keithley_6430.html#Keithley_6430.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.Keithley_6430.reset" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resets instrument to default values</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.Keithley_6430.set_trigger_immediate">
+<code class="sig-name descname">set_trigger_immediate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Tektronix/Keithley_6430.html#Keithley_6430.set_trigger_immediate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Tektronix.Keithley_6430.Keithley_6430.set_trigger_immediate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Set trigger and arm modes to immediate.</p>
+</dd></dl>
+
+</dd></dl>
 
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.Tektronix">
