@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Qcodes example with Lakeshore 311 &mdash; qcodes_contrib_drivers 0.5.0+87.gad21255 documentation</title>
+  <title>Qcodes example for National Instruments PXIe-2597 RF Switch &mdash; qcodes_contrib_drivers 0.5.0+87.gad21255 documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="National Instruments Multifunction DAQ example" href="NationalInstruments_DAQ.html" />
-    <link rel="prev" title="Example notebook for Keithley 6430 SMU" href="Keithley_6430.html" /> 
+    <link rel="next" title="Qcodes example with the NI RFSG signal generator driver" href="NationalInstruments_RFSG.html" />
+    <link rel="prev" title="National Instruments Multifunction DAQ example" href="NationalInstruments_DAQ.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -97,15 +97,14 @@
 <li class="toctree-l2"><a class="reference internal" href="Gentec_Maestro.html">QCoDeS Example with Gentec Maestro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Keithley_6430.html">Example notebook for Keithley 6430 SMU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Keithley_6430.html#Measure-resistance-of-a-~100k\Omega-resistor">Measure resistance of a ~100k<span class="math notranslate nohighlight">\(\Omega\)</span> resistor</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Qcodes example with Lakeshore 311</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Initialize-instrument">Initialize instrument</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Read-temperatures">Read temperatures</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Heater-configuration">Heater configuration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Close-the-instrument">Close the instrument</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Lakeshore_311.html">Qcodes example with Lakeshore 311</a></li>
+<li class="toctree-l2"><a class="reference internal" href="NationalInstruments_DAQ.html">National Instruments Multifunction DAQ example</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Qcodes example for National Instruments PXIe-2597 RF Switch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Connect-different-channels-on-the-switch">Connect different channels on the switch</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Aliasing-channel-names">Aliasing channel names</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Print-a-snapshot">Print a snapshot</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="NationalInstruments_DAQ.html">National Instruments Multifunction DAQ example</a></li>
-<li class="toctree-l2"><a class="reference internal" href="NationalInstruments_PXIe_2597.html">Qcodes example for National Instruments PXIe-2597 RF Switch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="NationalInstruments_RFSG.html">Qcodes example with the NI RFSG signal generator driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Newport_AG-UC8.html">QCoDeS Example with Newport AG-UC8 Piezo Motion Controller</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Rohde_Schwarx_HMC8043.html">QCoDeS Example with R&amp;S HMC 8043 Power Supply</a></li>
@@ -167,13 +166,13 @@
         
           <li><a href="index.html">Examples of how to use drivers</a> &raquo;</li>
         
-      <li>Qcodes example with Lakeshore 311</li>
+      <li>Qcodes example for National Instruments PXIe-2597 RF Switch</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/examples/Lakeshore_311.ipynb.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/examples/NationalInstruments_PXIe_2597.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -428,26 +427,27 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Qcodes-example-with-Lakeshore-311">
-<h1>Qcodes example with Lakeshore 311<a class="headerlink" href="#Qcodes-example-with-Lakeshore-311" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Qcodes-example-for-National-Instruments-PXIe-2597-RF-Switch">
+<h1>Qcodes example for National Instruments PXIe-2597 RF Switch<a class="headerlink" href="#Qcodes-example-for-National-Instruments-PXIe-2597-RF-Switch" title="Permalink to this headline">¶</a></h1>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">qcodes.instrument_drivers.Lakeshore.Model_331</span> <span class="kn">import</span> <span class="n">Model_331</span>
+<span></span><span class="kn">from</span> <span class="nn">qcodes_contrib_drivers.drivers.NationalInstruments.PXIe_2597</span> <span class="kn">import</span> <span class="n">NI_PXIe_2597</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="Initialize-instrument">
-<h2>Initialize instrument<a class="headerlink" href="#Initialize-instrument" title="Permalink to this headline">¶</a></h2>
-<p>We connect to the instrument using its GPIB address.</p>
+<p>The PXIe-2597 has a multiplexer configuration. It connects the common <code class="docutils literal notranslate"><span class="pre">com</span></code> port to one of 6 ports. Default channel names are <code class="docutils literal notranslate"><span class="pre">&quot;ch#&quot;</span></code>. We connect to the device using the VISA alias <code class="docutils literal notranslate"><span class="pre">RF_switch</span></code> assigned in NI MAX.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">lakeshore</span> <span class="o">=</span> <span class="n">Model_331</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Lakeshore&quot;</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="s1">&#39;GPIB0::12::INSTR&#39;</span><span class="p">)</span>
+<span></span><span class="n">dev</span> <span class="o">=</span> <span class="n">NI_PXIe_2597</span><span class="p">(</span><span class="s2">&quot;Switch&quot;</span><span class="p">,</span> <span class="n">resource</span><span class="o">=</span><span class="s2">&quot;RF_switch&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;All channels:&#39;</span><span class="p">,</span> <span class="p">[</span><span class="n">ch</span><span class="o">.</span><span class="n">short_name</span> <span class="k">for</span> <span class="n">ch</span> <span class="ow">in</span> <span class="n">dev</span><span class="o">.</span><span class="n">channels</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Initially connected to:&#39;</span><span class="p">,</span>  <span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -456,20 +456,32 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Connected to: LSCI 331S (serial:331259, firmware:032301) in 0.13s
+Connected to: National Instruments PXI-2597 (serial:1DBFD38, firmware:Not Available) in 6.85s
+All channels: [&#39;ch1&#39;, &#39;ch2&#39;, &#39;ch3&#39;, &#39;ch4&#39;, &#39;ch5&#39;, &#39;ch6&#39;, &#39;com&#39;]
+Initially connected to: ch3
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Read-temperatures">
-<h2>Read temperatures<a class="headerlink" href="#Read-temperatures" title="Permalink to this headline">¶</a></h2>
-<p>We read the temperatures for both channels.</p>
+<div class="section" id="Connect-different-channels-on-the-switch">
+<h2>Connect different channels on the switch<a class="headerlink" href="#Connect-different-channels-on-the-switch" title="Permalink to this headline">¶</a></h2>
+<p>The main way of connecting channels is the <code class="docutils literal notranslate"><span class="pre">channel</span></code> parameter.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">lakeshore</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">A</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lakeshore</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">B</span><span class="o">.</span><span class="n">temperature</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+<span></span><span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="s2">&quot;ch3&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Now connected to:&#39;</span><span class="p">,</span> <span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">())</span>
+
+<span class="c1"># disconnect by setting to None</span>
+<span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="kc">None</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Now connected to:&#39;</span><span class="p">,</span> <span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">())</span>
+
+<span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="s2">&quot;ch1&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Now connected to:&#39;</span><span class="p">,</span> <span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">())</span>
+
+<span class="c1"># or by using disconnect_all</span>
+<span class="n">dev</span><span class="o">.</span><span class="n">disconnect_all</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Now connected to:&#39;</span><span class="p">,</span> <span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -478,23 +490,20 @@ Connected to: LSCI 331S (serial:331259, firmware:032301) in 0.13s
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-temperature A :  294.63 K
-temperature B :  284.32 K
+Now connected to: ch3
+Now connected to: None
+Now connected to: ch1
+Now connected to: None
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Heater-configuration">
-<h2>Heater configuration<a class="headerlink" href="#Heater-configuration" title="Permalink to this headline">¶</a></h2>
-<p>We read the heater output, heater range, heater input channel and heater setpoint.</p>
+<p>Channels may be also connected using their <code class="docutils literal notranslate"><span class="pre">connect_to</span></code> method, although it doesn’t make much sense for the PXI-2597, which can have one connection at a time anyway.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_output</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_output</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_output</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_range</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_range</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_range</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lakeshore</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lakeshore</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+<span></span><span class="n">dev</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">connect_to</span><span class="p">(</span><span class="n">dev</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">com</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Connected to:&quot;</span><span class="p">,</span> <span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -503,32 +512,60 @@ temperature B :  284.32 K
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-heater output :  0.0 %
-heater range :  off
-input :  A
-setpoint :  290.0 K
+Connected to: ch1
 </pre></div></div>
 </div>
-<p>Now let’s turn on the heater and read the status again.</p>
-<div class="nbinput nblast docutils container">
+<p>You can check which channels are connected to which using the <code class="docutils literal notranslate"><span class="pre">connections</span></code> parameter of a channel. Disconnected channels return an empty list.</p>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">lakeshore</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">300</span><span class="p">)</span>
-<span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_range</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;5W&#39;</span><span class="p">)</span>
+<span></span><span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="s2">&quot;ch1&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ch1 is connected to&quot;</span><span class="p">,</span> <span class="n">dev</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">ch1</span><span class="o">.</span><span class="n">connections</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;com is connected to&quot;</span><span class="p">,</span> <span class="n">dev</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">com</span><span class="o">.</span><span class="n">connections</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;ch2 is connected to&quot;</span><span class="p">,</span> <span class="n">dev</span><span class="o">.</span><span class="n">channels</span><span class="o">.</span><span class="n">ch2</span><span class="o">.</span><span class="n">connections</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+ch1 is connected to [&#39;com&#39;]
+com is connected to [&#39;ch1&#39;]
+ch2 is connected to []
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Aliasing-channel-names">
+<h2>Aliasing channel names<a class="headerlink" href="#Aliasing-channel-names" title="Permalink to this headline">¶</a></h2>
+<p>You may also provide a dict of aliases for more memorable channel names. This can be also set up in the station YAML file. Note that if you want to use the channel as a setpoint in a measurement, it should be a valid Python identifier (unlike in the example below). The <code class="docutils literal notranslate"><span class="pre">com</span></code> port cannot be aliased.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_output</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_output</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_output</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_range</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_range</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_range</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lakeshore</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">input</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">lakeshore</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">lakeshore</span><span class="o">.</span><span class="n">setpoint</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+<span></span><span class="n">name_mapping</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;ch1&#39;</span><span class="p">:</span> <span class="s1">&#39;Main channel&#39;</span><span class="p">,</span>
+                <span class="s1">&#39;ch3&#39;</span><span class="p">:</span> <span class="s1">&#39;Qubit channel&#39;</span><span class="p">}</span>
+
+<span class="n">dev</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="n">dev</span> <span class="o">=</span> <span class="n">NI_PXIe_2597</span><span class="p">(</span><span class="s2">&quot;Switch&quot;</span><span class="p">,</span> <span class="n">resource</span><span class="o">=</span><span class="s2">&quot;RF_switch&quot;</span><span class="p">,</span>
+                   <span class="n">name_mapping</span><span class="o">=</span><span class="n">name_mapping</span><span class="p">)</span>
+
+<span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="s1">&#39;Main channel&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Now connected to:&#39;</span><span class="p">,</span> <span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">())</span>
+
+<span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="s1">&#39;Qubit channel&#39;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Now connected to:&#39;</span><span class="p">,</span> <span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">())</span>
+
+<span class="c1"># non-existent channel throws an error</span>
+<span class="k">try</span><span class="p">:</span>
+    <span class="n">dev</span><span class="o">.</span><span class="n">channel</span><span class="p">(</span><span class="s1">&#39;Undefined channel&#39;</span><span class="p">)</span>
+<span class="k">except</span> <span class="ne">ValueError</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">e</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -537,31 +574,70 @@ setpoint :  290.0 K
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-heater output :  100.0 %
-heater range :  5W
-input :  A
-setpoint :  300.0 K
+Connected to: National Instruments PXI-2597 (serial:1DBFD38, firmware:Not Available) in 2.28s
+Now connected to: Main channel
+Now connected to: Qubit channel
+(&#34;&#39;Undefined channel&#39; is not in {&#39;ch5&#39;, &#39;ch2&#39;, &#39;ch4&#39;, &#39;Qubit channel&#39;, None, &#39;ch6&#39;, &#39;Main channel&#39;}; Parameter: Switch.channel&#34;, &#39;setting Switch_channel to Undefined channel&#39;)
 </pre></div></div>
 </div>
-<p>Now turn the heater off again.</p>
-<div class="nbinput nblast docutils container">
+</div>
+<div class="section" id="Print-a-snapshot">
+<h2>Print a snapshot<a class="headerlink" href="#Print-a-snapshot" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">lakeshore</span><span class="o">.</span><span class="n">heater_range</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+<span></span><span class="n">dev</span><span class="o">.</span><span class="n">print_readable_snapshot</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
 </div>
-<div class="section" id="Close-the-instrument">
-<h2>Close the instrument<a class="headerlink" href="#Close-the-instrument" title="Permalink to this headline">¶</a></h2>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Switch:
+        parameter value
+--------------------------------------------------------------------------------
+IDN     :       {&#39;vendor&#39;: &#39;National Instruments&#39;, &#39;model&#39;: &#39;PXI-2597&#39;, &#39;serial&#39;: &#39;...
+channel :       Qubit channel
+Switch_Main channel:
+        parameter  value
+--------------------------------------------------------------------------------
+connections :   [&#39;com&#39;]
+Switch_ch2:
+        parameter  value
+--------------------------------------------------------------------------------
+connections :   []
+Switch_Qubit channel:
+        parameter  value
+--------------------------------------------------------------------------------
+connections :   []
+Switch_ch4:
+        parameter  value
+--------------------------------------------------------------------------------
+connections :   []
+Switch_ch5:
+        parameter  value
+--------------------------------------------------------------------------------
+connections :   []
+Switch_ch6:
+        parameter  value
+--------------------------------------------------------------------------------
+connections :   []
+Switch_com:
+        parameter  value
+--------------------------------------------------------------------------------
+connections :   [&#39;Main channel&#39;]
+</pre></div></div>
+</div>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">lakeshore</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span></span><span class="n">dev</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -576,10 +652,10 @@ setpoint :  300.0 K
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="NationalInstruments_DAQ.html" class="btn btn-neutral float-right" title="National Instruments Multifunction DAQ example" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="NationalInstruments_RFSG.html" class="btn btn-neutral float-right" title="Qcodes example with the NI RFSG signal generator driver" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Keithley_6430.html" class="btn btn-neutral float-left" title="Example notebook for Keithley 6430 SMU" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="NationalInstruments_DAQ.html" class="btn btn-neutral float-left" title="National Instruments Multifunction DAQ example" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
