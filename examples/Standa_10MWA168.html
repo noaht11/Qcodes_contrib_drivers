@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Qcodes example with Standa 10MWA168 &mdash; qcodes_contrib_drivers 0.5.0+87.gad21255 documentation</title>
+  <title>Qcodes example with Standa 10MWA168 &mdash; qcodes_contrib_drivers 0.5.0+94.g47880fd documentation</title>
   
 
   
@@ -38,7 +38,7 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Qcodes example with Thorlabs MFF10x" href="Thorlabs_MFF10x.html" />
+    <link rel="next" title="Qcodes example with Thorlabs K10CR1" href="Thorlabs_K10CR1.html" />
     <link rel="prev" title="Qcodes example with Shamrock SR750" href="Shamrock_SR750.html" /> 
 </head>
 
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.5.0+87.gad21255
+                0.5.0+94.g47880fd
               </div>
             
           
@@ -109,6 +109,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#Initialize-instrument">Initialize instrument</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="Thorlabs_K10CR1.html">Qcodes example with Thorlabs K10CR1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Thorlabs_MFF10x.html">Qcodes example with Thorlabs MFF10x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Thorlabs_PRM1Z8.html">Qcodes example with Thorlabs PRM1Z8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Vaunix_LDA.html">Qcodes example for Vaunix LDA step attenuator</a></li>
@@ -249,20 +250,33 @@ div.nboutput.container div.prompt pre {
 /* all prompts */
 div.nbinput.container div.prompt,
 div.nboutput.container div.prompt {
-    min-width: 5ex;
-    padding-top: 0.3rem;
-    padding-right: 0.3rem;
-    text-align: right;
-    flex: 0;
+    width: 4.5ex;
+    padding-top: 5px;
+    position: relative;
+    user-select: none;
 }
+
+div.nbinput.container div.prompt > div,
+div.nboutput.container div.prompt > div {
+    position: absolute;
+    right: 0;
+    margin-right: 0.3ex;
+}
+
 @media (max-width: 540px) {
     div.nbinput.container div.prompt,
     div.nboutput.container div.prompt {
+        width: unset;
         text-align: left;
         padding: 0.4em;
     }
     div.nboutput.container div.prompt.empty {
         padding: 0;
+    }
+
+    div.nbinput.container div.prompt > div,
+    div.nboutput.container div.prompt > div {
+        position: unset;
     }
 }
 
@@ -355,7 +369,7 @@ div.nboutput.container div.output_area div[class*=highlight].math,
 div.nboutput.container div.output_area.rendered_html,
 div.nboutput.container div.output_area > div.output_javascript,
 div.nboutput.container div.output_area:not(.rendered_html) > img{
-    padding: 0.3rem;
+    padding: 5px;
 }
 
 /* fix copybtn overflow problem in chromium (needed for 'sphinx_copybutton') */
@@ -475,7 +489,7 @@ Connected to: None Standa_10MWA168 (serial:None, firmware:None) in 0.06s
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Thorlabs_MFF10x.html" class="btn btn-neutral float-right" title="Qcodes example with Thorlabs MFF10x" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Thorlabs_K10CR1.html" class="btn btn-neutral float-right" title="Qcodes example with Thorlabs K10CR1" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Shamrock_SR750.html" class="btn btn-neutral float-left" title="Qcodes example with Shamrock SR750" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>

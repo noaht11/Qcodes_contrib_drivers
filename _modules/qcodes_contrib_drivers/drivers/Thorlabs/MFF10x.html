@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Thorlabs.MFF10x &mdash; qcodes_contrib_drivers 0.5.0+87.gad21255 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Thorlabs.MFF10x &mdash; qcodes_contrib_drivers 0.5.0+94.g47880fd documentation</title>
   
 
   
@@ -61,7 +61,7 @@
             
             
               <div class="version">
-                0.5.0+87.gad21255
+                0.5.0+94.g47880fd
               </div>
             
           
@@ -153,7 +153,7 @@
             
   <h1>Source code for qcodes_contrib_drivers.drivers.Thorlabs.MFF10x</h1><div class="highlight"><pre>
 <span></span><span class="kn">from</span> <span class="nn">qcodes</span> <span class="kn">import</span> <span class="n">Instrument</span>
-<span class="kn">from</span> <span class="nn">.APT</span> <span class="kn">import</span> <span class="n">Thorlabs_APT</span>
+<span class="kn">from</span> <span class="nn">.APT</span> <span class="kn">import</span> <span class="n">Thorlabs_APT</span><span class="p">,</span> <span class="n">ThorlabsHWType</span>
 
 
 <div class="viewcode-block" id="Thorlabs_MFF10x"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Thorlabs.html#qcodes_contrib_drivers.drivers.Thorlabs.MFF10x.Thorlabs_MFF10x">[docs]</a><span class="k">class</span> <span class="nc">Thorlabs_MFF10x</span><span class="p">(</span><span class="n">Instrument</span><span class="p">):</span>
@@ -180,7 +180,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">apt</span> <span class="o">=</span> <span class="n">apt</span>
 
         <span class="c1"># initialization</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">serial_number</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apt</span><span class="o">.</span><span class="n">get_hw_serial_num_ex</span><span class="p">(</span><span class="mi">48</span><span class="p">,</span> <span class="n">device_id</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">serial_number</span><span class="p">:</span> <span class="nb">int</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apt</span><span class="o">.</span><span class="n">get_hw_serial_num_ex</span><span class="p">(</span><span class="n">ThorlabsHWType</span><span class="o">.</span><span class="n">MFF10x</span><span class="p">,</span> <span class="n">device_id</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">apt</span><span class="o">.</span><span class="n">init_hw_device</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial_number</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">version</span><span class="p">,</span> <span class="n">_</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">apt</span><span class="o">.</span><span class="n">get_hw_info</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">serial_number</span><span class="p">)</span>
 

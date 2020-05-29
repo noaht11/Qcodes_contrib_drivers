@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Thorlabs package &mdash; qcodes_contrib_drivers 0.5.0+87.gad21255 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Thorlabs package &mdash; qcodes_contrib_drivers 0.5.0+94.g47880fd documentation</title>
   
 
   
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.5.0+87.gad21255
+                0.5.0+94.g47880fd
               </div>
             
           
@@ -113,6 +113,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.Thorlabs package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Thorlabs.APT">qcodes_contrib_drivers.drivers.Thorlabs.APT module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Thorlabs.K10CR1">qcodes_contrib_drivers.drivers.Thorlabs.K10CR1 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Thorlabs.MFF10x">qcodes_contrib_drivers.drivers.Thorlabs.MFF10x module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Thorlabs.PRM1Z8">qcodes_contrib_drivers.drivers.Thorlabs.PRM1Z8 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Thorlabs">Module contents</a></li>
@@ -221,12 +222,41 @@
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.Thorlabs.APT">
 <span id="qcodes-contrib-drivers-drivers-thorlabs-apt-module"></span><h2>qcodes_contrib_drivers.drivers.Thorlabs.APT module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Thorlabs.APT" title="Permalink to this headline">¶</a></h2>
+<dl class="exception">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsException">
+<em class="property">exception </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Thorlabs.APT.</code><code class="sig-name descname">ThorlabsException</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#ThorlabsException"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsException" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#Exception" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
+</dd></dl>
+
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsHWType">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Thorlabs.APT.</code><code class="sig-name descname">ThorlabsHWType</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#ThorlabsHWType"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsHWType" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.Enum" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>An enumeration.</p>
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsHWType.K10CR1">
+<code class="sig-name descname">K10CR1</code><em class="property"> = 50</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsHWType.K10CR1" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsHWType.MFF10x">
+<code class="sig-name descname">MFF10x</code><em class="property"> = 48</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsHWType.MFF10x" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsHWType.PRM1Z8">
+<code class="sig-name descname">PRM1Z8</code><em class="property"> = 31</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsHWType.PRM1Z8" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="class">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT">
 <em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Thorlabs.APT.</code><code class="sig-name descname">Thorlabs_APT</code><span class="sig-paren">(</span><em class="sig-param">dll_path: Optional[str] = None</em>, <em class="sig-param">verbose: bool = False</em>, <em class="sig-param">event_dialog: bool = False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Wrapper class for the APT.dll Thorlabs APT Server library.
-The class has been tested for a Thorlabs MFF10x mirror flipper and a Thorlabs PRM1Z8 Polarizer Wheel.</p>
+The class has been tested for a Thorlabs MFF10x mirror flipper, a Thorlabs PRM1Z8 Polarizer
+Wheel and a Thorlabs K10CR1 rotator.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -250,58 +280,374 @@ The class has been tested for a Thorlabs MFF10x mirror flipper and a Thorlabs PR
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.apt_clean_up">
-<code class="sig-name descname">apt_clean_up</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.apt_clean_up"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.apt_clean_up" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">apt_clean_up</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.apt_clean_up"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.apt_clean_up" title="Permalink to this definition">¶</a></dt>
+<dd><p>Cleans up the resources of APT.dll</p>
+</dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.apt_init">
-<code class="sig-name descname">apt_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.apt_init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.apt_init" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">apt_init</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.apt_init"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.apt_init" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialization of APT.dll</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.disable_hw_channel">
+<code class="sig-name descname">disable_hw_channel</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.disable_hw_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.disable_hw_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Disables the hardware channel (often the motor)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.enable_event_dlg">
-<code class="sig-name descname">enable_event_dlg</code><span class="sig-paren">(</span><em class="sig-param">enable</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.enable_event_dlg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.enable_event_dlg" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">enable_event_dlg</code><span class="sig-paren">(</span><em class="sig-param">enable: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.enable_event_dlg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.enable_event_dlg" title="Permalink to this definition">¶</a></dt>
+<dd><p>Activates/deactivates the event dialog, which appears when an error occurs.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>enable</strong> – True, to enable the event dialog. False, to disable it.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.enable_hw_channel">
+<code class="sig-name descname">enable_hw_channel</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.enable_hw_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.enable_hw_channel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Enables the hardware channel (often the motor)</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.error_check">
-<code class="sig-name descname">error_check</code><span class="sig-paren">(</span><em class="sig-param">code</em>, <em class="sig-param">function_name=''</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.error_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.error_check" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">error_check</code><span class="sig-paren">(</span><em class="sig-param">code: int</em>, <em class="sig-param">function_name: str = ''</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.error_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.error_check" title="Permalink to this definition">¶</a></dt>
+<dd><p>Analyzes a functions return code to check, if the function call to APT.dll was
+successful. If an error occurred, this function throws an ThorlabsException.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>code</strong> – The called function’s return code</p></li>
+<li><p><strong>function_name</strong> – Name of the called function</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="simple">
+<dt>Throws:</dt><dd><p>ThorlabsException: Thrown, if the return code indicates that an error has occurred.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.get_hw_info">
-<code class="sig-name descname">get_hw_info</code><span class="sig-paren">(</span><em class="sig-param">serial_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.get_hw_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.get_hw_info" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">get_hw_info</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em><span class="sig-paren">)</span> &#x2192; Tuple[str, str, str]<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.get_hw_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.get_hw_info" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the device’s information.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>device model name, firmware version, hardware notes.</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.get_hw_serial_num_ex">
-<code class="sig-name descname">get_hw_serial_num_ex</code><span class="sig-paren">(</span><em class="sig-param">hw_type</em>, <em class="sig-param">index</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.get_hw_serial_num_ex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.get_hw_serial_num_ex" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">get_hw_serial_num_ex</code><span class="sig-paren">(</span><em class="sig-param">hw_type: Union[int, qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsHWType], index: int</em><span class="sig-paren">)</span> &#x2192; int<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.get_hw_serial_num_ex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.get_hw_serial_num_ex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the a device’s serial number by passing the model’s hardware type and the
+device id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>hw_type</strong> – Hardware type (model code) to search for.</p></li>
+<li><p><strong>index</strong> – Device id</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The device’s serial number</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.init_hw_device">
-<code class="sig-name descname">init_hw_device</code><span class="sig-paren">(</span><em class="sig-param">serial_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.init_hw_device"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.init_hw_device" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">init_hw_device</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.init_hw_device"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.init_hw_device" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initializes the device</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.list_available_devices">
+<code class="sig-name descname">list_available_devices</code><span class="sig-paren">(</span><em class="sig-param">hw_type: Union[int</em>, <em class="sig-param">qcodes_contrib_drivers.drivers.Thorlabs.APT.ThorlabsHWType] = None</em><span class="sig-paren">)</span> &#x2192; List[Tuple[int, int, int]]<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.list_available_devices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.list_available_devices" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lists all available Thorlabs devices, that can connect to the APT server.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>hw_type</strong> – If this parameter is passed, the function only searches for a certain device
+model. Otherwise (if the parameter is None), it searches for all Thorlabs
+devices.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>A list of tuples. Each list-element is a tuple of 3 ints, containing the device’s
+hardware type, device id and serial number: [(hw type id, device id, serial), …]</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_home_parameters">
+<code class="sig-name descname">mot_get_home_parameters</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em><span class="sig-paren">)</span> &#x2192; Tuple[int, int, float, float]<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_get_home_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_home_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the motor’s parameters for moving home</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>direction, home limit switch, velocity (deg/s), zero offset (deg)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_position">
-<code class="sig-name descname">mot_get_position</code><span class="sig-paren">(</span><em class="sig-param">serial_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_get_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_position" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">mot_get_position</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em><span class="sig-paren">)</span> &#x2192; float<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_get_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_position" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the current motor position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Motor position in degrees (0 to 360)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_status_bits">
-<code class="sig-name descname">mot_get_status_bits</code><span class="sig-paren">(</span><em class="sig-param">serial_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_get_status_bits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_status_bits" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">mot_get_status_bits</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em><span class="sig-paren">)</span> &#x2192; int<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_get_status_bits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_status_bits" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the motor’s status bits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Status bits of the motor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_velocity_parameters">
+<code class="sig-name descname">mot_get_velocity_parameters</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em><span class="sig-paren">)</span> &#x2192; Tuple[float, float, float]<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_get_velocity_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_get_velocity_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the motor’s velocity parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>minimum velocity (deg/s), acceleration (deg/s/s), maximum velocity (deg/s)</p>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_absolute_ex">
-<code class="sig-name descname">mot_move_absolute_ex</code><span class="sig-paren">(</span><em class="sig-param">serial_number</em>, <em class="sig-param">absolute_position</em>, <em class="sig-param">wait</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_move_absolute_ex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_absolute_ex" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
+<code class="sig-name descname">mot_move_absolute_ex</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em>, <em class="sig-param">absolute_position: float</em>, <em class="sig-param">wait: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_move_absolute_ex"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_absolute_ex" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the motor to an absolute position</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p></li>
+<li><p><strong>position</strong> – The position to move the motor to in degrees (0 to 360)</p></li>
+<li><p><strong>wait</strong> – True, to block until the motor reaches the target position. False, to do this
+asynchronously.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_home">
+<code class="sig-name descname">mot_move_home</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em>, <em class="sig-param">wait: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_move_home"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_home" title="Permalink to this definition">¶</a></dt>
+<dd><p>Moves the motor to zero and recalibrates it</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p></li>
+<li><p><strong>wait</strong> – True, to block until the motor reaches the target position. False, to do this
+asynchronously.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
 
 <dl class="method">
 <dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_jog">
-<code class="sig-name descname">mot_move_jog</code><span class="sig-paren">(</span><em class="sig-param">serial_number</em>, <em class="sig-param">direction</em>, <em class="sig-param">wait</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_move_jog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_jog" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">mot_move_jog</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em>, <em class="sig-param">direction: int</em>, <em class="sig-param">wait: bool</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_move_jog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_jog" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns the motor’s status bits</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p></li>
+<li><p><strong>direction</strong> – Forward (1) or reverse (2)</p></li>
+<li><p><strong>wait</strong> – True, to block until the motor reaches the target position. False, to do this
+asynchronously.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_velocity">
+<code class="sig-name descname">mot_move_velocity</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em>, <em class="sig-param">direction: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_move_velocity"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_move_velocity" title="Permalink to this definition">¶</a></dt>
+<dd><p>Lets the motor rotate continuously in the specified direction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p></li>
+<li><p><strong>direction</strong> – Forward (1) or reverse (2)</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_set_home_parameters">
+<code class="sig-name descname">mot_set_home_parameters</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em>, <em class="sig-param">direction: int</em>, <em class="sig-param">lim_switch: int</em>, <em class="sig-param">velocity: float</em>, <em class="sig-param">zero_offset: float</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_set_home_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_set_home_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the motor’s parameters for moving home</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p></li>
+<li><p><strong>direction</strong> – Moving direction (1 for forward, 2 for reverse)</p></li>
+<li><p><strong>lim_switch</strong> – Home limit switch (1 for reverse, 4 for forward)</p></li>
+<li><p><strong>velocity</strong> – Moving velocity in degrees/s</p></li>
+<li><p><strong>zero_offset</strong> – Offset of zero position in degrees</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>minimum velocity (deg/s), acceleration (deg/s/s), maximum velocity (deg/s)</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_set_velocity_parameters">
+<code class="sig-name descname">mot_set_velocity_parameters</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em>, <em class="sig-param">min_vel: float</em>, <em class="sig-param">accn: float</em>, <em class="sig-param">max_vel: float</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_set_velocity_parameters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_set_velocity_parameters" title="Permalink to this definition">¶</a></dt>
+<dd><p>Sets the motor’s velocity parameters</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p></li>
+<li><p><strong>min_vel</strong> – Minimum veloctiy (starting velocity) in deg/s</p></li>
+<li><p><strong>accn</strong> – Acceleration in deg/s/s</p></li>
+<li><p><strong>max_vel</strong> – Maximum velocity (target velocity) in deg/s</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_stop_profiled">
+<code class="sig-name descname">mot_stop_profiled</code><span class="sig-paren">(</span><em class="sig-param">serial_number: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/APT.html#Thorlabs_APT.mot_stop_profiled"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT.mot_stop_profiled" title="Permalink to this definition">¶</a></dt>
+<dd><p>Stops the motor.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>serial_number</strong> – The device’s serial number for which this function is called.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Thorlabs.K10CR1">
+<span id="qcodes-contrib-drivers-drivers-thorlabs-k10cr1-module"></span><h2>qcodes_contrib_drivers.drivers.Thorlabs.K10CR1 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Thorlabs.K10CR1" title="Permalink to this headline">¶</a></h2>
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.HomeLimitSwitch">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.</code><code class="sig-name descname">HomeLimitSwitch</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/K10CR1.html#HomeLimitSwitch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.HomeLimitSwitch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.Enum" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>Constants for the home limit switch of Thorlabs K10CR1 rotator</p>
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.HomeLimitSwitch.FORWARD">
+<code class="sig-name descname">FORWARD</code><em class="property"> = 'fwd'</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.HomeLimitSwitch.FORWARD" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.HomeLimitSwitch.REVERSE">
+<code class="sig-name descname">REVERSE</code><em class="property"> = 'rev'</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.HomeLimitSwitch.REVERSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.RotationDirection">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.</code><code class="sig-name descname">RotationDirection</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/K10CR1.html#RotationDirection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.RotationDirection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/enum.html#enum.Enum" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></a></p>
+<p>Constants for the rotation direction of Thorlabs K10CR1 rotator</p>
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.RotationDirection.FORWARD">
+<code class="sig-name descname">FORWARD</code><em class="property"> = 'fwd'</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.RotationDirection.FORWARD" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.RotationDirection.REVERSE">
+<code class="sig-name descname">REVERSE</code><em class="property"> = 'rev'</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.RotationDirection.REVERSE" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.</code><code class="sig-name descname">Thorlabs_K10CR1</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">device_id: int</em>, <em class="sig-param">apt: qcodes_contrib_drivers.drivers.Thorlabs.APT.Thorlabs_APT</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/K10CR1.html#Thorlabs_K10CR1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
+<p>Instrument driver for the Thorlabs K10CR1 rotator.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – Instrument name.</p></li>
+<li><p><strong>device_id</strong> – ID for the desired rotator.</p></li>
+<li><p><strong>apt</strong> – Thorlabs APT server.</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1.apt">
+<code class="sig-name descname">apt</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1.apt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Thorlabs APT server.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1.serial_number">
+<code class="sig-name descname">serial_number</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1.serial_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Serial number of the device.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1.model">
+<code class="sig-name descname">model</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1.model" title="Permalink to this definition">¶</a></dt>
+<dd><p>Model description.</p>
+</dd></dl>
+
+<dl class="attribute">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1.version">
+<code class="sig-name descname">version</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1.version" title="Permalink to this definition">¶</a></dt>
+<dd><p>Firmware version.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1.get_idn">
+<code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Thorlabs/K10CR1.html#Thorlabs_K10CR1.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Thorlabs.K10CR1.Thorlabs_K10CR1.get_idn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns hardware information of the device.</p>
+</dd></dl>
 
 </dd></dl>
 

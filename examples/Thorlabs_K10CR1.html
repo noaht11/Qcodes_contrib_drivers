@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>QCoDeS Example with Gentec Maestro &mdash; qcodes_contrib_drivers 0.5.0+94.g47880fd documentation</title>
+  <title>Qcodes example with Thorlabs K10CR1 &mdash; qcodes_contrib_drivers 0.5.0+94.g47880fd documentation</title>
   
 
   
@@ -38,8 +38,8 @@
   <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Example notebook for Keithley 6430 SMU" href="Keithley_6430.html" />
-    <link rel="prev" title="Qcodes example with Aviosys IP Power 9258S" href="Aviosys_IP_Power_9258S.html" /> 
+    <link rel="next" title="Qcodes example with Thorlabs MFF10x" href="Thorlabs_MFF10x.html" />
+    <link rel="prev" title="Qcodes example with Standa 10MWA168" href="Standa_10MWA168.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -94,13 +94,7 @@
 <li class="toctree-l2"><a class="reference internal" href="Andor_DU401.html">Qcodes example with Andor DU401 BU2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Attocube_ANC300.html">QCoDeS example with Attocube ANC300</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Aviosys_IP_Power_9258S.html">Qcodes example with Aviosys IP Power 9258S</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">QCoDeS Example with Gentec Maestro</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Initialize-the-instrument-using-its-ASRL-address">Initialize the instrument using its ASRL address</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Set-the-wavelength-to-get-the-right-calibration">Set the wavelength to get the right calibration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Read-the-laser-power">Read the laser power</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Close-instrument">Close instrument</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="Gentec_Maestro.html">QCoDeS Example with Gentec Maestro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Keithley_6430.html">Example notebook for Keithley 6430 SMU</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Keithley_6430.html#Measure-resistance-of-a-~100k\Omega-resistor">Measure resistance of a ~100k<span class="math notranslate nohighlight">\(\Omega\)</span> resistor</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Lakeshore_311.html">Qcodes example with Lakeshore 311</a></li>
@@ -112,7 +106,17 @@
 <li class="toctree-l2"><a class="reference internal" href="Rohde_Schwarz_SMW200A.html">QCoDeS example with Rohe&amp;Schwarz SMW200A</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Shamrock_SR750.html">Qcodes example with Shamrock SR750</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Standa_10MWA168.html">Qcodes example with Standa 10MWA168</a></li>
-<li class="toctree-l2"><a class="reference internal" href="Thorlabs_K10CR1.html">Qcodes example with Thorlabs K10CR1</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Qcodes example with Thorlabs K10CR1</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Initialization">Initialization</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Moving-the-rotator">Moving the rotator</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#Moving-home">Moving home</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Moving-to-certain-position">Moving to certain position</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#Moving-to-certain-position-(asynchronously)">Moving to certain position (asynchronously)</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#Clean-up-resources">Clean up resources</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Thorlabs_MFF10x.html">Qcodes example with Thorlabs MFF10x</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Thorlabs_PRM1Z8.html">Qcodes example with Thorlabs PRM1Z8</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Vaunix_LDA.html">Qcodes example for Vaunix LDA step attenuator</a></li>
@@ -168,13 +172,13 @@
         
           <li><a href="index.html">Examples of how to use drivers</a> &raquo;</li>
         
-      <li>QCoDeS Example with Gentec Maestro</li>
+      <li>Qcodes example with Thorlabs K10CR1</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/examples/Gentec_Maestro.ipynb.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/examples/Thorlabs_K10CR1.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -442,25 +446,31 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="QCoDeS-Example-with-Gentec-Maestro">
-<h1>QCoDeS Example with Gentec Maestro<a class="headerlink" href="#QCoDeS-Example-with-Gentec-Maestro" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Qcodes-example-with-Thorlabs-K10CR1">
+<h1>Qcodes example with Thorlabs K10CR1<a class="headerlink" href="#Qcodes-example-with-Thorlabs-K10CR1" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Initialization">
+<h2>Initialization<a class="headerlink" href="#Initialization" title="Permalink to this headline">¶</a></h2>
+<p>Create an instance of <code class="docutils literal notranslate"><span class="pre">Thorlabs_APT</span></code>, which is a wrapper for the APT.dll of the APT server which is part of the Thorlabs drivers.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro</span> <span class="kn">import</span> <span class="n">Gentec_Maestro</span>
+<span></span><span class="kn">from</span> <span class="nn">qcodes_contrib_drivers.drivers.Thorlabs.APT</span> <span class="kn">import</span> <span class="n">Thorlabs_APT</span>
+
+<span class="n">apt</span> <span class="o">=</span> <span class="n">Thorlabs_APT</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="Initialize-the-instrument-using-its-ASRL-address">
-<h2>Initialize the instrument using its ASRL address<a class="headerlink" href="#Initialize-the-instrument-using-its-ASRL-address" title="Permalink to this headline">¶</a></h2>
+<p>Create an instance of <code class="docutils literal notranslate"><span class="pre">Thorlabs_K10CR1</span></code>, the actual driver class.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">gentec</span> <span class="o">=</span> <span class="n">Gentec_Maestro</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s2">&quot;Gentec&quot;</span><span class="p">,</span> <span class="n">address</span><span class="o">=</span><span class="s1">&#39;ASRL16::INSTR&#39;</span><span class="p">)</span>
+<span></span><span class="kn">from</span> <span class="nn">qcodes_contrib_drivers.drivers.Thorlabs.K10CR1</span> <span class="kn">import</span> <span class="n">Thorlabs_K10CR1</span>
+
+<span class="n">inst</span> <span class="o">=</span> <span class="n">Thorlabs_K10CR1</span><span class="p">(</span><span class="s2">&quot;K10CR1&quot;</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">apt</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -469,19 +479,25 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Connected to: Gentec Maestro (serial:None, firmware:1.04.16) in 0.09s
+Connected to: Thorlabs K10CR1 (serial:55125694, firmware:SW Version 1.0.3) in 0.01s
 </pre></div></div>
 </div>
 </div>
-<div class="section" id="Set-the-wavelength-to-get-the-right-calibration">
-<h2>Set the wavelength to get the right calibration<a class="headerlink" href="#Set-the-wavelength-to-get-the-right-calibration" title="Permalink to this headline">¶</a></h2>
-<p>First, we read the currently set wavelength.</p>
+<div class="section" id="Moving-the-rotator">
+<h2>Moving the rotator<a class="headerlink" href="#Moving-the-rotator" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="Moving-home">
+<h3>Moving home<a class="headerlink" href="#Moving-home" title="Permalink to this headline">¶</a></h3>
+<p>Move the rotator to its home position (zero) and recalibrate it.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">gentec</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">gentec</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">gentec</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+<span></span><span class="c1"># Move to zero and recalibrate</span>
+<span class="n">inst</span><span class="o">.</span><span class="n">move_home</span><span class="p">()</span>
+
+<span class="c1"># Read position</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Position:&quot;</span><span class="p">,</span> <span class="n">inst</span><span class="o">.</span><span class="n">position</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -490,25 +506,64 @@ Connected to: Gentec Maestro (serial:None, firmware:1.04.16) in 0.09s
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Wavelength :  1024 nm
+Position: 0.0
 </pre></div></div>
 </div>
-<p>Now let’s set the wavelength of our laser source and confirm that it was set.</p>
-<div class="nbinput nblast docutils container">
+</div>
+<div class="section" id="Moving-to-certain-position">
+<h3>Moving to certain position<a class="headerlink" href="#Moving-to-certain-position" title="Permalink to this headline">¶</a></h3>
+<p>Move to 120° with 10°/s</p>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">gentec</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">660</span><span class="p">)</span>
+<span></span><span class="c1"># Set target velocity to 10 deg/s</span>
+<span class="n">inst</span><span class="o">.</span><span class="n">velocity_max</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
+
+<span class="c1"># Move to 120 and wait until it&#39;s finished</span>
+<span class="n">inst</span><span class="o">.</span><span class="n">position</span><span class="p">(</span><span class="mi">120</span><span class="p">)</span>
+
+<span class="c1"># Read position</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Position:&quot;</span><span class="p">,</span> <span class="n">inst</span><span class="o">.</span><span class="n">position</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Position: 120.0
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Moving-to-certain-position-(asynchronously)">
+<h3>Moving to certain position (asynchronously)<a class="headerlink" href="#Moving-to-certain-position-(asynchronously)" title="Permalink to this headline">¶</a></h3>
+<p>The following commands will start a rotation to position 240°. This will happen asynchronously so that you can read out the current position in the meantime. After reaching 180° the motor will be stopped.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">gentec</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">gentec</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">gentec</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+<span></span><span class="kn">import</span> <span class="nn">time</span>
+
+<span class="c1"># Move to 300 without blocking</span>
+<span class="n">inst</span><span class="o">.</span><span class="n">position_async</span><span class="p">(</span><span class="mi">240</span><span class="p">)</span>
+
+<span class="n">last_position</span> <span class="o">=</span> <span class="mi">120</span>
+
+<span class="c1"># Print current position every 250 ms, until 240 is reached</span>
+<span class="k">while</span> <span class="n">last_position</span> <span class="o">&lt;</span> <span class="mi">180</span><span class="p">:</span>
+    <span class="n">last_position</span> <span class="o">=</span> <span class="n">inst</span><span class="o">.</span><span class="n">position</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Position:&quot;</span><span class="p">,</span> <span class="n">last_position</span><span class="p">)</span>
+    <span class="n">time</span><span class="o">.</span><span class="n">sleep</span><span class="p">(</span><span class="mf">0.25</span><span class="p">)</span>
+
+<span class="c1"># Stop at around 240 (before 280 is reached)</span>
+<span class="n">inst</span><span class="o">.</span><span class="n">stop</span><span class="p">()</span>
+
+<span class="c1"># Read position</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Position:&quot;</span><span class="p">,</span> <span class="n">inst</span><span class="o">.</span><span class="n">position</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -517,111 +572,47 @@ Wavelength :  1024 nm
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Wavelength :  660 nm
+Position: 120.0
+Position: 120.33045196533203
+Position: 121.30647277832031
+Position: 122.93938446044922
+Position: 125.22875213623047
+Position: 127.80081939697266
+Position: 130.36468505859375
+Position: 132.91712951660156
+Position: 135.5030059814453
+Position: 138.07122802734375
+Position: 140.61135864257812
+Position: 143.18075561523438
+Position: 145.73727416992188
+Position: 148.30560302734375
+Position: 150.8717498779297
+Position: 153.4274444580078
+Position: 155.98837280273438
+Position: 158.54783630371094
+Position: 161.1175994873047
+Position: 163.6906280517578
+Position: 166.25445556640625
+Position: 168.7959442138672
+Position: 171.37112426757812
+Position: 173.93038940429688
+Position: 176.48873901367188
+Position: 179.0663604736328
+Position: 181.61782836914062
+Position: 184.19651794433594
 </pre></div></div>
 </div>
 </div>
-<div class="section" id="Read-the-laser-power">
-<h2>Read the laser power<a class="headerlink" href="#Read-the-laser-power" title="Permalink to this headline">¶</a></h2>
-<p>Let’s read the laser power detected by the Gentec.</p>
-<div class="nbinput docutils container">
+</div>
+<div class="section" id="Clean-up-resources">
+<h2>Clean up resources<a class="headerlink" href="#Clean-up-resources" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">gentec</span><span class="o">.</span><span class="n">power</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">gentec</span><span class="o">.</span><span class="n">power</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">gentec</span><span class="o">.</span><span class="n">power</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Power :  0.634878 W
-</pre></div></div>
-</div>
-<p>We can also set an offset in order to remove any background from the measurement.</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">gentec</span><span class="o">.</span><span class="n">zero_offset_enabled</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">gentec</span><span class="o">.</span><span class="n">zero_offset_enabled</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">gentec</span><span class="o">.</span><span class="n">zero_offset_enabled</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Zero offset enabled :  0
-</pre></div></div>
-</div>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">gentec</span><span class="o">.</span><span class="n">set_zero_offset</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">gentec</span><span class="o">.</span><span class="n">zero_offset_enabled</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">gentec</span><span class="o">.</span><span class="n">zero_offset_enabled</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">gentec</span><span class="o">.</span><span class="n">zero_offset_enabled</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Zero offset enabled :  1
-</pre></div></div>
-</div>
-<p>Let’s now repeat the power measurement.</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">gentec</span><span class="o">.</span><span class="n">power</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;: &#39;</span><span class="p">,</span> <span class="n">gentec</span><span class="o">.</span><span class="n">power</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">gentec</span><span class="o">.</span><span class="n">power</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Power :  -0.000390634 W
-</pre></div></div>
-</div>
-<p>Finally let’s clear the offset.</p>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">gentec</span><span class="o">.</span><span class="n">clear_zero_offset</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="section" id="Close-instrument">
-<h2>Close instrument<a class="headerlink" href="#Close-instrument" title="Permalink to this headline">¶</a></h2>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">gentec</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span></span><span class="n">inst</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+<span class="n">apt</span><span class="o">.</span><span class="n">apt_clean_up</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -636,10 +627,10 @@ Power :  -0.000390634 W
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Keithley_6430.html" class="btn btn-neutral float-right" title="Example notebook for Keithley 6430 SMU" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Thorlabs_MFF10x.html" class="btn btn-neutral float-right" title="Qcodes example with Thorlabs MFF10x" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Aviosys_IP_Power_9258S.html" class="btn btn-neutral float-left" title="Qcodes example with Aviosys IP Power 9258S" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Standa_10MWA168.html" class="btn btn-neutral float-left" title="Qcodes example with Standa 10MWA168" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
