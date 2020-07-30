@@ -5,6 +5,7 @@ Subpackages
 -----------
 
 .. toctree::
+   :maxdepth: 10
 
    qcodes_contrib_drivers.drivers.Advantech
    qcodes_contrib_drivers.drivers.Andor

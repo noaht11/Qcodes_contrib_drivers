@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Keysight.SD_common package &mdash; qcodes_contrib_drivers 0.5.0+114.g58aed52 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Keysight.SD_common package &mdash; qcodes_contrib_drivers 0.5.0+116.gd76c859 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.5.0+114.g58aed52
+                0.5.0+116.gd76c859
               </div>
             
           
@@ -229,18 +229,18 @@
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG">
 <span id="qcodes-contrib-drivers-drivers-keysight-sd-common-sd-awg-module"></span><h2>qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.</code><code class="sig-name descname">SD_AWG</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">chassis</em>, <em class="sig-param">slot</em>, <em class="sig-param">channels</em>, <em class="sig-param">triggers</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.</code><code class="sig-name descname">SD_AWG</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">chassis</span></em>, <em class="sig-param"><span class="n">slot</span></em>, <em class="sig-param"><span class="n">channels</span></em>, <em class="sig-param"><span class="n">triggers</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module" title="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module</span></code></a></p>
 <p>This is the general SD_AWG driver class that implements shared parameters and functionality among all PXIe-based
 AWG cards by Keysight. (series M32xxA and M33xxA)</p>
 <p>This driver was written to be inherited from by a specific AWG card driver (e.g. M3201A).</p>
 <p>This driver was written with the M3201A card in mind.</p>
 <p>This driver makes use of the Python library provided by Keysight as part of the SD1 Software package (v.2.01.00).</p>
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_config_external_trigger">
-<code class="sig-name descname">awg_config_external_trigger</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em>, <em class="sig-param">external_source</em>, <em class="sig-param">trigger_behaviour</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_config_external_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_config_external_trigger" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_config_external_trigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em>, <em class="sig-param"><span class="n">external_source</span></em>, <em class="sig-param"><span class="n">trigger_behaviour</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_config_external_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_config_external_trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the external triggers for the selected awg.
 The external trigger is used in case the waveform is queued with th external trigger mode option.</p>
 <dl class="field-list simple">
@@ -260,16 +260,16 @@ Falling Edge    :   4</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_flush">
-<code class="sig-name descname">awg_flush</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_flush"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_flush" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_flush</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_flush"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_flush" title="Permalink to this definition">¶</a></dt>
 <dd><p>Empties the queue of the selected AWG.
 Waveforms are not removed from the onboard RAM.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_from_array">
-<code class="sig-name descname">awg_from_array</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em>, <em class="sig-param">trigger_mode</em>, <em class="sig-param">start_delay</em>, <em class="sig-param">cycles</em>, <em class="sig-param">prescaler</em>, <em class="sig-param">waveform_type</em>, <em class="sig-param">waveform_data_a</em>, <em class="sig-param">waveform_data_b=None</em>, <em class="sig-param">padding_mode=0</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_from_array"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_from_array" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_from_array</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em>, <em class="sig-param"><span class="n">trigger_mode</span></em>, <em class="sig-param"><span class="n">start_delay</span></em>, <em class="sig-param"><span class="n">cycles</span></em>, <em class="sig-param"><span class="n">prescaler</span></em>, <em class="sig-param"><span class="n">waveform_type</span></em>, <em class="sig-param"><span class="n">waveform_data_a</span></em>, <em class="sig-param"><span class="n">waveform_data_b</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="n">padding_mode</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_from_array"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_from_array" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a one-step method to load, queue and start a single waveform
 in one of the module AWGs.</p>
 <p>Loads a waveform from array.</p>
@@ -304,9 +304,9 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_from_file">
-<code class="sig-name descname">awg_from_file</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em>, <em class="sig-param">waveform_file</em>, <em class="sig-param">trigger_mode</em>, <em class="sig-param">start_delay</em>, <em class="sig-param">cycles</em>, <em class="sig-param">prescaler</em>, <em class="sig-param">padding_mode=0</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_from_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_from_file" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_from_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em>, <em class="sig-param"><span class="n">waveform_file</span></em>, <em class="sig-param"><span class="n">trigger_mode</span></em>, <em class="sig-param"><span class="n">start_delay</span></em>, <em class="sig-param"><span class="n">cycles</span></em>, <em class="sig-param"><span class="n">prescaler</span></em>, <em class="sig-param"><span class="n">padding_mode</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_from_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_from_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Provides a one-step method to load, queue and start a single waveform
 in one of the module AWGs.</p>
 <p>Loads a waveform from file.</p>
@@ -338,24 +338,24 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_jump_next_waveform">
-<code class="sig-name descname">awg_jump_next_waveform</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_jump_next_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_jump_next_waveform" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_jump_next_waveform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_jump_next_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_jump_next_waveform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Forces a jump to the next waveform in the awg queue.
 The jump is executed once the current waveform has finished a complete cycle.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_pause">
-<code class="sig-name descname">awg_pause</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_pause"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_pause" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_pause</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_pause"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_pause" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pauses the selected AWG, leaving the last waveform point at the output,
 and ignoring all incoming triggers.
 The waveform generation can be resumed calling awg_resume</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_pause_multiple">
-<code class="sig-name descname">awg_pause_multiple</code><span class="sig-paren">(</span><em class="sig-param">awg_mask</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_pause_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_pause_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_pause_multiple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_mask</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_pause_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_pause_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Pauses the selected AWGs, leaving the last waveform point at the output,
 and ignoring all incoming triggers.
 The waveform generation can be resumed calling awg_resume_multiple</p>
@@ -366,9 +366,9 @@ The waveform generation can be resumed calling awg_resume_multiple</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_queue_config">
-<code class="sig-name descname">awg_queue_config</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em>, <em class="sig-param">mode</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_queue_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_queue_config" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_queue_config</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em>, <em class="sig-param"><span class="n">mode</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_queue_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_queue_config" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the cyclic mode of the queue. All waveforms must be already queued in one of the AWGs</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -380,22 +380,22 @@ The waveform generation can be resumed calling awg_resume_multiple</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_queue_waveform">
-<code class="sig-name descname">awg_queue_waveform</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em>, <em class="sig-param">waveform_number</em>, <em class="sig-param">trigger_mode</em>, <em class="sig-param">start_delay</em>, <em class="sig-param">cycles</em>, <em class="sig-param">prescaler</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_queue_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_queue_waveform" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_queue_waveform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em>, <em class="sig-param"><span class="n">waveform_number</span></em>, <em class="sig-param"><span class="n">trigger_mode</span></em>, <em class="sig-param"><span class="n">start_delay</span></em>, <em class="sig-param"><span class="n">cycles</span></em>, <em class="sig-param"><span class="n">prescaler</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_queue_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_queue_waveform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Queues the specified waveform in one of the AWGs of the module.
 The waveform must be already loaded in the module onboard RAM.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_resume">
-<code class="sig-name descname">awg_resume</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_resume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_resume" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_resume</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_resume"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_resume" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resumes the selected AWG, from the current position of the queue.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_resume_multiple">
-<code class="sig-name descname">awg_resume_multiple</code><span class="sig-paren">(</span><em class="sig-param">awg_mask</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_resume_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_resume_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_resume_multiple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_mask</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_resume_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_resume_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resumes the selected AWGs, from the current positions of their respective queue.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -404,18 +404,18 @@ The waveform must be already loaded in the module onboard RAM.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_start">
-<code class="sig-name descname">awg_start</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_start" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_start</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts the selected AWG from the beginning of its queue.
 The generation will start immediately or when a trigger is received,
 depending on the trigger selection of the first waveform in the queue
 and provided that at least one waveform is queued in the AWG.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_start_multiple">
-<code class="sig-name descname">awg_start_multiple</code><span class="sig-paren">(</span><em class="sig-param">awg_mask</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_start_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_start_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_start_multiple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_mask</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_start_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_start_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Starts the selected AWGs from the beginning of their queues.
 The generation will start immediately or when a trigger is received,
 depending on the trigger selection of the first waveform in their queues
@@ -427,16 +427,16 @@ and provided that at least one waveform is queued in these AWGs.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_stop">
-<code class="sig-name descname">awg_stop</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_stop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_stop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops the selected AWG, setting the output to zero and resetting the AWG queue to its initial position.
 All following incoming triggers are ignored.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_stop_multiple">
-<code class="sig-name descname">awg_stop_multiple</code><span class="sig-paren">(</span><em class="sig-param">awg_mask</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_stop_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_stop_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_stop_multiple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_mask</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_stop_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_stop_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops the selected AWGs, setting their output to zero and resetting their AWG queues to the initial positions.
 All following incoming triggers are ignored.</p>
 <dl class="field-list simple">
@@ -446,17 +446,17 @@ All following incoming triggers are ignored.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_trigger">
-<code class="sig-name descname">awg_trigger</code><span class="sig-paren">(</span><em class="sig-param">awg_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_trigger" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_trigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Triggers the selected AWG.
 The waveform waiting in the current position of the queue is launched,
 provided it is configured with VI/HVI Trigger.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_trigger_multiple">
-<code class="sig-name descname">awg_trigger_multiple</code><span class="sig-paren">(</span><em class="sig-param">awg_mask</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_trigger_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_trigger_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">awg_trigger_multiple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_mask</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.awg_trigger_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.awg_trigger_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Triggers the selected AWGs.
 The waveform waiting in the current position of the queue is launched,
 provided it is configured with VI/HVI Trigger.</p>
@@ -467,9 +467,9 @@ provided it is configured with VI/HVI Trigger.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_amplitude_modulation">
-<code class="sig-name descname">config_amplitude_modulation</code><span class="sig-paren">(</span><em class="sig-param">channel_number</em>, <em class="sig-param">modulation_type</em>, <em class="sig-param">deviation_gain</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.config_amplitude_modulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_amplitude_modulation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">config_amplitude_modulation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel_number</span></em>, <em class="sig-param"><span class="n">modulation_type</span></em>, <em class="sig-param"><span class="n">deviation_gain</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.config_amplitude_modulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_amplitude_modulation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the modulation in amplitude/offset for the selected channel</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -485,9 +485,9 @@ Offset Modulation       :   2</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_angle_modulation">
-<code class="sig-name descname">config_angle_modulation</code><span class="sig-paren">(</span><em class="sig-param">channel_number</em>, <em class="sig-param">modulation_type</em>, <em class="sig-param">deviation_gain</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.config_angle_modulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_angle_modulation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">config_angle_modulation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel_number</span></em>, <em class="sig-param"><span class="n">modulation_type</span></em>, <em class="sig-param"><span class="n">deviation_gain</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.config_angle_modulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_angle_modulation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the modulation in frequency/phase for the selected channel</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -503,9 +503,9 @@ Phase Modulation        :   2</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_clock_io">
-<code class="sig-name descname">config_clock_io</code><span class="sig-paren">(</span><em class="sig-param">clock_config</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.config_clock_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_clock_io" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">config_clock_io</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">clock_config</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.config_clock_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_clock_io" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the operation of the clock output connector (CLK)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -516,9 +516,9 @@ CLKref Output   :   1   (A copy of the reference clock is available at the CLK c
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_trigger_io">
-<code class="sig-name descname">config_trigger_io</code><span class="sig-paren">(</span><em class="sig-param">direction</em>, <em class="sig-param">sync_mode</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.config_trigger_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_trigger_io" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">config_trigger_io</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">direction</span></em>, <em class="sig-param"><span class="n">sync_mode</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.config_trigger_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.config_trigger_io" title="Permalink to this definition">¶</a></dt>
 <dd><p>Configures the trigger connector/line direction and synchronization/sampling method</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -532,15 +532,15 @@ Synchronized mode       :   1   (trigger is sampled using CLK10)</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.flush_waveform">
-<code class="sig-name descname">flush_waveform</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.flush_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.flush_waveform" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">flush_waveform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.flush_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.flush_waveform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deletes all waveforms from the module onboard RAM and flushes all the AWG queues.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_clock_frequency">
-<code class="sig-name descname">get_clock_frequency</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.get_clock_frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_clock_frequency" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_clock_frequency</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.get_clock_frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_clock_frequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the real hardware clock frequency (CLKsys)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -553,9 +553,9 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_clock_sync_frequency">
-<code class="sig-name descname">get_clock_sync_frequency</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.get_clock_sync_frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_clock_sync_frequency" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_clock_sync_frequency</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.get_clock_sync_frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_clock_sync_frequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the frequency of the internal CLKsync</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -568,9 +568,9 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_trigger_io">
-<code class="sig-name descname">get_trigger_io</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.get_trigger_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_trigger_io" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_trigger_io</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.get_trigger_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_trigger_io" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads and returns the trigger input</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -583,19 +583,19 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_waveform_status">
-<em class="property">static </em><code class="sig-name descname">get_waveform_status</code><span class="sig-paren">(</span><em class="sig-param">waveform</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.get_waveform_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_waveform_status" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get_waveform_status</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">waveform</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.get_waveform_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_waveform_status" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_waveform_type">
-<em class="property">static </em><code class="sig-name descname">get_waveform_type</code><span class="sig-paren">(</span><em class="sig-param">waveform</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.get_waveform_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_waveform_type" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">get_waveform_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">waveform</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.get_waveform_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.get_waveform_type" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.load_waveform">
-<code class="sig-name descname">load_waveform</code><span class="sig-paren">(</span><em class="sig-param">waveform_object</em>, <em class="sig-param">waveform_number</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.load_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.load_waveform" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_waveform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">waveform_object</span></em>, <em class="sig-param"><span class="n">waveform_number</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.load_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.load_waveform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads the specified waveform into the module onboard RAM.
 Waveforms must be created first as an instance of the SD_Wave class.</p>
 <dl class="field-list simple">
@@ -616,9 +616,9 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.load_waveform_int16">
-<code class="sig-name descname">load_waveform_int16</code><span class="sig-paren">(</span><em class="sig-param">waveform_type</em>, <em class="sig-param">data_raw</em>, <em class="sig-param">waveform_number</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.load_waveform_int16"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.load_waveform_int16" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">load_waveform_int16</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">waveform_type</span></em>, <em class="sig-param"><span class="n">data_raw</span></em>, <em class="sig-param"><span class="n">waveform_number</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.load_waveform_int16"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.load_waveform_int16" title="Permalink to this definition">¶</a></dt>
 <dd><p>Loads the specified waveform into the module onboard RAM.
 Waveforms must be created first as an instance of the SD_Wave class.</p>
 <dl class="field-list simple">
@@ -640,9 +640,9 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.new_waveform_from_double">
-<em class="property">static </em><code class="sig-name descname">new_waveform_from_double</code><span class="sig-paren">(</span><em class="sig-param">waveform_type</em>, <em class="sig-param">waveform_data_a</em>, <em class="sig-param">waveform_data_b=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.new_waveform_from_double"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.new_waveform_from_double" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">new_waveform_from_double</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">waveform_type</span></em>, <em class="sig-param"><span class="n">waveform_data_a</span></em>, <em class="sig-param"><span class="n">waveform_data_b</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.new_waveform_from_double"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.new_waveform_from_double" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a SD_Wave object from data points contained in an array.
 This waveform object is stored in the PC RAM, not in the onboard RAM.</p>
 <dl class="field-list simple">
@@ -664,9 +664,9 @@ errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.new_waveform_from_file">
-<em class="property">static </em><code class="sig-name descname">new_waveform_from_file</code><span class="sig-paren">(</span><em class="sig-param">waveform_file</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.new_waveform_from_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.new_waveform_from_file" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">new_waveform_from_file</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">waveform_file</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.new_waveform_from_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.new_waveform_from_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a SD_Wave object from data points contained in a file.
 This waveform object is stored in the PC RAM, not in the onboard RAM.</p>
 <dl class="field-list simple">
@@ -683,9 +683,9 @@ for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.new_waveform_from_int">
-<em class="property">static </em><code class="sig-name descname">new_waveform_from_int</code><span class="sig-paren">(</span><em class="sig-param">waveform_type</em>, <em class="sig-param">waveform_data_a</em>, <em class="sig-param">waveform_data_b=None</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.new_waveform_from_int"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.new_waveform_from_int" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">new_waveform_from_int</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">waveform_type</span></em>, <em class="sig-param"><span class="n">waveform_data_a</span></em>, <em class="sig-param"><span class="n">waveform_data_b</span><span class="o">=</span><span class="default_value">None</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.new_waveform_from_int"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.new_waveform_from_int" title="Permalink to this definition">¶</a></dt>
 <dd><p>Creates a SD_Wave object from data points contained in an array.
 This waveform object is stored in the PC RAM, not in the onboard RAM.</p>
 <dl class="field-list simple">
@@ -707,15 +707,15 @@ for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.off">
 <code class="sig-name descname">off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.off"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.off" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stops the AWGs and sets the waveform of all channels to ‘No Signal’</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reload_waveform">
-<code class="sig-name descname">reload_waveform</code><span class="sig-paren">(</span><em class="sig-param">waveform_object</em>, <em class="sig-param">waveform_number</em>, <em class="sig-param">padding_mode=0</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.reload_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reload_waveform" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reload_waveform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">waveform_object</span></em>, <em class="sig-param"><span class="n">waveform_number</span></em>, <em class="sig-param"><span class="n">padding_mode</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.reload_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reload_waveform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replaces a waveform located in the module onboard RAM.
 The size of the new waveform must be smaller than or
 equal to the existing waveform.</p>
@@ -746,9 +746,9 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reload_waveform_int16">
-<code class="sig-name descname">reload_waveform_int16</code><span class="sig-paren">(</span><em class="sig-param">waveform_type</em>, <em class="sig-param">data_raw</em>, <em class="sig-param">waveform_number</em>, <em class="sig-param">padding_mode=0</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.reload_waveform_int16"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reload_waveform_int16" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reload_waveform_int16</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">waveform_type</span></em>, <em class="sig-param"><span class="n">data_raw</span></em>, <em class="sig-param"><span class="n">waveform_number</span></em>, <em class="sig-param"><span class="n">padding_mode</span><span class="o">=</span><span class="default_value">0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.reload_waveform_int16"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reload_waveform_int16" title="Permalink to this definition">¶</a></dt>
 <dd><p>Replaces a waveform located in the module onboard RAM.
 The size of the new waveform must be smaller than or
 equal to the existing waveform.</p>
@@ -780,9 +780,9 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reset_channel_phase">
-<code class="sig-name descname">reset_channel_phase</code><span class="sig-paren">(</span><em class="sig-param">channel_number</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.reset_channel_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reset_channel_phase" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reset_channel_phase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel_number</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.reset_channel_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reset_channel_phase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets the accumulated phase of the selected channel. This accumulated phase is the
 result of the phase continuous operation of the product.</p>
 <dl class="field-list simple">
@@ -792,9 +792,9 @@ result of the phase continuous operation of the product.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reset_clock_phase">
-<code class="sig-name descname">reset_clock_phase</code><span class="sig-paren">(</span><em class="sig-param">trigger_behaviour</em>, <em class="sig-param">trigger_source</em>, <em class="sig-param">skew=0.0</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.reset_clock_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reset_clock_phase" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reset_clock_phase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trigger_behaviour</span></em>, <em class="sig-param"><span class="n">trigger_source</span></em>, <em class="sig-param"><span class="n">skew</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.reset_clock_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reset_clock_phase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the module in a sync state, waiting for the first trigger to reset the phase
 of the internal clocks CLKsync and CLKsys</p>
 <dl class="field-list simple">
@@ -814,9 +814,9 @@ PXI Trigger [0..n]      :   4000+n</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reset_multiple_channel_phase">
-<code class="sig-name descname">reset_multiple_channel_phase</code><span class="sig-paren">(</span><em class="sig-param">channel_mask</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.reset_multiple_channel_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reset_multiple_channel_phase" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reset_multiple_channel_phase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel_mask</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.reset_multiple_channel_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.reset_multiple_channel_phase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Resets the accumulated phase of the selected channels simultaneously.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -827,9 +827,9 @@ PXI Trigger [0..n]      :   4000+n</p></li>
 <p>reset_multiple_channel_phase(5) would reset the phase of channel 0 and 2</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_amplitude">
-<code class="sig-name descname">set_channel_amplitude</code><span class="sig-paren">(</span><em class="sig-param">amplitude</em>, <em class="sig-param">channel_number</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_channel_amplitude"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_amplitude" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_channel_amplitude</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">amplitude</span></em>, <em class="sig-param"><span class="n">channel_number</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_channel_amplitude"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_amplitude" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the amplitude for the specified channel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -841,9 +841,9 @@ PXI Trigger [0..n]      :   4000+n</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_frequency">
-<code class="sig-name descname">set_channel_frequency</code><span class="sig-paren">(</span><em class="sig-param">frequency</em>, <em class="sig-param">channel_number</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_channel_frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_frequency" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_channel_frequency</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">frequency</span></em>, <em class="sig-param"><span class="n">channel_number</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_channel_frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_frequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the frequency for the specified channel.
 The frequency is used for the periodic signals generated by the Function Generators.</p>
 <dl class="field-list simple">
@@ -856,9 +856,9 @@ The frequency is used for the periodic signals generated by the Function Generat
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_offset">
-<code class="sig-name descname">set_channel_offset</code><span class="sig-paren">(</span><em class="sig-param">offset</em>, <em class="sig-param">channel_number</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_channel_offset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_offset" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_channel_offset</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">offset</span></em>, <em class="sig-param"><span class="n">channel_number</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_channel_offset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_offset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the DC offset for the specified channel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -870,9 +870,9 @@ The frequency is used for the periodic signals generated by the Function Generat
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_phase">
-<code class="sig-name descname">set_channel_phase</code><span class="sig-paren">(</span><em class="sig-param">phase</em>, <em class="sig-param">channel_number</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_channel_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_phase" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_channel_phase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">phase</span></em>, <em class="sig-param"><span class="n">channel_number</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_channel_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_phase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the phase for the specified channel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -884,9 +884,9 @@ The frequency is used for the periodic signals generated by the Function Generat
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_wave_shape">
-<code class="sig-name descname">set_channel_wave_shape</code><span class="sig-paren">(</span><em class="sig-param">wave_shape</em>, <em class="sig-param">channel_number</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_channel_wave_shape"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_wave_shape" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_channel_wave_shape</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">wave_shape</span></em>, <em class="sig-param"><span class="n">channel_number</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_channel_wave_shape"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_channel_wave_shape" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="simple">
 <dt>Sets output waveform type for the specified channel.</dt><dd><p>HiZ         :  -1 (only available for M3202A)
 No Signal   :   0
@@ -908,9 +908,9 @@ Partner Ch. :   8</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_clock_frequency">
-<code class="sig-name descname">set_clock_frequency</code><span class="sig-paren">(</span><em class="sig-param">frequency</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_clock_frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_clock_frequency" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_clock_frequency</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">frequency</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_clock_frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_clock_frequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the module clock frequency</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -926,9 +926,9 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_iq_modulation">
-<code class="sig-name descname">set_iq_modulation</code><span class="sig-paren">(</span><em class="sig-param">channel_number</em>, <em class="sig-param">enable</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_iq_modulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_iq_modulation" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_iq_modulation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel_number</span></em>, <em class="sig-param"><span class="n">enable</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_iq_modulation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_iq_modulation" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the IQ modulation for the selected channel</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -940,9 +940,9 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_trigger_io">
-<code class="sig-name descname">set_trigger_io</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_trigger_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_trigger_io" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_trigger_io</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_AWG.html#SD_AWG.set_trigger_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG.SD_AWG.set_trigger_io" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the trigger output. The trigger must be configured as output using
 config_trigger_io</p>
 <dl class="field-list simple">
@@ -957,17 +957,17 @@ config_trigger_io</p>
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG">
 <span id="qcodes-contrib-drivers-drivers-keysight-sd-common-sd-dig-module"></span><h2>qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.</code><code class="sig-name descname">SD_DIG</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">chassis</em>, <em class="sig-param">slot</em>, <em class="sig-param">channels</em>, <em class="sig-param">triggers</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.</code><code class="sig-name descname">SD_DIG</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">chassis</span></em>, <em class="sig-param"><span class="n">slot</span></em>, <em class="sig-param"><span class="n">channels</span></em>, <em class="sig-param"><span class="n">triggers</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module" title="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module</span></code></a></p>
 <p>This is the qcodes driver for a generic Signadyne Digitizer of the M32/33XX series.</p>
 <p>Status: beta</p>
 <p>This driver is written with the M3300A in mind.</p>
 <p>This driver makes use of the Python library provided by Keysight as part of the SD1 Software package (v.2.01.00).</p>
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_flush">
-<code class="sig-name descname">daq_flush</code><span class="sig-paren">(</span><em class="sig-param">daq</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_flush"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_flush" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">daq_flush</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daq</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_flush"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_flush" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flush the specified DAQ</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -976,9 +976,9 @@ config_trigger_io</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_flush_multiple">
-<code class="sig-name descname">daq_flush_multiple</code><span class="sig-paren">(</span><em class="sig-param">daq_mask</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_flush_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_flush_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">daq_flush_multiple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daq_mask</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_flush_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_flush_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flush the specified DAQs</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -988,9 +988,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_read">
-<code class="sig-name descname">daq_read</code><span class="sig-paren">(</span><em class="sig-param">daq</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_read" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">daq_read</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daq</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read from the specified DAQ</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1003,9 +1003,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_start">
-<code class="sig-name descname">daq_start</code><span class="sig-paren">(</span><em class="sig-param">daq</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_start" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">daq_start</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daq</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start acquiring data or waiting for a trigger on the specified DAQ</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1014,9 +1014,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_start_multiple">
-<code class="sig-name descname">daq_start_multiple</code><span class="sig-paren">(</span><em class="sig-param">daq_mask</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_start_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_start_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">daq_start_multiple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daq_mask</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_start_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_start_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start acquiring data or waiting for a trigger on the specified DAQs</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1026,9 +1026,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_stop">
-<code class="sig-name descname">daq_stop</code><span class="sig-paren">(</span><em class="sig-param">daq</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_stop" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">daq_stop</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daq</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop acquiring data on the specified DAQ</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1037,9 +1037,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_stop_multiple">
-<code class="sig-name descname">daq_stop_multiple</code><span class="sig-paren">(</span><em class="sig-param">daq_mask</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_stop_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_stop_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">daq_stop_multiple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daq_mask</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_stop_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_stop_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop acquiring data on the specified DAQs</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1049,9 +1049,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_trigger">
-<code class="sig-name descname">daq_trigger</code><span class="sig-paren">(</span><em class="sig-param">daq</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_trigger" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">daq_trigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daq</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manually trigger the specified DAQ</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1060,9 +1060,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_trigger_multiple">
-<code class="sig-name descname">daq_trigger_multiple</code><span class="sig-paren">(</span><em class="sig-param">daq_mask</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_trigger_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_trigger_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">daq_trigger_multiple</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">daq_mask</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.daq_trigger_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.daq_trigger_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Manually trigger the specified DAQs</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1072,9 +1072,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_coupling">
-<code class="sig-name descname">get_coupling</code><span class="sig-paren">(</span><em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_coupling"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_coupling" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_coupling</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_coupling"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_coupling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the channel coupling</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1083,9 +1083,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_full_scale">
-<code class="sig-name descname">get_full_scale</code><span class="sig-paren">(</span><em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_full_scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_full_scale" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_full_scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_full_scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_full_scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the channel full scale input voltage</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1094,9 +1094,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_impedance">
-<code class="sig-name descname">get_impedance</code><span class="sig-paren">(</span><em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_impedance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_impedance" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_impedance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_impedance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_impedance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the channel input impedance</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1105,9 +1105,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_prescaler">
-<code class="sig-name descname">get_prescaler</code><span class="sig-paren">(</span><em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_prescaler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_prescaler" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_prescaler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_prescaler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_prescaler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets the channel prescaler value</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1116,15 +1116,15 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_trigger_io">
-<code class="sig-name descname">get_trigger_io</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_trigger_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_trigger_io" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_trigger_io</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_trigger_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_trigger_io" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write a value to the IO trigger port</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_trigger_mode">
-<code class="sig-name descname">get_trigger_mode</code><span class="sig-paren">(</span><em class="sig-param">channel</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_trigger_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_trigger_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_trigger_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_trigger_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_trigger_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the current trigger mode</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1133,9 +1133,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_trigger_threshold">
-<code class="sig-name descname">get_trigger_threshold</code><span class="sig-paren">(</span><em class="sig-param">channel</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_trigger_threshold"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_trigger_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_trigger_threshold</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.get_trigger_threshold"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.get_trigger_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the current trigger threshold</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1144,9 +1144,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.reset_clock_phase">
-<code class="sig-name descname">reset_clock_phase</code><span class="sig-paren">(</span><em class="sig-param">trigger_behaviour</em>, <em class="sig-param">trigger_source</em>, <em class="sig-param">skew=0.0</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.reset_clock_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.reset_clock_phase" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reset_clock_phase</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">trigger_behaviour</span></em>, <em class="sig-param"><span class="n">trigger_source</span></em>, <em class="sig-param"><span class="n">skew</span><span class="o">=</span><span class="default_value">0.0</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.reset_clock_phase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.reset_clock_phase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset the clock phase between CLKsync and CLKsys</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1159,9 +1159,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_analog_trigger_mask">
-<code class="sig-name descname">set_analog_trigger_mask</code><span class="sig-paren">(</span><em class="sig-param">mask</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_analog_trigger_mask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_analog_trigger_mask" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_analog_trigger_mask</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mask</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_analog_trigger_mask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_analog_trigger_mask" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1172,17 +1172,17 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_clksys_frequency">
-<em class="property">static </em><code class="sig-name descname">set_clksys_frequency</code><span class="sig-paren">(</span><em class="sig-param">frequency</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_clksys_frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_clksys_frequency" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">set_clksys_frequency</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">frequency</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_clksys_frequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_clksys_frequency" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the CLKsys frequency</p>
 <p>Args:</p>
 <p>frequency (int)         : frequency of CLKsys in Hz</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_coupling">
-<code class="sig-name descname">set_coupling</code><span class="sig-paren">(</span><em class="sig-param">coupling</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_coupling"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_coupling" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_coupling</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">coupling</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_coupling"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_coupling" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the channel coupling</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1194,9 +1194,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_daq_trigger_delay">
-<code class="sig-name descname">set_daq_trigger_delay</code><span class="sig-paren">(</span><em class="sig-param">delay</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_daq_trigger_delay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_daq_trigger_delay" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_daq_trigger_delay</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">delay</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_daq_trigger_delay"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_daq_trigger_delay" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the trigger delay for the specified trigger source</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1208,9 +1208,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_daq_trigger_mode">
-<code class="sig-name descname">set_daq_trigger_mode</code><span class="sig-paren">(</span><em class="sig-param">mode</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_daq_trigger_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_daq_trigger_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_daq_trigger_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_daq_trigger_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_daq_trigger_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the trigger mode when using an external trigger</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1222,9 +1222,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_digital_trigger_mode">
-<code class="sig-name descname">set_digital_trigger_mode</code><span class="sig-paren">(</span><em class="sig-param">mode</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_digital_trigger_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_digital_trigger_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_digital_trigger_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_digital_trigger_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_digital_trigger_mode" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1235,9 +1235,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_digital_trigger_source">
-<code class="sig-name descname">set_digital_trigger_source</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_digital_trigger_source"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_digital_trigger_source" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_digital_trigger_source</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_digital_trigger_source"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_digital_trigger_source" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><ul class="simple">
@@ -1248,9 +1248,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_ext_trigger_behaviour">
-<code class="sig-name descname">set_ext_trigger_behaviour</code><span class="sig-paren">(</span><em class="sig-param">behaviour</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_ext_trigger_behaviour"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_ext_trigger_behaviour" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_ext_trigger_behaviour</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">behaviour</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_ext_trigger_behaviour"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_ext_trigger_behaviour" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the trigger source</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1262,9 +1262,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_ext_trigger_source">
-<code class="sig-name descname">set_ext_trigger_source</code><span class="sig-paren">(</span><em class="sig-param">source</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_ext_trigger_source"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_ext_trigger_source" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_ext_trigger_source</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">source</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_ext_trigger_source"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_ext_trigger_source" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the trigger source</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1276,9 +1276,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_full_scale">
-<code class="sig-name descname">set_full_scale</code><span class="sig-paren">(</span><em class="sig-param">full_scale</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_full_scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_full_scale" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_full_scale</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">full_scale</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_full_scale"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_full_scale" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the channel full scale input voltage</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1290,9 +1290,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_impedance">
-<code class="sig-name descname">set_impedance</code><span class="sig-paren">(</span><em class="sig-param">impedance</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_impedance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_impedance" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_impedance</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">impedance</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_impedance"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_impedance" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the channel input impedance</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1304,9 +1304,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_n_cycles">
-<code class="sig-name descname">set_n_cycles</code><span class="sig-paren">(</span><em class="sig-param">n_cycles</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_n_cycles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_n_cycles" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_n_cycles</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_cycles</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_n_cycles"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_n_cycles" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the number of trigger cycles to collect data for</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1318,9 +1318,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_n_points">
-<code class="sig-name descname">set_n_points</code><span class="sig-paren">(</span><em class="sig-param">n_points</em>, <em class="sig-param">channel</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_n_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_n_points" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_n_points</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_points</span></em>, <em class="sig-param"><span class="n">channel</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_n_points"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_n_points" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the trigger source</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1332,9 +1332,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_points_per_cycle">
-<code class="sig-name descname">set_points_per_cycle</code><span class="sig-paren">(</span><em class="sig-param">n_points</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_points_per_cycle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_points_per_cycle" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_points_per_cycle</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">n_points</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_points_per_cycle"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_points_per_cycle" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the number of points to be collected per trigger</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1346,9 +1346,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_prescaler">
-<code class="sig-name descname">set_prescaler</code><span class="sig-paren">(</span><em class="sig-param">prescaler</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_prescaler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_prescaler" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_prescaler</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">prescaler</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_prescaler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_prescaler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the channel sampling frequency via the prescaler</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1360,9 +1360,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_timeout">
-<code class="sig-name descname">set_timeout</code><span class="sig-paren">(</span><em class="sig-param">timeout</em>, <em class="sig-param">channel</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_timeout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_timeout" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_timeout</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">timeout</span></em>, <em class="sig-param"><span class="n">channel</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_timeout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_timeout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the trigger source</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1374,9 +1374,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_trigger_io">
-<code class="sig-name descname">set_trigger_io</code><span class="sig-paren">(</span><em class="sig-param">val</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_trigger_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_trigger_io" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_trigger_io</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_trigger_io"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_trigger_io" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write a value to the IO trigger port</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1385,9 +1385,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_trigger_mode">
-<code class="sig-name descname">set_trigger_mode</code><span class="sig-paren">(</span><em class="sig-param">mode</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_trigger_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_trigger_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_trigger_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_trigger_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_trigger_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the current trigger mode from those defined in SD_AIN_TriggerMode</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1399,9 +1399,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_trigger_threshold">
-<code class="sig-name descname">set_trigger_threshold</code><span class="sig-paren">(</span><em class="sig-param">threshold</em>, <em class="sig-param">channel</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_trigger_threshold"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_trigger_threshold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_trigger_threshold</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">threshold</span></em>, <em class="sig-param"><span class="n">channel</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_DIG.html#SD_DIG.set_trigger_threshold"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG.SD_DIG.set_trigger_threshold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the current trigger threshold, in the range of -3V and 3V</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1418,9 +1418,9 @@ where the LSB is for DAQ_0, bit 1 is for DAQ_1 etc.</p>
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module">
 <span id="qcodes-contrib-drivers-drivers-keysight-sd-common-sd-module-module"></span><h2>qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.</code><code class="sig-name descname">SD_Module</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">chassis</em>, <em class="sig-param">slot</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.</code><code class="sig-name descname">SD_Module</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">chassis</span></em>, <em class="sig-param"><span class="n">slot</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
 <p>This is the general SD_Module driver class that implements shared parameters and functionality among all PXIe-based
 digitizer/awg/combo cards by Keysight.</p>
@@ -1428,7 +1428,7 @@ digitizer/awg/combo cards by Keysight.</p>
 functionality of the card.</p>
 <p>Specifically, this driver was written with the M3201A and M3300A cards in mind.</p>
 <p>This driver makes use of the Python library provided by Keysight as part of the SD1 Software package (v.2.01.00).</p>
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.close">
 <code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Irreversibly stop this instrument and free its resources.</p>
@@ -1436,26 +1436,26 @@ functionality of the card.</p>
 resources to close.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.close_soft">
 <code class="sig-name descname">close_soft</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.close_soft"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.close_soft" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_chassis">
-<code class="sig-name descname">get_chassis</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_chassis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_chassis" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_chassis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_chassis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_chassis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the chassis number where the device is located</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_firmware_version">
-<code class="sig-name descname">get_firmware_version</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_firmware_version"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_firmware_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_firmware_version</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_firmware_version"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_firmware_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the firmware version of the device</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_fpga_pc_port">
-<code class="sig-name descname">get_fpga_pc_port</code><span class="sig-paren">(</span><em class="sig-param">port</em>, <em class="sig-param">data_size</em>, <em class="sig-param">address</em>, <em class="sig-param">address_mode</em>, <em class="sig-param">access_mode</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_fpga_pc_port"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_fpga_pc_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_fpga_pc_port</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">port</span></em>, <em class="sig-param"><span class="n">data_size</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="n">address_mode</span></em>, <em class="sig-param"><span class="n">access_mode</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_fpga_pc_port"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_fpga_pc_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads data at the PCport FPGA Block</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1470,43 +1470,43 @@ resources to close.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_hardware_version">
-<code class="sig-name descname">get_hardware_version</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_hardware_version"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_hardware_version" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_hardware_version</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_hardware_version"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_hardware_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the hardware version of the device</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_module_count">
-<code class="sig-name descname">get_module_count</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_module_count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_module_count" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_module_count</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_module_count"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_module_count" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the number of SD modules installed in the system</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_open">
-<code class="sig-name descname">get_open</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_open"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_open" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_open</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_open"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_open" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns whether the device is open (True) or not (False)</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_product_name">
-<code class="sig-name descname">get_product_name</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_product_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_product_name" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_product_name</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_product_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_product_name" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the product name of the device</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_product_name_by_index">
-<code class="sig-name descname">get_product_name_by_index</code><span class="sig-paren">(</span><em class="sig-param">index</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_product_name_by_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_product_name_by_index" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_product_name_by_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_product_name_by_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_product_name_by_index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_product_name_by_slot">
-<code class="sig-name descname">get_product_name_by_slot</code><span class="sig-paren">(</span><em class="sig-param">chassis</em>, <em class="sig-param">slot</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_product_name_by_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_product_name_by_slot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_product_name_by_slot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">chassis</span></em>, <em class="sig-param"><span class="n">slot</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_product_name_by_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_product_name_by_slot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_pxi_trigger">
-<code class="sig-name descname">get_pxi_trigger</code><span class="sig-paren">(</span><em class="sig-param">pxi_trigger</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_pxi_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_pxi_trigger" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_pxi_trigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">pxi_trigger</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_pxi_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_pxi_trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the digital value of the specified PXI trigger</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1525,68 +1525,68 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_serial_number">
-<code class="sig-name descname">get_serial_number</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_serial_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_serial_number" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_serial_number</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_serial_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_serial_number" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the serial number of the device</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_serial_number_by_index">
-<code class="sig-name descname">get_serial_number_by_index</code><span class="sig-paren">(</span><em class="sig-param">index</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_serial_number_by_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_serial_number_by_index" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_serial_number_by_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_serial_number_by_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_serial_number_by_index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_serial_number_by_slot">
-<code class="sig-name descname">get_serial_number_by_slot</code><span class="sig-paren">(</span><em class="sig-param">chassis</em>, <em class="sig-param">slot</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_serial_number_by_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_serial_number_by_slot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_serial_number_by_slot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">chassis</span></em>, <em class="sig-param"><span class="n">slot</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_serial_number_by_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_serial_number_by_slot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_slot">
-<code class="sig-name descname">get_slot</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_slot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_slot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_slot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the slot number where the device is located</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_status">
-<code class="sig-name descname">get_status</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_status</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the status of the device</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_type">
-<code class="sig-name descname">get_type</code><span class="sig-paren">(</span><em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_type" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_type</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_type"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_type" title="Permalink to this definition">¶</a></dt>
 <dd><p>Returns the type of the device</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_type_by_index">
-<code class="sig-name descname">get_type_by_index</code><span class="sig-paren">(</span><em class="sig-param">index</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_type_by_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_type_by_index" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_type_by_index</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">index</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_type_by_index"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_type_by_index" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_type_by_slot">
-<code class="sig-name descname">get_type_by_slot</code><span class="sig-paren">(</span><em class="sig-param">chassis</em>, <em class="sig-param">slot</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_type_by_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_type_by_slot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_type_by_slot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">chassis</span></em>, <em class="sig-param"><span class="n">slot</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.get_type_by_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.get_type_by_slot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.open_with_serial_number">
-<code class="sig-name descname">open_with_serial_number</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">serial_number</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.open_with_serial_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.open_with_serial_number" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">open_with_serial_number</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">serial_number</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.open_with_serial_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.open_with_serial_number" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.open_with_slot">
-<code class="sig-name descname">open_with_slot</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">chassis</em>, <em class="sig-param">slot</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.open_with_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.open_with_slot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">open_with_slot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">chassis</span></em>, <em class="sig-param"><span class="n">slot</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.open_with_slot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.open_with_slot" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.run_self_test">
 <code class="sig-name descname">run_self_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.run_self_test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.run_self_test" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.set_fpga_pc_port">
-<code class="sig-name descname">set_fpga_pc_port</code><span class="sig-paren">(</span><em class="sig-param">port</em>, <em class="sig-param">data</em>, <em class="sig-param">address</em>, <em class="sig-param">address_mode</em>, <em class="sig-param">access_mode</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.set_fpga_pc_port"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.set_fpga_pc_port" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_fpga_pc_port</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">port</span></em>, <em class="sig-param"><span class="n">data</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="n">address_mode</span></em>, <em class="sig-param"><span class="n">access_mode</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.set_fpga_pc_port"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.set_fpga_pc_port" title="Permalink to this definition">¶</a></dt>
 <dd><p>Writes data at the PCport FPGA Block</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1601,9 +1601,9 @@ or negative numbers for errors</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.set_pxi_trigger">
-<code class="sig-name descname">set_pxi_trigger</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">pxi_trigger</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.set_pxi_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.set_pxi_trigger" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_pxi_trigger</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">pxi_trigger</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#SD_Module.set_pxi_trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.SD_Module.set_pxi_trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sets the digital value of the specified PXI trigger</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -1617,9 +1617,9 @@ or negative numbers for errors</p>
 
 </dd></dl>
 
-<dl class="function">
+<dl class="py function">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.result_parser">
-<code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.</code><code class="sig-name descname">result_parser</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">name='result'</em>, <em class="sig-param">verbose=False</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#result_parser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.result_parser" title="Permalink to this definition">¶</a></dt>
+<code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.</code><code class="sig-name descname">result_parser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em>, <em class="sig-param"><span class="n">name</span><span class="o">=</span><span class="default_value">'result'</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/SD_common/SD_Module.html#result_parser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module.result_parser" title="Permalink to this definition">¶</a></dt>
 <dd><p>This method is used for parsing the result in the get-methods.
 For values that are non-negative, the value is simply returned.
 Negative values indicate an error, so an error is raised

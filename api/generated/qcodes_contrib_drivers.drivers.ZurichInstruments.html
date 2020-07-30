@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.ZurichInstruments package &mdash; qcodes_contrib_drivers 0.5.0+114.g58aed52 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.ZurichInstruments package &mdash; qcodes_contrib_drivers 0.5.0+116.gd76c859 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.5.0+114.g58aed52
+                0.5.0+116.gd76c859
               </div>
             
           
@@ -222,9 +222,9 @@
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI">
 <span id="qcodes-contrib-drivers-drivers-zurichinstruments-hf2li-module"></span><h2>qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.</code><code class="sig-name descname">HF2LI</code><span class="sig-paren">(</span><em class="sig-param">name: str, device: str, demod: int, sigout: int, auxouts: Dict[str, int], num_sigout_mixer_channels: int = 1, **kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/HF2LI.html#HF2LI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.</code><code class="sig-name descname">HF2LI</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">device</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">demod</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em>, <em class="sig-param"><span class="n">sigout</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em>, <em class="sig-param"><span class="n">auxouts</span><span class="p">:</span> <span class="n">Dict<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">, </span><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">num_sigout_mixer_channels</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span> <span class="o">=</span> <span class="default_value">1</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/HF2LI.html#HF2LI"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
 <p>Qcodes driver for Zurich Instruments HF2LI lockin amplifier.</p>
 <p>This driver is meant to emulate a single-channel lockin amplifier,
@@ -247,14 +247,14 @@ to use the instrument as a lockin amplifier in X-Y mode with auxout channels 0 a
 </ul>
 </dd>
 </dl>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI.OUTPUT_MAPPING">
 <code class="sig-name descname">OUTPUT_MAPPING</code><em class="property"> = {-1: 'manual', 0: 'X', 1: 'Y', 2: 'R', 3: 'Theta'}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI.OUTPUT_MAPPING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI.sample">
-<code class="sig-name descname">sample</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; dict<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/HF2LI.html#HF2LI.sample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI.sample" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">sample</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#dict" title="(in Python v3.6)">dict</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/HF2LI.html#HF2LI.sample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.HF2LI.HF2LI.sample" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
@@ -262,16 +262,16 @@ to use the instrument as a lockin amplifier in X-Y mode with auxout channels 0 a
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8">
 <span id="qcodes-contrib-drivers-drivers-zurichinstruments-zihdawg8-module"></span><h2>qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8" title="Permalink to this headline">¶</a></h2>
-<dl class="exception">
+<dl class="py exception">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.CompilerError">
 <em class="property">exception </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.</code><code class="sig-name descname">CompilerError</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#CompilerError"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.CompilerError" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#Exception" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
 <p>Errors that occur during compilation of sequence programs.</p>
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.</code><code class="sig-name descname">ZIHDAWG8</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">device_id: str</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.</code><code class="sig-name descname">ZIHDAWG8</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">device_id</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
 <p>QCoDeS driver for ZI HDAWG8.
 Requires ZI LabOne software to be installed on the computer running QCoDeS
@@ -284,9 +284,9 @@ not want clipping or truncating of waveform to happen silently by the
 compiler. Warnings are constants on the module level and can be added to the
 drivers attribute <code class="docutils literal notranslate"><span class="pre">warnings_as_errors</span></code>. If warning are added, they
 will raise a CompilerError.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.create_parameters_from_node_tree">
-<code class="sig-name descname">create_parameters_from_node_tree</code><span class="sig-paren">(</span><em class="sig-param">parameters: dict</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.create_parameters_from_node_tree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.create_parameters_from_node_tree" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">create_parameters_from_node_tree</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parameters</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#dict" title="(in Python v3.6)">dict</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.create_parameters_from_node_tree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.create_parameters_from_node_tree" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create QuCoDeS parameters from the device node tree.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -295,9 +295,9 @@ will raise a CompilerError.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.disable_channel">
-<code class="sig-name descname">disable_channel</code><span class="sig-paren">(</span><em class="sig-param">channel_number: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.disable_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.disable_channel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">disable_channel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.disable_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.disable_channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Disable a signal output, turns off a blue LED on the device.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -306,9 +306,9 @@ will raise a CompilerError.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.download_device_node_tree">
-<code class="sig-name descname">download_device_node_tree</code><span class="sig-paren">(</span><em class="sig-param">flags: int = 0</em><span class="sig-paren">)</span> &#x2192; dict<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.download_device_node_tree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.download_device_node_tree" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">download_device_node_tree</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">flags</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span> <span class="o">=</span> <span class="default_value">0</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#dict" title="(in Python v3.6)">dict</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.download_device_node_tree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.download_device_node_tree" title="Permalink to this definition">¶</a></dt>
 <dd><dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
 <dd class="field-odd"><p><strong>flags</strong> – <p>ziPython.ziListEnum.settingsonly (0x08): Returns only nodes
@@ -328,9 +328,9 @@ of a node in case of multiple channels</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.enable_channel">
-<code class="sig-name descname">enable_channel</code><span class="sig-paren">(</span><em class="sig-param">channel_number: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.enable_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.enable_channel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">enable_channel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.enable_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.enable_channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Enable a signal output, turns on a blue LED on the device.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -339,9 +339,9 @@ of a node in case of multiple channels</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.generate_csv_sequence_program">
-<em class="property">static </em><code class="sig-name descname">generate_csv_sequence_program</code><span class="sig-paren">(</span><em class="sig-param">wave_info: List[Tuple[int, Optional[str], Optional[str]]]</em><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.generate_csv_sequence_program"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.generate_csv_sequence_program" title="Permalink to this definition">¶</a></dt>
+<em class="property">static </em><code class="sig-name descname">generate_csv_sequence_program</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">wave_info</span><span class="p">:</span> <span class="n">List<span class="p">[</span>Tuple<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a><span class="p">, </span>Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">]</span><span class="p">, </span>Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">]</span><span class="p">]</span><span class="p">]</span></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.generate_csv_sequence_program"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.generate_csv_sequence_program" title="Permalink to this definition">¶</a></dt>
 <dd><p>A method that generates a sequence program that plays waveforms from
 csv files.</p>
 <dl class="field-list simple">
@@ -356,9 +356,9 @@ and wave, marker or both wave and marker.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.set_channel_grouping">
-<code class="sig-name descname">set_channel_grouping</code><span class="sig-paren">(</span><em class="sig-param">group: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.set_channel_grouping"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.set_channel_grouping" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">set_channel_grouping</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">group</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.set_channel_grouping"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.set_channel_grouping" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the channel grouping mode of the device.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -368,21 +368,21 @@ sequencer program controls 8 outputs.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.snapshot">
-<code class="sig-name descname">snapshot</code><span class="sig-paren">(</span><em class="sig-param">update=True</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.snapshot" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">snapshot</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">update</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.snapshot"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.snapshot" title="Permalink to this definition">¶</a></dt>
 <dd><p>Override base method to make update default True.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.snapshot_base">
-<code class="sig-name descname">snapshot_base</code><span class="sig-paren">(</span><em class="sig-param">update: Optional[bool] = True</em>, <em class="sig-param">params_to_skip_update: Optional[Sequence[str]] = None</em><span class="sig-paren">)</span> &#x2192; Dict<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.snapshot_base"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.snapshot_base" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">snapshot_base</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">update</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)">bool</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">True</span></em>, <em class="sig-param"><span class="n">params_to_skip_update</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Sequence<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em><span class="sig-paren">)</span> &#x2192; Dict<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.snapshot_base"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.snapshot_base" title="Permalink to this definition">¶</a></dt>
 <dd><p>Override the base method to ignore ‘feature_code’ by default.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.start_awg">
-<code class="sig-name descname">start_awg</code><span class="sig-paren">(</span><em class="sig-param">awg_number: int</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.start_awg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.start_awg" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">start_awg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.start_awg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.start_awg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Activate an AWG</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -391,9 +391,9 @@ sequencer program controls 8 outputs.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.stop_awg">
-<code class="sig-name descname">stop_awg</code><span class="sig-paren">(</span><em class="sig-param">awg_number: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.stop_awg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.stop_awg" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">stop_awg</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.stop_awg"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.stop_awg" title="Permalink to this definition">¶</a></dt>
 <dd><p>Deactivate an AWG</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -402,9 +402,9 @@ sequencer program controls 8 outputs.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.upload_sequence_program">
-<code class="sig-name descname">upload_sequence_program</code><span class="sig-paren">(</span><em class="sig-param">awg_number: int</em>, <em class="sig-param">sequence_program: str</em><span class="sig-paren">)</span> &#x2192; int<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.upload_sequence_program"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.upload_sequence_program" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">upload_sequence_program</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em>, <em class="sig-param"><span class="n">sequence_program</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.upload_sequence_program"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.upload_sequence_program" title="Permalink to this definition">¶</a></dt>
 <dd><p>Uploads a sequence program to the device equivalent to using the the
 sequencer tab in the device’s gui.</p>
 <dl class="field-list simple">
@@ -426,9 +426,9 @@ device.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.upload_waveform">
-<code class="sig-name descname">upload_waveform</code><span class="sig-paren">(</span><em class="sig-param">awg_number: int</em>, <em class="sig-param">waveform: list</em>, <em class="sig-param">index: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.upload_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.upload_waveform" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">upload_waveform</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">awg_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em>, <em class="sig-param"><span class="n">waveform</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)">list</a></span></em>, <em class="sig-param"><span class="n">index</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.upload_waveform"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.upload_waveform" title="Permalink to this definition">¶</a></dt>
 <dd><p>Upload a waveform to the device memory at a given index.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -450,9 +450,9 @@ in the GUI.</p></li>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.waveform_to_csv">
-<code class="sig-name descname">waveform_to_csv</code><span class="sig-paren">(</span><em class="sig-param">wave_name: str</em>, <em class="sig-param">*waveforms: list</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.waveform_to_csv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.waveform_to_csv" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">waveform_to_csv</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">wave_name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="o">*</span><span class="n">waveforms</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#list" title="(in Python v3.6)">list</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/ZurichInstruments/ZIHDAWG8.html#ZIHDAWG8.waveform_to_csv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.ZurichInstruments.ZIHDAWG8.ZIHDAWG8.waveform_to_csv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write waveforms to a CSV file in the modules data directory so that it
 can be referenced and used in a sequence program. If more than one
 waveform is provided they will be played simultaneously but on separate

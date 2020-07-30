@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Cryogenic package &mdash; qcodes_contrib_drivers 0.5.0+114.g58aed52 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Cryogenic package &mdash; qcodes_contrib_drivers 0.5.0+116.gd76c859 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.5.0+114.g58aed52
+                0.5.0+116.gd76c859
               </div>
             
           
@@ -236,19 +236,19 @@ accompanying the magnet. The SMS60C current_rating should be slightly below
 SMS60C are: coil_constant=0.0380136, current_rating=52.61</p>
 </dd>
 </dl>
-<dl class="class">
+<dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.</code><code class="sig-name descname">CryogenicSMS120C</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">address</em>, <em class="sig-param">coil_constant=0.113375</em>, <em class="sig-param">current_rating=105.84</em>, <em class="sig-param">current_ramp_limit=0.0506</em>, <em class="sig-param">reset=False</em>, <em class="sig-param">timeout=5</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Cryogenic/CryogenicSMS120C.html#CryogenicSMS120C"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.</code><code class="sig-name descname">CryogenicSMS120C</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="n">coil_constant</span><span class="o">=</span><span class="default_value">0.113375</span></em>, <em class="sig-param"><span class="n">current_rating</span><span class="o">=</span><span class="default_value">105.84</span></em>, <em class="sig-param"><span class="n">current_ramp_limit</span><span class="o">=</span><span class="default_value">0.0506</span></em>, <em class="sig-param"><span class="n">reset</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">timeout</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Cryogenic/CryogenicSMS120C.html#CryogenicSMS120C"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>The following hard-coded, default values for Cryogenic magnets are safety limits
 and should not be modified.
 - these values should be set using the corresponding arguments when the class is called.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C.default_current_ramp_limit">
 <code class="sig-name descname">default_current_ramp_limit</code><em class="property"> = 0.0506</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C.default_current_ramp_limit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C.default_max_current_ramp_limit">
 <code class="sig-name descname">default_max_current_ramp_limit</code><em class="property"> = 0.12</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C.default_max_current_ramp_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Driver for the Cryogenic SMS120C magnet power supply.
@@ -270,16 +270,16 @@ for 4K operation 0.12A/s (0.013605 T/s, 0.8163 T/min) - not recommended</p></li>
 <p>Note about timing : SMS120C needs a minimum of 200ms delay between commands being sent</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C.get_idn">
 <code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Cryogenic/CryogenicSMS120C.html#CryogenicSMS120C.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C.get_idn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overwrites the get_idn function using constants as the hardware
 does not have a proper <code class="docutils literal notranslate"><span class="pre">*IDN</span></code> function.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C.query">
-<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param">msg</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Cryogenic/CryogenicSMS120C.html#CryogenicSMS120C.query"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C.query" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">query</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">msg</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Cryogenic/CryogenicSMS120C.html#CryogenicSMS120C.query"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C.CryogenicSMS120C.query" title="Permalink to this definition">¶</a></dt>
 <dd><p>Message outputs do not follow the standard SCPI format,
 separate regexp to parse unique/variable instrument message structures.</p>
 <dl class="field-list simple">

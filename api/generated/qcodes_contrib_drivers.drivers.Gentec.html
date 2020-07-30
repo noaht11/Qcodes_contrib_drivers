@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Gentec package &mdash; qcodes_contrib_drivers 0.5.0+114.g58aed52 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Gentec package &mdash; qcodes_contrib_drivers 0.5.0+116.gd76c859 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.5.0+114.g58aed52
+                0.5.0+116.gd76c859
               </div>
             
           
@@ -222,9 +222,9 @@
 </div>
 <div class="section" id="module-qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro">
 <span id="qcodes-contrib-drivers-drivers-gentec-gentec-maestro-module"></span><h2>qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro" title="Permalink to this headline">¶</a></h2>
-<dl class="class">
+<dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.</code><code class="sig-name descname">Gentec_Maestro</code><span class="sig-paren">(</span><em class="sig-param">name</em>, <em class="sig-param">address</em>, <em class="sig-param">baud_rate=115200</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Gentec/Gentec_Maestro.html#Gentec_Maestro"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.</code><code class="sig-name descname">Gentec_Maestro</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="n">baud_rate</span><span class="o">=</span><span class="default_value">115200</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Gentec/Gentec_Maestro.html#Gentec_Maestro"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>Instrument driver for the Gentec Maestro powermeter.
 :param name: Instrument name.
@@ -233,7 +233,7 @@
 :type address: str
 :param baud_rate: Baud rate for the connection.
 :type baud_rate: int</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro.model">
 <code class="sig-name descname">model</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro.model" title="Permalink to this definition">¶</a></dt>
 <dd><p>Model identification.</p>
@@ -244,7 +244,7 @@
 </dl>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro.firmware_version">
 <code class="sig-name descname">firmware_version</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro.firmware_version" title="Permalink to this definition">¶</a></dt>
 <dd><p>Firmware version.</p>
@@ -255,12 +255,12 @@
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro.clear_zero_offset">
 <code class="sig-name descname">clear_zero_offset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Gentec/Gentec_Maestro.html#Gentec_Maestro.clear_zero_offset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro.clear_zero_offset" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro.get_idn">
 <code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Gentec/Gentec_Maestro.html#Gentec_Maestro.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro.get_idn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse a standard VISA <code class="docutils literal notranslate"><span class="pre">*IDN?</span></code> response into an ID dict.</p>
@@ -279,7 +279,7 @@ as well.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro.set_zero_offset">
 <code class="sig-name descname">set_zero_offset</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Gentec/Gentec_Maestro.html#Gentec_Maestro.set_zero_offset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Gentec.Gentec_Maestro.Gentec_Maestro.set_zero_offset" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>

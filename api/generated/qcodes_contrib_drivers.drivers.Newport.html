@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Newport package &mdash; qcodes_contrib_drivers 0.5.0+114.g58aed52 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Newport package &mdash; qcodes_contrib_drivers 0.5.0+116.gd76c859 documentation</title>
   
 
   
@@ -31,7 +31,7 @@
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/language_data.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
         <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.5.0+114.g58aed52
+                0.5.0+116.gd76c859
               </div>
             
           
@@ -223,9 +223,9 @@
 <div class="section" id="module-qcodes_contrib_drivers.drivers.Newport.AG_UC8">
 <span id="qcodes-contrib-drivers-drivers-newport-ag-uc8-module"></span><h2>qcodes_contrib_drivers.drivers.Newport.AG_UC8 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Newport.AG_UC8" title="Permalink to this headline">¶</a></h2>
 <p>QCoDeS driver for Newport AGILIS AG-UC8 Piezo Stepper Controller.</p>
-<dl class="class">
+<dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8</code><span class="sig-paren">(</span><em class="sig-param">name: str</em>, <em class="sig-param">address: str</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">address</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>QCoDeS driver for the Newport AGILIS AG-UC8 Piezo Stepper Controller.</p>
 <dl class="field-list simple">
@@ -237,26 +237,26 @@ for example “ASRL3” for COM3.</p></li>
 </ul>
 </dd>
 </dl>
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.ask_channel">
-<code class="sig-name descname">ask_channel</code><span class="sig-paren">(</span><em class="sig-param">channel_number: int</em>, <em class="sig-param">cmd: str</em><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.ask_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.ask_channel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ask_channel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em>, <em class="sig-param"><span class="n">cmd</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.ask_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.ask_channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Select specified channel, then apply specified query
 and return response.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.command_delay">
 <code class="sig-name descname">command_delay</code><em class="property"> = 0.002</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.command_delay" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.default_timeout">
 <code class="sig-name descname">default_timeout</code><em class="property"> = 1.0</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.default_timeout" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.get_idn">
-<code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict[str, Optional[str]]<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.get_idn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">, </span>Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.get_idn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse a standard VISA <code class="docutils literal notranslate"><span class="pre">*IDN?</span></code> response into an ID dict.</p>
 <p>Even though this is the VISA standard, it applies to various other
 types as well, such as IPInstruments, so it is included here in the
@@ -273,9 +273,9 @@ as well.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.get_last_error">
-<code class="sig-name descname">get_last_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.get_last_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.get_last_error" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">get_last_error</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.get_last_error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.get_last_error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Send a TE command (get error of previous command) and return
 a numerical error code.</p>
 <dl class="field-list simple">
@@ -293,25 +293,25 @@ to the device. When a command results in error, exception
 Newport_AG_UC8_ErrorCode is raised.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.reset">
-<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.reset" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset the motor controller.</p>
 </dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.reset_delay">
 <code class="sig-name descname">reset_delay</code><em class="property"> = 0.05</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.reset_delay" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.slow_command_timeout">
 <code class="sig-name descname">slow_command_timeout</code><em class="property"> = 120.0</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.slow_command_timeout" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.write">
-<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param">cmd: str</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.write" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.write" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write a command string with NO response to the hardware.</p>
 <p>Subclasses that transform <code class="docutils literal notranslate"><span class="pre">cmd</span></code> should override this method, and in
 it call <code class="docutils literal notranslate"><span class="pre">super().write(new_cmd)</span></code>. Subclasses that define a new
@@ -327,27 +327,27 @@ hardware communication should instead override <code class="docutils literal not
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.write_channel">
-<code class="sig-name descname">write_channel</code><span class="sig-paren">(</span><em class="sig-param">channel_number: int</em>, <em class="sig-param">cmd: str</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.write_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.write_channel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">write_channel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em>, <em class="sig-param"><span class="n">cmd</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8.write_channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8.write_channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Select specified channel, then apply specified command.</p>
 </dd></dl>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8_Axis</code><span class="sig-paren">(</span><em class="sig-param">parent: qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel</em>, <em class="sig-param">axis: int</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8_Axis</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel" title="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel">qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel</a></span></em>, <em class="sig-param"><span class="n">axis</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
 <p>Represents one of the 2 axes of one channel of an AG-UC8 controller.</p>
-<dl class="attribute">
+<dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.SPEED_TABLE">
 <code class="sig-name descname">SPEED_TABLE</code><em class="property"> = {1: '5 steps/second at defined step amplitude', 2: '100 steps/second at maximum step amplitude', 3: '1700 steps/second at maximum step amplitude', 4: '666 steps/second at defined step amplitude'}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.SPEED_TABLE" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.jog">
-<code class="sig-name descname">jog</code><span class="sig-paren">(</span><em class="sig-param">speed: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.jog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.jog" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">jog</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">speed</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.jog"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.jog" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start moving in positive (speed &gt; 0) or negative (speed &lt; 0)
 direction.</p>
 <dl class="field-list simple">
@@ -361,9 +361,9 @@ Newport_AG_UC8_Axis.SPEED_TABLE.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.measure_position">
-<code class="sig-name descname">measure_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; int<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.measure_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.measure_position" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">measure_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.measure_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.measure_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Measure current position.</p>
 <p>This is a slow command which may take up to 2 minutes to finish.</p>
 <dl class="field-list simple">
@@ -377,9 +377,9 @@ steps of 1/1000 of total travel.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.move_abs">
-<code class="sig-name descname">move_abs</code><span class="sig-paren">(</span><em class="sig-param">position: int</em><span class="sig-paren">)</span> &#x2192; int<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.move_abs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.move_abs" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">move_abs</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">position</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.move_abs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.move_abs" title="Permalink to this definition">¶</a></dt>
 <dd><p>Move to absolute position.</p>
 <p>This is a slow command which may take up to 2 minutes to finish.</p>
 <dl class="field-list simple">
@@ -390,9 +390,9 @@ steps of 1/1000 of total travel.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.move_limit">
-<code class="sig-name descname">move_limit</code><span class="sig-paren">(</span><em class="sig-param">speed: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.move_limit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.move_limit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">move_limit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">speed</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.move_limit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.move_limit" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start moving to positive (speed &gt; 0) or negative (speed &lt; 0) limit.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -405,9 +405,9 @@ Newport_AG_UC8_Axis.SPEED_TABLE.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.move_rel">
-<code class="sig-name descname">move_rel</code><span class="sig-paren">(</span><em class="sig-param">steps: int</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.move_rel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.move_rel" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">move_rel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">steps</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.move_rel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.move_rel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start a relative move to current position.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -416,13 +416,13 @@ Newport_AG_UC8_Axis.SPEED_TABLE.</p>
 </dl>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.stop">
 <code class="sig-name descname">stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.stop" title="Permalink to this definition">¶</a></dt>
 <dd><p>Stop current movement.</p>
 </dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.zero_position">
 <code class="sig-name descname">zero_position</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Axis.zero_position"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Axis.zero_position" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset the step counter to zero.</p>
@@ -430,31 +430,31 @@ Newport_AG_UC8_Axis.SPEED_TABLE.</p>
 
 </dd></dl>
 
-<dl class="class">
+<dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8_Channel</code><span class="sig-paren">(</span><em class="sig-param">parent: qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8</em>, <em class="sig-param">channel_number: int</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel" title="Permalink to this definition">¶</a></dt>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8_Channel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8" title="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8">qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8</a></span></em>, <em class="sig-param"><span class="n">channel_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Channel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
 <p>Represents one of the 4 channels of an AG-UC8 controller.</p>
 <p>Each channel drives 2 axes of an optical mount.</p>
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel.ask">
-<code class="sig-name descname">ask</code><span class="sig-paren">(</span><em class="sig-param">cmd: str</em><span class="sig-paren">)</span> &#x2192; str<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Channel.ask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel.ask" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">ask</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Channel.ask"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel.ask" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
-<dl class="method">
+<dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel.write">
-<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param">cmd: str</em><span class="sig-paren">)</span> &#x2192; None<a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Channel.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel.write" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname">write</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Channel.write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Channel.write" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_ErrorCode">
-<em class="property">exception </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8_ErrorCode</code><span class="sig-paren">(</span><em class="sig-param">cmd: str</em>, <em class="sig-param">err: int</em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_ErrorCode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_ErrorCode" title="Permalink to this definition">¶</a></dt>
+<em class="property">exception </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8_ErrorCode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">err</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_ErrorCode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_ErrorCode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference internal" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Exception" title="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Exception"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Exception</span></code></a></p>
 </dd></dl>
 
-<dl class="exception">
+<dl class="py exception">
 <dt id="qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Exception">
 <em class="property">exception </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Newport.AG_UC8.</code><code class="sig-name descname">Newport_AG_UC8_Exception</code><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Newport/AG_UC8.html#Newport_AG_UC8_Exception"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Newport.AG_UC8.Newport_AG_UC8_Exception" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/exceptions.html#Exception" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></a></p>
