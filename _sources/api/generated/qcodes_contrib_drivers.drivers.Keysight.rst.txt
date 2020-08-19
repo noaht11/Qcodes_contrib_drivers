@@ -52,7 +52,6 @@ qcodes\_contrib\_drivers.drivers.Keysight.Keysight\_M3300A module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -27,6 +27,7 @@ Subpackages
    qcodes_contrib_drivers.drivers.StanfordResearchSystems
    qcodes_contrib_drivers.drivers.Tektronix
    qcodes_contrib_drivers.drivers.Thorlabs
+   qcodes_contrib_drivers.drivers.Vaunix
    qcodes_contrib_drivers.drivers.ZurichInstruments
 
 Module contents

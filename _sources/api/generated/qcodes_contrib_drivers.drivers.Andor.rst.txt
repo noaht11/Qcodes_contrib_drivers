@@ -12,7 +12,6 @@ qcodes\_contrib\_drivers.drivers.Andor.DU401 module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

@@ -12,7 +12,6 @@ qcodes\_contrib\_drivers.drivers.AimTTi.EL320P module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

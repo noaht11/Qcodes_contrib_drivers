@@ -12,7 +12,6 @@ qcodes\_contrib\_drivers.drivers.Cryocon.cryocon\_26 module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

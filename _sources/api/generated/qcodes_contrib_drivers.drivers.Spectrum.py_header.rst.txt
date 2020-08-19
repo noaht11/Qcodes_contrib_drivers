@@ -28,7 +28,6 @@ qcodes\_contrib\_drivers.drivers.Spectrum.py\_header.spcerr module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

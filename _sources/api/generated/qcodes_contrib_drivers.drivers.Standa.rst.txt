@@ -12,7 +12,6 @@ qcodes\_contrib\_drivers.drivers.Standa.Standa\_10MWA168 module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

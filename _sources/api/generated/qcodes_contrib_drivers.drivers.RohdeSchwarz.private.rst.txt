@@ -12,7 +12,6 @@ qcodes\_contrib\_drivers.drivers.RohdeSchwarz.private.HMC804x module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

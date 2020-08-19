@@ -12,7 +12,6 @@ qcodes\_contrib\_drivers.drivers.Aviosys.IP\_Power\_9258S module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

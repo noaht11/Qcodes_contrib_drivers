@@ -12,7 +12,6 @@ qcodes\_contrib\_drivers.drivers.Gentec.Gentec\_Maestro module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

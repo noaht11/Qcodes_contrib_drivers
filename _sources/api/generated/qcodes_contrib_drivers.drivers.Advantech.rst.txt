@@ -12,7 +12,6 @@ qcodes\_contrib\_drivers.drivers.Advantech.PCIE\_1751 module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

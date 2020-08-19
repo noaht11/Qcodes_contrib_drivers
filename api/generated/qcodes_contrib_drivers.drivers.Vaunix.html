@@ -1,0 +1,414 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>qcodes_contrib_drivers.drivers.Vaunix package &mdash; qcodes_contrib_drivers 0.5.0+125.ge950b6e documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/language_data.js"></script>
+        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="qcodes_contrib_drivers.drivers.ZurichInstruments package" href="qcodes_contrib_drivers.drivers.ZurichInstruments.html" />
+    <link rel="prev" title="qcodes_contrib_drivers.drivers.Thorlabs package" href="qcodes_contrib_drivers.drivers.Thorlabs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../index.html" class="icon icon-home" alt="Documentation Home"> qcodes_contrib_drivers
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.5.0+125.ge950b6e
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../../examples/index.html">Examples of how to use drivers</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html">qcodes_contrib_drivers.drivers package</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Advantech.html">qcodes_contrib_drivers.drivers.Advantech package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.AimTTi.html">qcodes_contrib_drivers.drivers.AimTTi package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Andor.html">qcodes_contrib_drivers.drivers.Andor package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Attocube.html">qcodes_contrib_drivers.drivers.Attocube package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Aviosys.html">qcodes_contrib_drivers.drivers.Aviosys package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryocon.html">qcodes_contrib_drivers.drivers.Cryocon package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryogenic.html">qcodes_contrib_drivers.drivers.Cryogenic package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Gentec.html">qcodes_contrib_drivers.drivers.Gentec package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.html">qcodes_contrib_drivers.drivers.Keysight package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Lakeshore.html">qcodes_contrib_drivers.drivers.Lakeshore package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Newport.html">qcodes_contrib_drivers.drivers.Newport package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Oxford.html">qcodes_contrib_drivers.drivers.Oxford package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.QuTech.html">qcodes_contrib_drivers.drivers.QuTech package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.RohdeSchwarz.html">qcodes_contrib_drivers.drivers.RohdeSchwarz package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Shamrock.html">qcodes_contrib_drivers.drivers.Shamrock package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Spectrum.html">qcodes_contrib_drivers.drivers.Spectrum package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Standa.html">qcodes_contrib_drivers.drivers.Standa package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.StanfordResearchSystems.html">qcodes_contrib_drivers.drivers.StanfordResearchSystems package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Tektronix.html">qcodes_contrib_drivers.drivers.Tektronix package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Thorlabs.html">qcodes_contrib_drivers.drivers.Thorlabs package</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.Vaunix package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Vaunix.LDA">qcodes_contrib_drivers.drivers.Vaunix.LDA module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Vaunix">Module contents</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.ZurichInstruments.html">qcodes_contrib_drivers.drivers.ZurichInstruments package</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="qcodes_contrib_drivers.drivers.html#module-qcodes_contrib_drivers.drivers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../index.html">qcodes_contrib_drivers</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="qcodes_contrib_drivers.drivers.html">qcodes_contrib_drivers.drivers package</a> &raquo;</li>
+        
+      <li>qcodes_contrib_drivers.drivers.Vaunix package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../../_sources/api/generated/qcodes_contrib_drivers.drivers.Vaunix.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+<style>
+/* CSS overrides for sphinx_rtd_theme */
+
+/* 24px margin */
+.nbinput.nblast.container,
+.nboutput.nblast.container {
+    margin-bottom: 19px;  /* padding has already 5px */
+}
+
+/* ... except between code cells! */
+.nblast.container + .nbinput.container {
+    margin-top: -19px;
+}
+
+.admonition > p:before {
+    margin-right: 4px;  /* make room for the exclamation icon */
+}
+
+/* Fix math alignment, see https://github.com/rtfd/sphinx_rtd_theme/pull/686 */
+.math {
+    text-align: unset;
+}
+</style>
+<div class="section" id="qcodes-contrib-drivers-drivers-vaunix-package">
+<h1>qcodes_contrib_drivers.drivers.Vaunix package<a class="headerlink" href="#qcodes-contrib-drivers-drivers-vaunix-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Vaunix.LDA">
+<span id="qcodes-contrib-drivers-drivers-vaunix-lda-module"></span><h2>qcodes_contrib_drivers.drivers.Vaunix.LDA module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Vaunix.LDA" title="Permalink to this headline">¶</a></h2>
+<p>This is the QCoDeS driver for Vaunix LDA digital attenuators. It requires the
+DLL that comes with the instrument, <code class="docutils literal notranslate"><span class="pre">VNX_atten64.dll</span></code> and/or
+<code class="docutils literal notranslate"><span class="pre">VNX_atten.dll</span></code>, for 64-bit Windows and 32-bit Windows, respectively. If the
+instrument has more than one physical channel, <code class="docutils literal notranslate"><span class="pre">InstrumentChannel</span></code> s are
+created for each one. If the instrument has only one physical channel, no
+channels are created and the parameters will be assigned to this instrument
+instead. The sweep profiles available in the API are not implemented.</p>
+<p>Tested with 64-bit system and</p>
+<ul class="simple">
+<li><p>LDA-133</p></li>
+<li><p>LDA-802Q</p></li>
+</ul>
+<dl class="py attribute">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LDA">
+<code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Vaunix.LDA.</code><code class="sig-name descname">LDA</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA</span></code></a></p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaAttenuation">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Vaunix.LDA.</code><code class="sig-name descname">LdaAttenuation</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">instrument</span><span class="p">:</span> <span class="n">Union<span class="p">[</span><a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA">qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA</a><span class="p">, </span><a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel">qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#LdaAttenuation"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaAttenuation" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter</span></code></a></p>
+<p>Attenuation of one channel in the LDA.</p>
+<dl class="py attribute">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaAttenuation.scaling">
+<code class="sig-name descname">scaling</code><em class="property"> = 0.05</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaAttenuation.scaling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Vaunix.LDA.</code><code class="sig-name descname">LdaChannel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA">qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA</a></span></em>, <em class="sig-param"><span class="n">channel_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#LdaChannel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
+<p>Channel corresponding to one input-output pair of the LDA digital
+attenuator.</p>
+</dd></dl>
+
+<dl class="py class">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Vaunix.LDA.</code><code class="sig-name descname">LdaParameter</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">instrument</span><span class="p">:</span> <span class="n">Union<span class="p">[</span><a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA">qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA</a><span class="p">, </span><a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel">qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="n">dll_get_function</span><span class="p">:</span> <span class="n">Callable</span></em>, <em class="sig-param"><span class="n">dll_set_function</span><span class="p">:</span> <span class="n">Callable</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#LdaParameter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/parameters/parameter.html#qcodes.instrument.parameter.Parameter" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.parameter.Parameter</span></code></a></p>
+<dl class="py method">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter.get_raw">
+<code class="sig-name descname">get_raw</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)">float</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#LdaParameter.get_raw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter.get_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Switch to this channel and return current value.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter.scaling">
+<code class="sig-name descname">scaling</code><em class="property"> = 1.0</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter.scaling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter.set_raw">
+<code class="sig-name descname">set_raw</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)">float</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#LdaParameter.set_raw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter.set_raw" title="Permalink to this definition">¶</a></dt>
+<dd><p>Switch to this channel and set to <code class="docutils literal notranslate"><span class="pre">value</span></code> .</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaWorkingFrequency">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Vaunix.LDA.</code><code class="sig-name descname">LdaWorkingFrequency</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">instrument</span><span class="p">:</span> <span class="n">Union<span class="p">[</span><a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA">qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA</a><span class="p">, </span><a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel">qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaChannel</a><span class="p">]</span></span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#LdaWorkingFrequency"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaWorkingFrequency" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaParameter</span></code></a></p>
+<p>Working frequency of one channel of the LDA. Not supported on all models.</p>
+<dl class="py method">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaWorkingFrequency.get_validator">
+<em class="property">classmethod </em><code class="sig-name descname">get_validator</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">root_instrument</span><span class="p">:</span> <span class="n"><a class="reference internal" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA" title="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA">qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA</a></span></em><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference external" href="https://qcodes.github.io/Qcodes/api/utils/validators.html#qcodes.utils.validators.Numbers" title="(in QCoDeS)">qcodes.utils.validators.Numbers</a><span class="p">]</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#LdaWorkingFrequency.get_validator"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaWorkingFrequency.get_validator" title="Permalink to this definition">¶</a></dt>
+<dd><p>Returns validator for working frequency, if <code class="docutils literal notranslate"><span class="pre">root_instrument</span></code>
+supports it. Else returns None.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaWorkingFrequency.scaling">
+<code class="sig-name descname">scaling</code><em class="property"> = 100000</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.LdaWorkingFrequency.scaling" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Vaunix.LDA.</code><code class="sig-name descname">Vaunix_LDA</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">serial_number</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em>, <em class="sig-param"><span class="n">dll_path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">channel_names</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>Dict<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a><span class="p">, </span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">]</span><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">test_mode</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)">bool</a></span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#Vaunix_LDA"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
+<dl class="py method">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA.close">
+<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#Vaunix_LDA.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA.close" title="Permalink to this definition">¶</a></dt>
+<dd><p>Irreversibly stop this instrument and free its resources.</p>
+<p>Subclasses should override this if they have other specific
+resources to close.</p>
+</dd></dl>
+
+<dl class="py attribute">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA.dll_path">
+<code class="sig-name descname">dll_path</code><em class="property"> = None</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA.dll_path" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA.get_idn">
+<code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Dict<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">, </span>Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">]</span><span class="p">]</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#Vaunix_LDA.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA.get_idn" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse a standard VISA <code class="docutils literal notranslate"><span class="pre">*IDN?</span></code> response into an ID dict.</p>
+<p>Even though this is the VISA standard, it applies to various other
+types as well, such as IPInstruments, so it is included here in the
+Instrument base class.</p>
+<p>Override this if your instrument does not support <code class="docutils literal notranslate"><span class="pre">*IDN?</span></code> or
+returns a nonstandard IDN string. This string is supposed to be a
+comma-separated list of vendor, model, serial, and firmware, but
+semicolon and colon are also common separators so we accept them here
+as well.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Returns</dt>
+<dd class="field-odd"><p>A dict containing vendor, model, serial, and firmware.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt id="qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA.save_settings">
+<code class="sig-name descname">save_settings</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Vaunix/LDA.html#Vaunix_LDA.save_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Vaunix.LDA.Vaunix_LDA.save_settings" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save current settings to memory. Settings are automatically loaded
+during power on.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Vaunix">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Vaunix" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="qcodes_contrib_drivers.drivers.ZurichInstruments.html" class="btn btn-neutral float-right" title="qcodes_contrib_drivers.drivers.ZurichInstruments package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="qcodes_contrib_drivers.drivers.Thorlabs.html" class="btn btn-neutral float-left" title="qcodes_contrib_drivers.drivers.Thorlabs package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2019, QCoDeS Users
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -44,7 +44,6 @@ qcodes\_contrib\_drivers.drivers.Tektronix.Keithley\_6500 module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

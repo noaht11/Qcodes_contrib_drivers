@@ -36,7 +36,6 @@ qcodes\_contrib\_drivers.drivers.Thorlabs.PRM1Z8 module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

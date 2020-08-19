@@ -12,7 +12,6 @@ qcodes\_contrib\_drivers.drivers.Lakeshore.Model\_331 module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 

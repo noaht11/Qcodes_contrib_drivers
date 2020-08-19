@@ -20,7 +20,6 @@ qcodes\_contrib\_drivers.drivers.Attocube.ANC300sim module
    :undoc-members:
    :show-inheritance:
 
-
 Module contents
 ---------------
 
