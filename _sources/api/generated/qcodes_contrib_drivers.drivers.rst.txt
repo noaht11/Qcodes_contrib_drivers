@@ -8,6 +8,7 @@ Subpackages
    :maxdepth: 10
 
    qcodes_contrib_drivers.drivers.Advantech
+   qcodes_contrib_drivers.drivers.Agilent
    qcodes_contrib_drivers.drivers.AimTTi
    qcodes_contrib_drivers.drivers.Andor
    qcodes_contrib_drivers.drivers.Attocube
