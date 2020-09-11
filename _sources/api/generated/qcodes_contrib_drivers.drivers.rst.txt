@@ -18,6 +18,7 @@ Subpackages
    qcodes_contrib_drivers.drivers.Gentec
    qcodes_contrib_drivers.drivers.Keysight
    qcodes_contrib_drivers.drivers.Lakeshore
+   qcodes_contrib_drivers.drivers.NationalInstruments
    qcodes_contrib_drivers.drivers.Newport
    qcodes_contrib_drivers.drivers.Oxford
    qcodes_contrib_drivers.drivers.QuTech
