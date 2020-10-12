@@ -13,6 +13,7 @@ Subpackages
    qcodes_contrib_drivers.drivers.Andor
    qcodes_contrib_drivers.drivers.Attocube
    qcodes_contrib_drivers.drivers.Aviosys
+   qcodes_contrib_drivers.drivers.BlueFors
    qcodes_contrib_drivers.drivers.Cryocon
    qcodes_contrib_drivers.drivers.Cryogenic
    qcodes_contrib_drivers.drivers.Gentec
