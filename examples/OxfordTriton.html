@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Qcodes example with Shamrock SR750 &mdash; qcodes_contrib_drivers 0.6.0+75.g49aea0a documentation</title>
+  <title>Example of the oxford triton driver &mdash; qcodes_contrib_drivers 0.6.0+75.g49aea0a documentation</title>
   
 
   
@@ -39,8 +39,8 @@
     
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Qcodes example with Standa 10MWA168" href="Standa_10MWA168.html" />
-    <link rel="prev" title="QCoDeS example with Rohe&amp;Schwarz SMW200A" href="Rohde_Schwarz_SMW200A.html" /> 
+    <link rel="next" title="QCoDeS Example with R&amp;S HMC 8043 Power Supply" href="Rohde_Schwarx_HMC8043.html" />
+    <link rel="prev" title="QCoDeS Example with Newport AG-UC8 Piezo Motion Controller" href="Newport_AG-UC8.html" /> 
 </head>
 
 <body class="wy-body-for-nav">
@@ -106,19 +106,16 @@
 <li class="toctree-l2"><a class="reference internal" href="NationalInstruments_PXIe_2597.html">Qcodes example for National Instruments PXIe-2597 RF Switch</a></li>
 <li class="toctree-l2"><a class="reference internal" href="NationalInstruments_RFSG.html">Qcodes example with the NI RFSG signal generator driver</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Newport_AG-UC8.html">QCoDeS Example with Newport AG-UC8 Piezo Motion Controller</a></li>
-<li class="toctree-l2"><a class="reference internal" href="OxfordTriton.html">Example of the oxford triton driver</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Example of the oxford triton driver</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#Imports">Imports</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Load-instrument">Load instrument</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#Readout-instrument-parameters">Readout instrument parameters</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="Rohde_Schwarx_HMC8043.html">QCoDeS Example with R&amp;S HMC 8043 Power Supply</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Rohde_Schwarz_HMP4040.html">QCoDeS Example with R&amp;S HMP4040 Power Supply</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Rohde_Schwarz_SMW200A.html">QCoDeS example with Rohe&amp;Schwarz SMW200A</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Qcodes example with Shamrock SR750</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Initialize-the-instrument">Initialize the instrument</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Get-the-current-spectrometer-setup">Get the current spectrometer setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Change-spectrometer-setup">Change spectrometer setup</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Get-spectrometer-calibration">Get spectrometer calibration</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Take-a-snapshot">Take a snapshot</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Close-the-instrument">Close the instrument</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="Shamrock_SR750.html">Qcodes example with Shamrock SR750</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Standa_10MWA168.html">Qcodes example with Standa 10MWA168</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Tektronix_Keithley_6500.html">QCoDeS Example with Tektronix Keithley Digital Multimeter DMM6500</a></li>
 <li class="toctree-l2"><a class="reference internal" href="Thorlabs_K10CR1.html">Qcodes example with Thorlabs K10CR1</a></li>
@@ -178,13 +175,13 @@
         
           <li><a href="index.html">Examples of how to use drivers</a> &raquo;</li>
         
-      <li>Qcodes example with Shamrock SR750</li>
+      <li>Example of the oxford triton driver</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
-            <a href="../_sources/examples/Shamrock_SR750.ipynb.txt" rel="nofollow"> View page source</a>
+            <a href="../_sources/examples/OxfordTriton.ipynb.txt" rel="nofollow"> View page source</a>
           
         
       </li>
@@ -467,25 +464,47 @@ div.rendered_html tbody tr:hover {
     text-align: unset;
 }
 </style>
-<div class="section" id="Qcodes-example-with-Shamrock-SR750">
-<h1>Qcodes example with Shamrock SR750<a class="headerlink" href="#Qcodes-example-with-Shamrock-SR750" title="Permalink to this headline">¶</a></h1>
-<div class="nbinput nblast docutils container">
+<div class="section" id="Example-of-the-oxford-triton-driver">
+<h1>Example of the oxford triton driver<a class="headerlink" href="#Example-of-the-oxford-triton-driver" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="Imports">
+<h2>Imports<a class="headerlink" href="#Imports" title="Permalink to this headline">¶</a></h2>
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">qcodes.instrument_drivers.Shamrock.SR750</span> <span class="kn">import</span> <span class="n">Shamrock_SR750</span>
+<span></span><span class="kn">import</span> <span class="nn">qcodes</span> <span class="k">as</span> <span class="nn">qc</span>
+<span class="kn">from</span> <span class="nn">Triton</span> <span class="kn">import</span> <span class="n">Triton</span>
 </pre></div>
 </div>
 </div>
-<div class="section" id="Initialize-the-instrument">
-<h2>Initialize the instrument<a class="headerlink" href="#Initialize-the-instrument" title="Permalink to this headline">¶</a></h2>
+<div class="nboutput nblast docutils container">
+<div class="prompt empty docutils container">
+</div>
+<div class="output_area docutils container">
+<div class="highlight"><pre>
+Logging hadn&#39;t been started.
+Activating auto-logging. Current session state plus future input saved.
+Filename       : C:\Users\ed261978\.qcodes\logs\command_history.log
+Mode           : append
+Output logging : True
+Raw input log  : False
+Timestamping   : True
+State          : active
+Qcodes Logfile : C:\Users\ed261978\.qcodes\logs\201007-9328-qcodes.log
+</pre></div></div>
+</div>
+</div>
+<div class="section" id="Load-instrument">
+<h2>Load instrument<a class="headerlink" href="#Load-instrument" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">shamrock</span> <span class="o">=</span> <span class="n">Shamrock_SR750</span><span class="p">(</span><span class="s2">&quot;Shamrock&quot;</span><span class="p">)</span>
+<span></span><span class="n">triton</span> <span class="o">=</span> <span class="n">Triton</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="s1">&#39;triton&#39;</span><span class="p">,</span>
+                <span class="n">file_path</span><span class="o">=</span><span class="s1">&#39;log/20201005.vcl&#39;</span><span class="p">,</span>
+                <span class="n">magnet</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 </div>
 </div>
@@ -494,23 +513,23 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Connected to: Shamrock None (serial:SR-2975, firmware:None) in 8.30s
+Connected to: None triton (serial:None, firmware:None) in 0.00s
 </pre></div></div>
 </div>
 </div>
-<div class="section" id="Get-the-current-spectrometer-setup">
-<h2>Get the current spectrometer setup<a class="headerlink" href="#Get-the-current-spectrometer-setup" title="Permalink to this headline">¶</a></h2>
-<p>We read the current grating number, its blaze and groove density, the current central wavelength and the slit width.</p>
+<div class="section" id="Readout-instrument-parameters">
+<h2>Readout instrument parameters<a class="headerlink" href="#Readout-instrument-parameters" title="Permalink to this headline">¶</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">shamrock</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">shamrock</span><span class="o">.</span><span class="n">blaze</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">blaze</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">blaze</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">shamrock</span><span class="o">.</span><span class="n">groove_density</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">groove_density</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">groove_density</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">shamrock</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">shamrock</span><span class="o">.</span><span class="n">slit</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">slit</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">slit</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">triton</span><span class="o">.</span><span class="n">temperature_50k_plate</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">triton</span><span class="o">.</span><span class="n">temperature_4k_plate</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">triton</span><span class="o">.</span><span class="n">temperature_magnet</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">triton</span><span class="o">.</span><span class="n">temperature_still</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">triton</span><span class="o">.</span><span class="n">temperature_100mk</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">triton</span><span class="o">.</span><span class="n">temperature_mixing_chamber</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -519,38 +538,22 @@ Connected to: Shamrock None (serial:SR-2975, firmware:None) in 8.30s
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Grating : 1
-Blaze : 650
-Groove density : 600 l/mm
-Wavelength : 600.0 nm
-Slit : 200 μm
+295.94393629146197
+295.622032281476
+282.72965240364397
+39.9949711258109
+39.9949711258109
+295.115153276995
 </pre></div></div>
 </div>
-</div>
-<div class="section" id="Change-spectrometer-setup">
-<h2>Change spectrometer setup<a class="headerlink" href="#Change-spectrometer-setup" title="Permalink to this headline">¶</a></h2>
-<p>We select another grating, change the central wavelength and change the slit width. Afterwards, we repeat the parameter reading.</p>
-<div class="nbinput nblast docutils container">
+<div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
 <div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">shamrock</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-<span class="n">shamrock</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">756</span><span class="p">)</span>
-<span class="n">shamrock</span><span class="o">.</span><span class="n">slit</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">100</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="nb">print</span><span class="p">(</span><span class="n">shamrock</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">grating</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">shamrock</span><span class="o">.</span><span class="n">blaze</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">blaze</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">blaze</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">shamrock</span><span class="o">.</span><span class="n">groove_density</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">groove_density</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">groove_density</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">shamrock</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">wavelength</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">shamrock</span><span class="o">.</span><span class="n">slit</span><span class="o">.</span><span class="n">label</span><span class="p">,</span> <span class="s1">&#39;:&#39;</span><span class="p">,</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">slit</span><span class="o">.</span><span class="n">get</span><span class="p">(),</span> <span class="n">shamrock</span><span class="o">.</span><span class="n">slit</span><span class="o">.</span><span class="n">unit</span><span class="p">)</span>
+<span></span><span class="nb">print</span><span class="p">(</span><span class="n">triton</span><span class="o">.</span><span class="n">pressure_condensation_line</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">triton</span><span class="o">.</span><span class="n">pressure_forepump_back</span><span class="p">())</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">triton</span><span class="o">.</span><span class="n">pressure_mixture_tank</span><span class="p">())</span>
 </pre></div>
 </div>
 </div>
@@ -559,85 +562,10 @@ Slit : 200 μm
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Grating : 2
-Blaze : 675
-Groove density : 1350 l/mm
-Wavelength : 756.0 nm
-Slit : 100 μm
+0.420131839019814
+0.0630699567828778
+0.697571356918492
 </pre></div></div>
-</div>
-</div>
-<div class="section" id="Get-spectrometer-calibration">
-<h2>Get spectrometer calibration<a class="headerlink" href="#Get-spectrometer-calibration" title="Permalink to this headline">¶</a></h2>
-<p>We read the spectrometer calibration, i.e. the wavelength for each pixel on the CCD.</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">shamrock</span><span class="o">.</span><span class="n">calibration</span><span class="o">.</span><span class="n">get</span><span class="p">()[:</span><span class="mi">10</span><span class="p">]</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
-</pre></div>
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-[745.6130981445312,
- 745.6336059570312,
- 745.6541137695312,
- 745.674560546875,
- 745.695068359375,
- 745.715576171875,
- 745.736083984375,
- 745.756591796875,
- 745.777099609375,
- 745.7975463867188]
-</pre></div></div>
-</div>
-</div>
-<div class="section" id="Take-a-snapshot">
-<h2>Take a snapshot<a class="headerlink" href="#Take-a-snapshot" title="Permalink to this headline">¶</a></h2>
-<p>We take a snapshot of the instrument to get an overview of the current settings.</p>
-<div class="nbinput docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">shamrock</span><span class="o">.</span><span class="n">print_readable_snapshot</span><span class="p">()</span>
-</pre></div>
-</div>
-</div>
-<div class="nboutput nblast docutils container">
-<div class="prompt empty docutils container">
-</div>
-<div class="output_area docutils container">
-<div class="highlight"><pre>
-Shamrock:
-        parameter     value
---------------------------------------------------------------------------------
-IDN            :        {&#39;vendor&#39;: &#39;Shamrock&#39;, &#39;serial&#39;: &#39;SR-2975&#39;}
-blaze          :        675
-calibration    :        [745.6130981445312, 745.6336059570312, 745.6541137695312, 74...
-grating        :        2
-groove_density :        1350 (l/mm)
-slit           :        100 (μm)
-wavelength     :        756 (nm)
-</pre></div></div>
-</div>
-</div>
-<div class="section" id="Close-the-instrument">
-<h2>Close the instrument<a class="headerlink" href="#Close-the-instrument" title="Permalink to this headline">¶</a></h2>
-<div class="nbinput nblast docutils container">
-<div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
-</pre></div>
-</div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre>
-<span></span><span class="n">shamrock</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
-</pre></div>
-</div>
 </div>
 </div>
 </div>
@@ -650,10 +578,10 @@ wavelength     :        756 (nm)
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="Standa_10MWA168.html" class="btn btn-neutral float-right" title="Qcodes example with Standa 10MWA168" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="Rohde_Schwarx_HMC8043.html" class="btn btn-neutral float-right" title="QCoDeS Example with R&amp;S HMC 8043 Power Supply" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Rohde_Schwarz_SMW200A.html" class="btn btn-neutral float-left" title="QCoDeS example with Rohe&amp;Schwarz SMW200A" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Newport_AG-UC8.html" class="btn btn-neutral float-left" title="QCoDeS Example with Newport AG-UC8 Piezo Motion Controller" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
