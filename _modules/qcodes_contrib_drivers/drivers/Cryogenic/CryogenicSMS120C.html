@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C &mdash; qcodes_contrib_drivers 0.6.0+79.gc7757a4 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Cryogenic.CryogenicSMS120C &mdash; qcodes_contrib_drivers 0.6.0+82.g027cafb documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                0.6.0+79.gc7757a4
+                0.6.0+82.g027cafb
               </div>
             
           
@@ -172,7 +172,6 @@
 <span class="sd">    SMS60C are: coil_constant=0.0380136, current_rating=52.61</span>
 <span class="sd">&quot;&quot;&quot;</span>
 
-<span class="kn">import</span> <span class="nn">visa</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">time</span>
@@ -227,8 +226,8 @@
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">address</span><span class="p">,</span> <span class="n">terminator</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\r\n</span><span class="s1">&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">visa_handle</span><span class="o">.</span><span class="n">baud_rate</span> <span class="o">=</span> <span class="mi">9600</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">visa_handle</span><span class="o">.</span><span class="n">parity</span> <span class="o">=</span> <span class="n">visa</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">Parity</span><span class="o">.</span><span class="n">none</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">visa_handle</span><span class="o">.</span><span class="n">stop_bits</span> <span class="o">=</span> <span class="n">visa</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">StopBits</span><span class="o">.</span><span class="n">one</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">visa_handle</span><span class="o">.</span><span class="n">parity</span> <span class="o">=</span> <span class="n">vi_const</span><span class="o">.</span><span class="n">Parity</span><span class="o">.</span><span class="n">none</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">visa_handle</span><span class="o">.</span><span class="n">stop_bits</span> <span class="o">=</span> <span class="n">vi_const</span><span class="o">.</span><span class="n">StopBits</span><span class="o">.</span><span class="n">one</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">visa_handle</span><span class="o">.</span><span class="n">data_bits</span> <span class="o">=</span> <span class="mi">8</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">visa_handle</span><span class="o">.</span><span class="n">flow_control</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">visa_handle</span><span class="o">.</span><span class="n">flush</span><span class="p">(</span><span class="n">vi_const</span><span class="o">.</span><span class="n">VI_READ_BUF_DISCARD</span> <span class="o">|</span>

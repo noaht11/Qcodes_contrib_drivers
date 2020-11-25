@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.RohdeSchwarz.SMW200Asim &mdash; qcodes_contrib_drivers 0.6.0+79.gc7757a4 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.RohdeSchwarz.SMW200Asim &mdash; qcodes_contrib_drivers 0.6.0+82.g027cafb documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                0.6.0+79.gc7757a4
+                0.6.0+82.g027cafb
               </div>
             
           
@@ -165,7 +165,7 @@
 <span class="sd">Authors:</span>
 <span class="sd">    Michael Wagener, ZEA-2, m.wagener@fz-juelich.de</span>
 <span class="sd">&quot;&quot;&quot;</span>
-<span class="kn">import</span> <span class="nn">visa</span>
+<span class="kn">import</span> <span class="nn">pyvisa</span>
 <span class="kn">from</span> <span class="nn">qcodes.instrument.visa</span> <span class="kn">import</span> <span class="n">VisaInstrument</span>
 <span class="kn">from</span> <span class="nn">qcodes.utils.validators</span> <span class="kn">import</span> <span class="n">Numbers</span>
 
@@ -357,7 +357,7 @@
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;be more positive!&#39;</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="n">num</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-            <span class="n">ret_code</span> <span class="o">=</span> <span class="n">visa</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">VI_ERROR_TMO</span>
+            <span class="n">ret_code</span> <span class="o">=</span> <span class="n">pyvisa</span><span class="o">.</span><span class="n">constants</span><span class="o">.</span><span class="n">VI_ERROR_TMO</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="n">ret_code</span> <span class="o">=</span> <span class="mi">0</span>
 
