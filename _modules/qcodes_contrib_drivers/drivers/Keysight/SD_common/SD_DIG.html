@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG &mdash; qcodes_contrib_drivers 0.6.0+84.ga2876c3 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG &mdash; qcodes_contrib_drivers 0.6.0+132.gbc40e8d documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                0.6.0+84.ga2876c3
+                0.6.0+132.gbc40e8d
               </div>
             
           
@@ -180,25 +180,14 @@
 <span class="sd">                channels (int)  : the number of input channels the specified card has</span>
 <span class="sd">                triggers (int)  : the number of trigger inputs the specified card has</span>
 <span class="sd">        &quot;&quot;&quot;</span>
-        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">chassis</span><span class="p">,</span> <span class="n">slot</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+        <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">name</span><span class="p">,</span> <span class="n">chassis</span><span class="p">,</span> <span class="n">slot</span><span class="p">,</span> <span class="n">module_class</span><span class="o">=</span><span class="n">keysightSD1</span><span class="o">.</span><span class="n">SD_AIN</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
 
-        <span class="c1"># Create instance of keysight SD_AIN class</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">SD_AIN</span> <span class="o">=</span> <span class="n">keysightSD1</span><span class="o">.</span><span class="n">SD_AIN</span><span class="p">()</span>
 
         <span class="c1"># store card-specifics</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_channels</span> <span class="o">=</span> <span class="n">channels</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">n_triggers</span> <span class="o">=</span> <span class="n">triggers</span>
 
-        <span class="c1"># Open the device, using the specified chassis and slot number</span>
-        <span class="n">dig_name</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">SD_AIN</span><span class="o">.</span><span class="n">getProductNameBySlot</span><span class="p">(</span><span class="n">chassis</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
-        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">dig_name</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
-            <span class="n">result_code</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">SD_AIN</span><span class="o">.</span><span class="n">openWithSlot</span><span class="p">(</span><span class="n">dig_name</span><span class="p">,</span> <span class="n">chassis</span><span class="p">,</span> <span class="n">slot</span><span class="p">)</span>
-            <span class="k">if</span> <span class="n">result_code</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">:</span>
-                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Could not open SD_DIG &#39;</span>
-                                <span class="s1">&#39;error code </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">result_code</span><span class="p">))</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;No SD_DIG found at &#39;</span>
-                            <span class="s1">&#39;chassis </span><span class="si">{}</span><span class="s1">, slot </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chassis</span><span class="p">,</span> <span class="n">slot</span><span class="p">))</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">SD_AIN</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">SD_module</span>
 
         <span class="c1">#</span>
         <span class="c1"># Create a set of internal variables to aid set/get cmds in params</span>

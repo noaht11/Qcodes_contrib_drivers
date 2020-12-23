@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>qcodes_contrib_drivers.drivers.Keysight package &mdash; qcodes_contrib_drivers 0.6.0+84.ga2876c3 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Keysight package &mdash; qcodes_contrib_drivers 0.6.0+132.gbc40e8d documentation</title>
   
 
   
@@ -64,7 +64,7 @@
             
             
               <div class="version">
-                0.6.0+84.ga2876c3
+                0.6.0+132.gbc40e8d
               </div>
             
           
@@ -112,6 +112,7 @@
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211">qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_M3201A">qcodes_contrib_drivers.drivers.Keysight.Keysight_M3201A module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.Keysight_M3300A">qcodes_contrib_drivers.drivers.Keysight.Keysight_M3300A module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight.M3202A">qcodes_contrib_drivers.drivers.Keysight.M3202A module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Keysight">Module contents</a></li>
 </ul>
 </li>
@@ -235,8 +236,10 @@
 <li class="toctree-l1"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.SD_common.html">qcodes_contrib_drivers.drivers.Keysight.SD_common package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.SD_common.html#submodules">Submodules</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.SD_common.html#module-qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.SD_common.html#module-qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG_Async">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG_Async module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.SD_common.html#module-qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_DIG module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.SD_common.html#module-qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_Module module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.SD_common.html#module-qcodes_contrib_drivers.drivers.Keysight.SD_common.memory_manager">qcodes_contrib_drivers.drivers.Keysight.SD_common.memory_manager module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.SD_common.html#module-qcodes_contrib_drivers.drivers.Keysight.SD_common">Module contents</a></li>
 </ul>
 </li>
@@ -251,7 +254,7 @@
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313A">
 <em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.</code><code class="sig-name descname">E36313A</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/Keysight_E36313A.html#E36313A"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313A" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.21.0+13.g54fafe4baa)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.21.0+35.g4b60fc051b)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>This is the qcodes driver for the Keysight E36313A programmable DC power supply</p>
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313A.get_idn">
@@ -276,8 +279,8 @@ as well.</p>
 
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313AChannel">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.</code><code class="sig-name descname">E36313AChannel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.21.0+13.g54fafe4baa)">qcodes.instrument.base.Instrument</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">chan</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/Keysight_E36313A.html#E36313AChannel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313AChannel" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS v0.21.0+13.g54fafe4baa)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.</code><code class="sig-name descname">E36313AChannel</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">parent</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.21.0+35.g4b60fc051b)">qcodes.instrument.base.Instrument</a></span></em>, <em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">chan</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/Keysight_E36313A.html#E36313AChannel"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.Keysight_E36313A.E36313AChannel" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/channel.html#qcodes.instrument.channel.InstrumentChannel" title="(in QCoDeS v0.21.0+35.g4b60fc051b)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.channel.InstrumentChannel</span></code></a></p>
 </dd></dl>
 
 </div>
@@ -286,7 +289,7 @@ as well.</p>
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D.Keysight_E8267D">
 <em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D.</code><code class="sig-name descname">Keysight_E8267D</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="n">step_attenuator</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/Keysight_E8267D.html#Keysight_E8267D"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.Keysight_E8267D.Keysight_E8267D" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.21.0+13.g54fafe4baa)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.21.0+35.g4b60fc051b)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>This is the qcodes driver for the Keysight_E8267D signal generator</p>
 <dl class="simple">
 <dt>Status: beta-version.</dt><dd><p>TODO:
@@ -329,7 +332,7 @@ only the ones most commonly used.</p>
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211.Keysight_J7211">
 <em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211.</code><code class="sig-name descname">Keysight_J7211</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">address</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">attenuation</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">terminator</span><span class="o">=</span><span class="default_value">'\r'</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/Keysight_J7211.html#Keysight_J7211"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.Keysight_J7211.Keysight_J7211" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.21.0+13.g54fafe4baa)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.21.0+35.g4b60fc051b)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>Qcodes driver for the Keysight J7211 Attenuation Control Unit.
 Tested with J7211B.</p>
 <dl class="field-list simple">
@@ -400,6 +403,41 @@ Tested with J7211B.</p>
 </dl>
 <p class="rubric">Example</p>
 <p>DIG  = DIG(‘M3300A’)</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Keysight.M3202A">
+<span id="qcodes-contrib-drivers-drivers-keysight-m3202a-module"></span><h2>qcodes_contrib_drivers.drivers.Keysight.M3202A module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Keysight.M3202A" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="qcodes_contrib_drivers.drivers.Keysight.M3202A.M3202A">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Keysight.M3202A.</code><code class="sig-name descname">M3202A</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">chassis</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em>, <em class="sig-param"><span class="n">slot</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Keysight/M3202A.html#M3202A"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Keysight.M3202A.M3202A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="qcodes_contrib_drivers.drivers.Keysight.SD_common.html#qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG_Async.SD_AWG_Async" title="qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG_Async.SD_AWG_Async"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes_contrib_drivers.drivers.Keysight.SD_common.SD_AWG_Async.SD_AWG_Async</span></code></a></p>
+<p>qcodes driver for the Keysight M3202A AWG PXIe card.</p>
+<p>M3202A channel numbers start with 1.</p>
+<p>This driver is derived from SD_AWG_Async which uses a thread per module to
+upload waveforms concurrently. The sychronous methods like load_waveform are
+not available in this class.</p>
+<p class="rubric">Example</p>
+<p>awg1 = M3202A(‘awg1’, 0, 2)
+ref_1 = awg1.upload_waveform(wave1)</p>
+<p>trigger_mode = keysightSD1.SD_TriggerModes.EXTTRIG
+awg1.awg_queue_waveform(1, ref_1, trigger_mode, 0, 1, 0)</p>
+<p>If you want to test M3202A based on the synchronous SD_AWG, then you can
+instantiate SD_AWG directly.
+.. rubric:: Example</p>
+<dl class="simple">
+<dt>m3202a_sync = SD_AWG(name, chassis, slot, channels=4, triggers=8,</dt><dd><p>legacy_channel_numbering=False)</p>
+</dd>
+</dl>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> – name for this instrument, passed to the base instrument</p></li>
+<li><p><strong>chassis</strong> – chassis number where the device is located</p></li>
+<li><p><strong>slot</strong> – slot number where the device is plugged in</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </div>
