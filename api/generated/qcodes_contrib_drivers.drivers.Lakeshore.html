@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>qcodes_contrib_drivers.drivers.Lakeshore package &mdash; qcodes_contrib_drivers 0.6.0+154.gb01ce47 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Lakeshore package &mdash; qcodes_contrib_drivers 0.6.0+174.g97e05f8 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                0.6.0+154.gb01ce47
+                0.6.0+174.g97e05f8
               </div>
             
           
@@ -110,6 +110,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">qcodes_contrib_drivers.drivers.Lakeshore package</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Lakeshore.Model_331">qcodes_contrib_drivers.drivers.Lakeshore.Model_331 module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Lakeshore.Model_625">qcodes_contrib_drivers.drivers.Lakeshore.Model_625 module</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#module-qcodes_contrib_drivers.drivers.Lakeshore">Module contents</a></li>
 </ul>
 </li>
@@ -265,6 +266,41 @@
 <dt id="qcodes_contrib_drivers.drivers.Lakeshore.Model_331.SensorChannel.channel">
 <code class="sig-name descname">channel</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Lakeshore.Model_331.SensorChannel.channel" title="Permalink to this definition">¶</a></dt>
 <dd><p>The channel ID.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+<div class="section" id="module-qcodes_contrib_drivers.drivers.Lakeshore.Model_625">
+<span id="qcodes-contrib-drivers-drivers-lakeshore-model-625-module"></span><h2>qcodes_contrib_drivers.drivers.Lakeshore.Model_625 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Lakeshore.Model_625" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt id="qcodes_contrib_drivers.drivers.Lakeshore.Model_625.Lakeshore625">
+<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Lakeshore.Model_625.</code><code class="sig-name descname">Lakeshore625</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">coil_constant</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)">float</a></span></em>, <em class="sig-param"><span class="n">field_ramp_rate</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)">float</a></span></em>, <em class="sig-param"><span class="n">address</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">reset</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)">bool</a></span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="n">terminator</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span> <span class="o">=</span> <span class="default_value">''</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Lakeshore/Model_625.html#Lakeshore625"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Lakeshore.Model_625.Lakeshore625" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.22.0+52.g115f6ae378)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<p>Driver for the Lakeshore Model 625 superconducting magnet power supply.</p>
+<p>This class uses T/A and A/s as units.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – a name for the instrument</p></li>
+<li><p><strong>coil_constant</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) – Coil contant of magnet, in untis of T/A</p></li>
+<li><p><strong>field_ramp_rate</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)"><em>float</em></a>) – Magnetic field ramp rate, in units of T/min</p></li>
+<li><p><strong>address</strong> (<a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><em>str</em></a>) – VISA address of the device</p></li>
+</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt id="qcodes_contrib_drivers.drivers.Lakeshore.Model_625.Lakeshore625.set_field">
+<code class="sig-name descname">set_field</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)">float</a></span></em>, <em class="sig-param"><span class="n">block</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)">bool</a></span> <span class="o">=</span> <span class="default_value">True</span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Lakeshore/Model_625.html#Lakeshore625.set_field"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Lakeshore.Model_625.Lakeshore625.set_field" title="Permalink to this definition">¶</a></dt>
+<dd><p>Ramp to a certain field</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> – field setpoint</p></li>
+<li><p><strong>block</strong> – Whether to wait until the field has finished setting</p></li>
+</ul>
+</dd>
+</dl>
 </dd></dl>
 
 </dd></dl>
