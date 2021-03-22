@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>qcodes_contrib_drivers.drivers.Agilent package &mdash; qcodes_contrib_drivers 0.6.0+174.g97e05f8 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Agilent package &mdash; qcodes_contrib_drivers 0.7.0+12.g7ffba76 documentation</title>
   
 
   
@@ -33,8 +33,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -66,7 +64,7 @@
             
             
               <div class="version">
-                0.6.0+174.g97e05f8
+                0.7.0+12.g7ffba76
               </div>
             
           
@@ -107,6 +105,7 @@
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Andor.html">qcodes_contrib_drivers.drivers.Andor package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Attocube.html">qcodes_contrib_drivers.drivers.Attocube package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Aviosys.html">qcodes_contrib_drivers.drivers.Aviosys package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Bilt.html">qcodes_contrib_drivers.drivers.Bilt package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.BlueFors.html">qcodes_contrib_drivers.drivers.BlueFors package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryocon.html">qcodes_contrib_drivers.drivers.Cryocon package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryogenic.html">qcodes_contrib_drivers.drivers.Cryogenic package</a></li>
@@ -234,13 +233,13 @@
 <span id="qcodes-contrib-drivers-drivers-agilent-agilent-n9000a-module"></span><h2>qcodes_contrib_drivers.drivers.Agilent.Agilent_N9000A module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Agilent.Agilent_N9000A" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Agilent.Agilent_N9000A.Agilent_N9000A">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Agilent.Agilent_N9000A.</code><code class="sig-name descname">Agilent_N9000A</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">address</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">terminator</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span> <span class="o">=</span> <span class="default_value">'\n'</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Agilent/Agilent_N9000A.html#Agilent_N9000A"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Agilent.Agilent_N9000A.Agilent_N9000A" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.22.0+52.g115f6ae378)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.Agilent.Agilent_N9000A.</span></code><code class="sig-name descname"><span class="pre">Agilent_N9000A</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">terminator</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">'\n'</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Agilent/Agilent_N9000A.html#Agilent_N9000A"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Agilent.Agilent_N9000A.Agilent_N9000A" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.23.0+100.gdeb79e3849)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>This is the QCoDeS python driver for the Agilent CXA N9000A power spectrum
 analyzer.</p>
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Agilent.Agilent_N9000A.Agilent_N9000A.power_parser">
-<code class="sig-name descname">power_parser</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">val</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">output</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)">float</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Agilent/Agilent_N9000A.html#Agilent_N9000A.power_parser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Agilent.Agilent_N9000A.Agilent_N9000A.power_parser" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">power_parser</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">val</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">output</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)"><span class="pre">float</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Agilent/Agilent_N9000A.html#Agilent_N9000A.power_parser"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Agilent.Agilent_N9000A.Agilent_N9000A.power_parser" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse the reply from a strin containing ‘power, psd’ to float depending
 of the output.</p>
 <dl class="field-list simple">

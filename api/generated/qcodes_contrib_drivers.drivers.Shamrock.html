@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>qcodes_contrib_drivers.drivers.Shamrock package &mdash; qcodes_contrib_drivers 0.6.0+174.g97e05f8 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Shamrock package &mdash; qcodes_contrib_drivers 0.7.0+12.g7ffba76 documentation</title>
   
 
   
@@ -33,8 +33,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -66,7 +64,7 @@
             
             
               <div class="version">
-                0.6.0+174.g97e05f8
+                0.7.0+12.g7ffba76
               </div>
             
           
@@ -102,6 +100,7 @@
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Andor.html">qcodes_contrib_drivers.drivers.Andor package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Attocube.html">qcodes_contrib_drivers.drivers.Attocube package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Aviosys.html">qcodes_contrib_drivers.drivers.Aviosys package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Bilt.html">qcodes_contrib_drivers.drivers.Bilt package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.BlueFors.html">qcodes_contrib_drivers.drivers.BlueFors package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryocon.html">qcodes_contrib_drivers.drivers.Cryocon package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryogenic.html">qcodes_contrib_drivers.drivers.Cryogenic package</a></li>
@@ -234,7 +233,7 @@
 <span id="qcodes-contrib-drivers-drivers-shamrock-sr750-module"></span><h2>qcodes_contrib_drivers.drivers.Shamrock.SR750 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Shamrock.SR750" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Shamrock.SR750.</code><code class="sig-name descname">ShamrockCIF</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">dll_path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">verbose</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)">bool</a></span> <span class="o">=</span> <span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.Shamrock.SR750.</span></code><code class="sig-name descname"><span class="pre">ShamrockCIF</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dll_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">verbose</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><span class="pre">bool</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Wrapper class for the ShamrockCIF.dll library.</p>
 <p>The class has been tested for a Shamrock SR750.</p>
@@ -248,117 +247,117 @@
 </dl>
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.verbose">
-<code class="sig-name descname">verbose</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.verbose" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">verbose</span></code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.verbose" title="Permalink to this definition">¶</a></dt>
 <dd><p>Flag for the verbose behaviour.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.dll">
-<code class="sig-name descname">dll</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.dll" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">dll</span></code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.dll" title="Permalink to this definition">¶</a></dt>
 <dd><p>WinDLL object for ShamrockCIF.dll.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.close" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.error_check">
-<code class="sig-name descname">error_check</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">code</span></em>, <em class="sig-param"><span class="n">function_name</span><span class="o">=</span><span class="default_value">''</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.error_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.error_check" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">error_check</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">code</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">function_name</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">''</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.error_check"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.error_check" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_calibration">
-<code class="sig-name descname">get_calibration</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em>, <em class="sig-param"><span class="n">number_pixels</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_calibration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_calibration" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_calibration</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_pixels</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_calibration"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_calibration" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_grating">
-<code class="sig-name descname">get_grating</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_grating"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_grating" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_grating</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_grating"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_grating" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_grating_info">
-<code class="sig-name descname">get_grating_info</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em>, <em class="sig-param"><span class="n">grating</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_grating_info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_grating_info" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_grating_info</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grating</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_grating_info"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_grating_info" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_number_devices">
-<code class="sig-name descname">get_number_devices</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_number_devices"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_number_devices" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_number_devices</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_number_devices"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_number_devices" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_number_gratings">
-<code class="sig-name descname">get_number_gratings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_number_gratings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_number_gratings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_number_gratings</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_number_gratings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_number_gratings" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_number_pixels">
-<code class="sig-name descname">get_number_pixels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_number_pixels"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_number_pixels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_number_pixels</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_number_pixels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_number_pixels" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_pixel_width">
-<code class="sig-name descname">get_pixel_width</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_pixel_width"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_pixel_width" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_pixel_width</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_pixel_width"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_pixel_width" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_serial_number">
-<code class="sig-name descname">get_serial_number</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_serial_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_serial_number" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_serial_number</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_serial_number"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_serial_number" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_slit">
-<code class="sig-name descname">get_slit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_slit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_slit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_slit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_slit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_slit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_wavelength">
-<code class="sig-name descname">get_wavelength</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_wavelength"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_wavelength" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_wavelength</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_wavelength"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_wavelength" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_wavelength_limits">
-<code class="sig-name descname">get_wavelength_limits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em>, <em class="sig-param"><span class="n">grating</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_wavelength_limits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_wavelength_limits" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_wavelength_limits</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grating</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.get_wavelength_limits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.get_wavelength_limits" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.initialize">
-<code class="sig-name descname">initialize</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.initialize"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.initialize" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">initialize</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.initialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.initialize" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_grating">
-<code class="sig-name descname">set_grating</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em>, <em class="sig-param"><span class="n">grating</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.set_grating"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_grating" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_grating</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">grating</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.set_grating"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_grating" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_number_pixels">
-<code class="sig-name descname">set_number_pixels</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em>, <em class="sig-param"><span class="n">number_pixels</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.set_number_pixels"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_number_pixels" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_number_pixels</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number_pixels</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.set_number_pixels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_number_pixels" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_pixel_width">
-<code class="sig-name descname">set_pixel_width</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em>, <em class="sig-param"><span class="n">width</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.set_pixel_width"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_pixel_width" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_pixel_width</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.set_pixel_width"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_pixel_width" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_slit">
-<code class="sig-name descname">set_slit</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em>, <em class="sig-param"><span class="n">width</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.set_slit"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_slit" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_slit</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.set_slit"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_slit" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_wavelength">
-<code class="sig-name descname">set_wavelength</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">device</span></em>, <em class="sig-param"><span class="n">wavelength</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.set_wavelength"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_wavelength" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_wavelength</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">device</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">wavelength</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#ShamrockCIF.set_wavelength"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.ShamrockCIF.set_wavelength" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Shamrock.SR750.</code><code class="sig-name descname">Shamrock_SR750</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">dll_path</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">]</span></span> <span class="o">=</span> <span class="default_value">None</span></em>, <em class="sig-param"><span class="n">device_id</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span> <span class="o">=</span> <span class="default_value">0</span></em>, <em class="sig-param"><span class="n">ccd_number_pixels</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span> <span class="o">=</span> <span class="default_value">1024</span></em>, <em class="sig-param"><span class="n">ccd_pixel_width</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span> <span class="o">=</span> <span class="default_value">26</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#Shamrock_SR750"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.22.0+52.g115f6ae378)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.Shamrock.SR750.</span></code><code class="sig-name descname"><span class="pre">Shamrock_SR750</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dll_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">device_id</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">0</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ccd_number_pixels</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">1024</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ccd_pixel_width</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)"><span class="pre">int</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">26</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#Shamrock_SR750"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.23.0+100.gdeb79e3849)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
 <p>Instrument driver for the Shamrock SR750 spectrometer.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -373,31 +372,31 @@
 </dl>
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.ShamrockCIF">
-<code class="sig-name descname">ShamrockCIF</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.ShamrockCIF" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">ShamrockCIF</span></code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.ShamrockCIF" title="Permalink to this definition">¶</a></dt>
 <dd><p>DLL wrapper for ShamrockCIF.dll</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.device_id">
-<code class="sig-name descname">device_id</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.device_id" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">device_id</span></code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.device_id" title="Permalink to this definition">¶</a></dt>
 <dd><p>Spectrometer device ID.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.serial_number">
-<code class="sig-name descname">serial_number</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.serial_number" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">serial_number</span></code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.serial_number" title="Permalink to this definition">¶</a></dt>
 <dd><p>Serial number of the spectrometer.</p>
 </dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.number_gratings">
-<code class="sig-name descname">number_gratings</code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.number_gratings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">number_gratings</span></code><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.number_gratings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Number of gratings on the spectrometer.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#Shamrock_SR750.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#Shamrock_SR750.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Irreversibly stop this instrument and free its resources.</p>
 <p>Subclasses should override this if they have other specific
 resources to close.</p>
@@ -405,7 +404,7 @@ resources to close.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.get_idn">
-<code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#Shamrock_SR750.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.get_idn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_idn</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Shamrock/SR750.html#Shamrock_SR750.get_idn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Shamrock.SR750.Shamrock_SR750.get_idn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Parse a standard VISA <code class="docutils literal notranslate"><span class="pre">*IDN?</span></code> response into an ID dict.</p>
 <p>Even though this is the VISA standard, it applies to various other
 types as well, such as IPInstruments, so it is included here in the

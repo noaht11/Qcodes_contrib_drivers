@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>qcodes_contrib_drivers.drivers.Oxford package &mdash; qcodes_contrib_drivers 0.6.0+174.g97e05f8 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Oxford package &mdash; qcodes_contrib_drivers 0.7.0+12.g7ffba76 documentation</title>
   
 
   
@@ -33,8 +33,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -66,7 +64,7 @@
             
             
               <div class="version">
-                0.6.0+174.g97e05f8
+                0.7.0+12.g7ffba76
               </div>
             
           
@@ -102,6 +100,7 @@
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Andor.html">qcodes_contrib_drivers.drivers.Andor package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Attocube.html">qcodes_contrib_drivers.drivers.Attocube package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Aviosys.html">qcodes_contrib_drivers.drivers.Aviosys package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Bilt.html">qcodes_contrib_drivers.drivers.Bilt package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.BlueFors.html">qcodes_contrib_drivers.drivers.BlueFors package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryocon.html">qcodes_contrib_drivers.drivers.Cryocon package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryogenic.html">qcodes_contrib_drivers.drivers.Cryogenic package</a></li>
@@ -237,8 +236,8 @@
 <span id="qcodes-contrib-drivers-drivers-oxford-ilm200-module"></span><h2>qcodes_contrib_drivers.drivers.Oxford.ILM200 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Oxford.ILM200" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Oxford.ILM200.</code><code class="sig-name descname">OxfordInstruments_ILM200</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="n">number</span><span class="o">=</span><span class="default_value">1</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.22.0+52.g115f6ae378)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.Oxford.ILM200.</span></code><code class="sig-name descname"><span class="pre">OxfordInstruments_ILM200</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">1</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.23.0+100.gdeb79e3849)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>This is the qcodes driver for the Oxford Instruments ILM 200 Helium Level Meter.</p>
 <p>Usage:
 Initialize with
@@ -248,20 +247,20 @@ Initialize with
 which is sent to the device starts with ‘&#64;n’, where n is the ISOBUS instrument number.</p>
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Safely close connection</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.get_all">
-<code class="sig-name descname">get_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.get_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.get_all" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_all</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.get_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.get_all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads all implemented parameters from the instrument,
 and updates the wrapper.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.get_idn">
-<code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.get_idn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_idn</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.get_idn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.get_idn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overrides the function of Instrument since ILM does not support <cite>*IDN?</cite></p>
 <p>This string is supposed to be a
 comma-separated list of vendor, model, serial, and firmware, but
@@ -276,19 +275,19 @@ as well.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.local">
-<code class="sig-name descname">local</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.local"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.local" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">local</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.local"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.local" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set control to local &amp; locked</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.remote">
-<code class="sig-name descname">remote</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.remote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.remote" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">remote</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.remote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.remote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set control to remote &amp; locked</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.set_remote_status">
-<code class="sig-name descname">set_remote_status</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.set_remote_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.set_remote_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_remote_status</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.set_remote_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.set_remote_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set remote control status.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -308,13 +307,13 @@ as well.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.set_to_fast">
-<code class="sig-name descname">set_to_fast</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.set_to_fast"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.set_to_fast" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_to_fast</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.set_to_fast"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.set_to_fast" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set helium meter channel 1 to fast mode.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.set_to_slow">
-<code class="sig-name descname">set_to_slow</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.set_to_slow"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.set_to_slow" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_to_slow</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/ILM200.html#OxfordInstruments_ILM200.set_to_slow"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.ILM200.OxfordInstruments_ILM200.set_to_slow" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set helium meter channel 1 to slow mode.</p>
 </dd></dl>
 
@@ -325,34 +324,34 @@ as well.</p>
 <span id="qcodes-contrib-drivers-drivers-oxford-ips120-module"></span><h2>qcodes_contrib_drivers.drivers.Oxford.IPS120 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Oxford.IPS120" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Oxford.IPS120.</code><code class="sig-name descname">OxfordInstruments_IPS120</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="n">use_gpib</span><span class="o">=</span><span class="default_value">False</span></em>, <em class="sig-param"><span class="n">number</span><span class="o">=</span><span class="default_value">2</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.22.0+52.g115f6ae378)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.Oxford.IPS120.</span></code><code class="sig-name descname"><span class="pre">OxfordInstruments_IPS120</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">use_gpib</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">2</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.23.0+100.gdeb79e3849)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>This is the driver for the Oxford Instruments IPS 120 Magnet Power Supply</p>
 <p>The IPS 120 can connect through both RS232 serial as well as GPIB. The
 commands sent in both cases are similar. When using the serial connection,
 commands are prefaced with ‘&#64;n’ where n is the ISOBUS number.</p>
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Safely close connection</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.examine">
-<code class="sig-name descname">examine</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.examine"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.examine" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">examine</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.examine"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.examine" title="Permalink to this definition">¶</a></dt>
 <dd><p>Examine the status of the device</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.get_all">
-<code class="sig-name descname">get_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.get_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.get_all" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_all</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.get_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.get_all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads all implemented parameters from the instrument,
 and updates the wrapper.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.get_idn">
-<code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.get_idn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_idn</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.get_idn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.get_idn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overides the function of Instrument since IPS120 does not support <cite>*IDN?</cite></p>
 <p>This string is supposed to be a comma-separated list of vendor, model,
 serial, and firmware, but semicolon and colon are also common
@@ -366,50 +365,50 @@ separators so we accept them here as well.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.heater_off">
-<code class="sig-name descname">heater_off</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.heater_off"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.heater_off" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">heater_off</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.heater_off"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.heater_off" title="Permalink to this definition">¶</a></dt>
 <dd><p>Switch the heater off</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.heater_on">
-<code class="sig-name descname">heater_on</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.heater_on"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.heater_on" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">heater_on</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.heater_on"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.heater_on" title="Permalink to this definition">¶</a></dt>
 <dd><p>Switch the heater on, with PSU = Magnet current check</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.hold">
-<code class="sig-name descname">hold</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.hold"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.hold" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">hold</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.hold"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.hold" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the device activity to Hold</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.identify">
-<code class="sig-name descname">identify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.identify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.identify" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">identify</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.identify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.identify" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identify the device</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.leave_persistent_mode">
-<code class="sig-name descname">leave_persistent_mode</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.leave_persistent_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.leave_persistent_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">leave_persistent_mode</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.leave_persistent_mode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.leave_persistent_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Read out persistent current, match the current in the leads to that current
 and switch on heater</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.local">
-<code class="sig-name descname">local</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.local"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.local" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">local</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.local"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.local" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set control to local and unlocked</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.remote">
-<code class="sig-name descname">remote</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.remote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.remote" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">remote</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.remote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.remote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set control to remote and unlocked</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.run_to_field">
-<code class="sig-name descname">run_to_field</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">field_value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.run_to_field"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.run_to_field" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">run_to_field</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.run_to_field"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.run_to_field" title="Permalink to this definition">¶</a></dt>
 <dd><p>Go to field value</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -420,7 +419,7 @@ and switch on heater</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.run_to_field_wait">
-<code class="sig-name descname">run_to_field_wait</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">field_value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.run_to_field_wait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.run_to_field_wait" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">run_to_field_wait</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">field_value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.run_to_field_wait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.run_to_field_wait" title="Permalink to this definition">¶</a></dt>
 <dd><p>Go to field value and wait until it’s done sweeping.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -431,7 +430,7 @@ and switch on heater</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.set_persistent">
-<code class="sig-name descname">set_persistent</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.set_persistent"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.set_persistent" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_persistent</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.set_persistent"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.set_persistent" title="Permalink to this definition">¶</a></dt>
 <dd><p>Puts magnet into persistent mode</p>
 <p>Note: After turning of the switch heater we will wait for additional 20
 seconds before we put the current to zero. This is done to make sure
@@ -440,13 +439,13 @@ that the switch heater is cold enough and becomes superconducting.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.to_setpoint">
-<code class="sig-name descname">to_setpoint</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.to_setpoint"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.to_setpoint" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">to_setpoint</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.to_setpoint"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.to_setpoint" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the device activity to “To set point”. This initiates a sweep.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.to_zero">
-<code class="sig-name descname">to_zero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.to_zero"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.to_zero" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">to_zero</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/IPS120.html#OxfordInstruments_IPS120.to_zero"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.IPS120.OxfordInstruments_IPS120.to_zero" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the device activity to “To zero”. This sweeps te magnet back to zero.</p>
 </dd></dl>
 
@@ -457,13 +456,13 @@ that the switch heater is cold enough and becomes superconducting.</p>
 <span id="qcodes-contrib-drivers-drivers-oxford-triton-module"></span><h2>qcodes_contrib_drivers.drivers.Oxford.Triton module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Oxford.Triton" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.Triton.Triton">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Oxford.Triton.</code><code class="sig-name descname">Triton</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">file_path</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">converter_path</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em>, <em class="sig-param"><span class="n">threshold_temperature</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)">float</a></span> <span class="o">=</span> <span class="default_value">4</span></em>, <em class="sig-param"><span class="n">conversion_timer</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)">float</a></span> <span class="o">=</span> <span class="default_value">30</span></em>, <em class="sig-param"><span class="n">magnet</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)">bool</a></span> <span class="o">=</span> <span class="default_value">False</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/Triton.html#Triton"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.Triton.Triton" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.22.0+52.g115f6ae378)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.Oxford.Triton.</span></code><code class="sig-name descname"><span class="pre">Triton</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">file_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">converter_path</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold_temperature</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">4</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">conversion_timer</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)"><span class="pre">float</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">30</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">magnet</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#bool" title="(in Python v3.6)"><span class="pre">bool</span></a></span> <span class="o"><span class="pre">=</span></span> <span class="default_value"><span class="pre">False</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/Triton.html#Triton"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.Triton.Triton" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.23.0+100.gdeb79e3849)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
 <p>This is the QCoDeS python driver to extract the temperature and pressure
 from a Oxford Triton fridge.</p>
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.Triton.Triton.get_pressure">
-<code class="sig-name descname">get_pressure</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)">float</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/Triton.html#Triton.get_pressure"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.Triton.Triton.get_pressure" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_pressure</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)"><span class="pre">float</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/Triton.html#Triton.get_pressure"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.Triton.Triton.get_pressure" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the last registered pressure of the channel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -480,7 +479,7 @@ from a Oxford Triton fridge.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.Triton.Triton.get_temperature">
-<code class="sig-name descname">get_temperature</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">channel</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)">float</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/Triton.html#Triton.get_temperature"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.Triton.Triton.get_temperature" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_temperature</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#float" title="(in Python v3.6)"><span class="pre">float</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/Triton.html#Triton.get_temperature"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.Triton.Triton.get_temperature" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return the last registered temperature of the channel.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -497,7 +496,7 @@ from a Oxford Triton fridge.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.Triton.Triton.vcl2csv">
-<code class="sig-name descname">vcl2csv</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; Optional<span class="p">[</span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)">str</a><span class="p">]</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/Triton.html#Triton.vcl2csv"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.Triton.Triton.vcl2csv" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">vcl2csv</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <span class="pre">Optional</span><span class="p"><span class="pre">[</span></span><a class="reference external" href="https://docs.python.org/3.6/library/stdtypes.html#str" title="(in Python v3.6)"><span class="pre">str</span></a><span class="p"><span class="pre">]</span></span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/Triton.html#Triton.vcl2csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.Triton.Triton.vcl2csv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert vcl file into csv file using proprietary binary exe.
 The executable is called through the python subprocess library.
 To avoid to frequent file conversion, a timer of self.conversion_timer
@@ -519,8 +518,8 @@ second is used.</p>
 <span id="qcodes-contrib-drivers-drivers-oxford-kelvinox-module"></span><h2>qcodes_contrib_drivers.drivers.Oxford.kelvinox module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.Oxford.kelvinox" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.Oxford.kelvinox.</code><code class="sig-name descname">OxfordInstruments_Kelvinox_IGH</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="n">number</span><span class="o">=</span><span class="default_value">5</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.22.0+52.g115f6ae378)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.Oxford.kelvinox.</span></code><code class="sig-name descname"><span class="pre">OxfordInstruments_Kelvinox_IGH</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">number</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">5</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.23.0+100.gdeb79e3849)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>This is the python driver for the Oxford Instruments Kelvinox IGH Dilution Refrigerator and
 Intelligent Dilution Refrigerator Power Supply (IDR PS).</p>
 <p>Usage:
@@ -530,20 +529,20 @@ fridge = qcodes.instrument_drivers.oxford.kelvinox.OxfordInstruments_Kelvinox_IG
 which is sent to the device starts with ‘&#64;n’, where n is the ISOBUS instrument number.</p>
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.close">
-<code class="sig-name descname">close</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.close"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.close" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.close" title="Permalink to this definition">¶</a></dt>
 <dd><p>Safely close connection</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.get_all">
-<code class="sig-name descname">get_all</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.get_all"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.get_all" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_all</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.get_all"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.get_all" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reads all implemented parameters from the instrument,
 and updates the wrapper.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.get_idn">
-<code class="sig-name descname">get_idn</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.get_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.get_idn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_idn</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.get_idn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.get_idn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Overides the function of Instrument since IPS120 does not support <cite>*IDN?</cite></p>
 <p>This string is supposed to be a comma-separated list of vendor, model,
 serial, and firmware, but semicolon and colon are also common
@@ -557,7 +556,7 @@ separators so we accept them here as well.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.identify">
-<code class="sig-name descname">identify</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.identify"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.identify" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">identify</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.identify"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.identify" title="Permalink to this definition">¶</a></dt>
 <dd><p>Identify the device</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -568,25 +567,25 @@ separators so we accept them here as well.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.local">
-<code class="sig-name descname">local</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.local"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.local" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">local</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.local"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.local" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set control to local and unlocked</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.remote">
-<code class="sig-name descname">remote</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.remote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.remote" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">remote</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.remote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.remote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set control to remote and unlocked</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.rotate_Nvalve">
-<code class="sig-name descname">rotate_Nvalve</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">value</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.rotate_Nvalve"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.rotate_Nvalve" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">rotate_Nvalve</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.rotate_Nvalve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.rotate_Nvalve" title="Permalink to this definition">¶</a></dt>
 <dd><p>This set the opening of the stepper valve N. Status should be a percentage.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.set_mix_chamber_heater_mode">
-<code class="sig-name descname">set_mix_chamber_heater_mode</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.set_mix_chamber_heater_mode"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.set_mix_chamber_heater_mode" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_mix_chamber_heater_mode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.set_mix_chamber_heater_mode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.set_mix_chamber_heater_mode" title="Permalink to this definition">¶</a></dt>
 <dd><p>0 : off
 1 : fixed heater power
 2 : temperature control</p>
@@ -594,7 +593,7 @@ separators so we accept them here as well.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.set_mix_chamber_heater_power_range">
-<code class="sig-name descname">set_mix_chamber_heater_power_range</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">mode</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.set_mix_chamber_heater_power_range"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.set_mix_chamber_heater_power_range" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_mix_chamber_heater_power_range</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/Oxford/kelvinox.html#OxfordInstruments_Kelvinox_IGH.set_mix_chamber_heater_power_range"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.Oxford.kelvinox.OxfordInstruments_Kelvinox_IGH.set_mix_chamber_heater_power_range" title="Permalink to this definition">¶</a></dt>
 <dd><p>1 : 2uW
 2 : 20uW
 3 : 200uW

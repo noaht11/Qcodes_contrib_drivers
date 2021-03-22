@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>qcodes_contrib_drivers.drivers.StanfordResearchSystems package &mdash; qcodes_contrib_drivers 0.6.0+174.g97e05f8 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.StanfordResearchSystems package &mdash; qcodes_contrib_drivers 0.7.0+12.g7ffba76 documentation</title>
   
 
   
@@ -33,8 +33,6 @@
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
-        <script type="text/x-mathjax-config">MathJax.Hub.Config({"tex2jax": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true, "ignoreClass": "document", "processClass": "math|output_area"}})</script>
     
     <script type="text/javascript" src="../../_static/js/theme.js"></script>
 
@@ -66,7 +64,7 @@
             
             
               <div class="version">
-                0.6.0+174.g97e05f8
+                0.7.0+12.g7ffba76
               </div>
             
           
@@ -102,6 +100,7 @@
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Andor.html">qcodes_contrib_drivers.drivers.Andor package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Attocube.html">qcodes_contrib_drivers.drivers.Attocube package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Aviosys.html">qcodes_contrib_drivers.drivers.Aviosys package</a></li>
+<li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Bilt.html">qcodes_contrib_drivers.drivers.Bilt package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.BlueFors.html">qcodes_contrib_drivers.drivers.BlueFors package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryocon.html">qcodes_contrib_drivers.drivers.Cryocon package</a></li>
 <li class="toctree-l3"><a class="reference internal" href="qcodes_contrib_drivers.drivers.Cryogenic.html">qcodes_contrib_drivers.drivers.Cryogenic package</a></li>
@@ -235,60 +234,60 @@
 <span id="qcodes-contrib-drivers-drivers-stanfordresearchsystems-dg645-module"></span><h2>qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.</code><code class="sig-name descname">DG645</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kwargs</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.22.0+52.g115f6ae378)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.</span></code><code class="sig-name descname"><span class="pre">DG645</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.23.0+100.gdeb79e3849)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>Qcodes driver for SRS DG645 digital delay generator.</p>
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.CHANNEL_MAPPING">
-<code class="sig-name descname">CHANNEL_MAPPING</code><em class="property"> = {'A': 2, 'B': 3, 'C': 4, 'D': 5, 'E': 6, 'F': 7, 'G': 8, 'H': 9, 'T0': 0, 'T1': 1}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.CHANNEL_MAPPING" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">CHANNEL_MAPPING</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'A':</span> <span class="pre">2,</span> <span class="pre">'B':</span> <span class="pre">3,</span> <span class="pre">'C':</span> <span class="pre">4,</span> <span class="pre">'D':</span> <span class="pre">5,</span> <span class="pre">'E':</span> <span class="pre">6,</span> <span class="pre">'F':</span> <span class="pre">7,</span> <span class="pre">'G':</span> <span class="pre">8,</span> <span class="pre">'H':</span> <span class="pre">9,</span> <span class="pre">'T0':</span> <span class="pre">0,</span> <span class="pre">'T1':</span> <span class="pre">1}</span></em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.CHANNEL_MAPPING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.DISPLAY_MAPPING">
-<code class="sig-name descname">DISPLAY_MAPPING</code><em class="property"> = {'advanced_trig_enable': 4, 'burst_T0_config': 14, 'burst_count': 9, 'burst_delay': 8, 'burst_mode': 7, 'burst_period': 10, 'channel_delay': 11, 'channel_output_levels': 12, 'channel_output_polarity': 13, 'prescale_config': 6, 'trig_holdoff': 5, 'trig_line': 3, 'trig_rate': 0, 'trig_single_shot': 2, 'trig_thresh': 1}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.DISPLAY_MAPPING" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">DISPLAY_MAPPING</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'advanced_trig_enable':</span> <span class="pre">4,</span> <span class="pre">'burst_T0_config':</span> <span class="pre">14,</span> <span class="pre">'burst_count':</span> <span class="pre">9,</span> <span class="pre">'burst_delay':</span> <span class="pre">8,</span> <span class="pre">'burst_mode':</span> <span class="pre">7,</span> <span class="pre">'burst_period':</span> <span class="pre">10,</span> <span class="pre">'channel_delay':</span> <span class="pre">11,</span> <span class="pre">'channel_output_levels':</span> <span class="pre">12,</span> <span class="pre">'channel_output_polarity':</span> <span class="pre">13,</span> <span class="pre">'prescale_config':</span> <span class="pre">6,</span> <span class="pre">'trig_holdoff':</span> <span class="pre">5,</span> <span class="pre">'trig_line':</span> <span class="pre">3,</span> <span class="pre">'trig_rate':</span> <span class="pre">0,</span> <span class="pre">'trig_single_shot':</span> <span class="pre">2,</span> <span class="pre">'trig_thresh':</span> <span class="pre">1}</span></em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.DISPLAY_MAPPING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.OUTPUT_MAPPING">
-<code class="sig-name descname">OUTPUT_MAPPING</code><em class="property"> = {'AB': 1, 'CD': 2, 'EF': 3, 'GH': 4, 'T0': 0}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.OUTPUT_MAPPING" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">OUTPUT_MAPPING</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'AB':</span> <span class="pre">1,</span> <span class="pre">'CD':</span> <span class="pre">2,</span> <span class="pre">'EF':</span> <span class="pre">3,</span> <span class="pre">'GH':</span> <span class="pre">4,</span> <span class="pre">'T0':</span> <span class="pre">0}</span></em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.OUTPUT_MAPPING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.POLARITY_MAPPING">
-<code class="sig-name descname">POLARITY_MAPPING</code><em class="property"> = {'+': 1, '-': 0}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.POLARITY_MAPPING" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">POLARITY_MAPPING</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'+':</span> <span class="pre">1,</span> <span class="pre">'-':</span> <span class="pre">0}</span></em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.POLARITY_MAPPING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.PRESCALE_MAPPING">
-<code class="sig-name descname">PRESCALE_MAPPING</code><em class="property"> = {'AB': 1, 'CD': 2, 'EF': 3, 'GH': 4, 'trig': 0}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.PRESCALE_MAPPING" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">PRESCALE_MAPPING</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'AB':</span> <span class="pre">1,</span> <span class="pre">'CD':</span> <span class="pre">2,</span> <span class="pre">'EF':</span> <span class="pre">3,</span> <span class="pre">'GH':</span> <span class="pre">4,</span> <span class="pre">'trig':</span> <span class="pre">0}</span></em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.PRESCALE_MAPPING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py attribute">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.TRIGGER_MAPPING">
-<code class="sig-name descname">TRIGGER_MAPPING</code><em class="property"> = {'ext_falling': 2, 'ext_rising': 1, 'internal': 0, 'line': 6, 'single': 5, 'single_ext_falling': 4, 'single_ext_rising': 3}</em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.TRIGGER_MAPPING" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">TRIGGER_MAPPING</span></code><em class="property"> <span class="pre">=</span> <span class="pre">{'ext_falling':</span> <span class="pre">2,</span> <span class="pre">'ext_rising':</span> <span class="pre">1,</span> <span class="pre">'internal':</span> <span class="pre">0,</span> <span class="pre">'line':</span> <span class="pre">6,</span> <span class="pre">'single':</span> <span class="pre">5,</span> <span class="pre">'single_ext_falling':</span> <span class="pre">4,</span> <span class="pre">'single_ext_rising':</span> <span class="pre">3}</span></em><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.TRIGGER_MAPPING" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.local">
-<code class="sig-name descname">local</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.local"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.local" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">local</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)"><span class="pre">None</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.local"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.local" title="Permalink to this definition">¶</a></dt>
 <dd><p>Go to local.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.remote">
-<code class="sig-name descname">remote</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.remote"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.remote" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">remote</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)"><span class="pre">None</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.remote"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.remote" title="Permalink to this definition">¶</a></dt>
 <dd><p>Go to remote.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.reset">
-<code class="sig-name descname">reset</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.reset"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.reset" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">reset</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)"><span class="pre">None</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.reset"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.reset" title="Permalink to this definition">¶</a></dt>
 <dd><p>Reset instrument.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.save_settings">
-<code class="sig-name descname">save_settings</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">location</span><span class="p">:</span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)">int</a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.save_settings"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.save_settings" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">save_settings</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span> <span class="n"><a class="reference external" href="https://docs.python.org/3.6/library/functions.html#int" title="(in Python v3.6)"><span class="pre">int</span></a></span></em><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)"><span class="pre">None</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.save_settings"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.save_settings" title="Permalink to this definition">¶</a></dt>
 <dd><p>Save instrument settings to given location.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -299,25 +298,25 @@
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.self_calibrate">
-<code class="sig-name descname">self_calibrate</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.self_calibrate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.self_calibrate" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">self_calibrate</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)"><span class="pre">None</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.self_calibrate"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.self_calibrate" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run auto-calibration routine.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.self_test">
-<code class="sig-name descname">self_test</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.self_test"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.self_test" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">self_test</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)"><span class="pre">None</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.self_test"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.self_test" title="Permalink to this definition">¶</a></dt>
 <dd><p>Run self-test routine.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.trigger">
-<code class="sig-name descname">trigger</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.trigger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.trigger" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">trigger</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)"><span class="pre">None</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.trigger"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.trigger" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initiates a single trigger if instrument is in single shot mode.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.wait">
-<code class="sig-name descname">wait</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)">None</a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.wait"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.wait" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">wait</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; <a class="reference external" href="https://docs.python.org/3.6/library/constants.html#None" title="(in Python v3.6)"><span class="pre">None</span></a><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/DG645.html#DG645.wait"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.DG645.DG645.wait" title="Permalink to this definition">¶</a></dt>
 <dd><p>Wait for all prior commands to execute before continuing.</p>
 </dd></dl>
 
@@ -328,8 +327,8 @@
 <span id="qcodes-contrib-drivers-drivers-stanfordresearchsystems-sim928-module"></span><h2>qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928 module<a class="headerlink" href="#module-qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928" title="Permalink to this headline">¶</a></h2>
 <dl class="py class">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928">
-<em class="property">class </em><code class="sig-prename descclassname">qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.</code><code class="sig-name descname">SIM928</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span></em>, <em class="sig-param"><span class="n">address</span></em>, <em class="sig-param"><span class="n">slot_names</span><span class="o">=</span><span class="default_value">None</span></em>, <em class="sig-param"><span class="o">**</span><span class="n">kw</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.22.0+52.g115f6ae378)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
+<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.</span></code><code class="sig-name descname"><span class="pre">SIM928</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">slot_names</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kw</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/visa.html#qcodes.instrument.visa.VisaInstrument" title="(in QCoDeS v0.23.0+100.gdeb79e3849)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.visa.VisaInstrument</span></code></a></p>
 <p>A driver for Stanford Research Systems SIM 928 DC source modules installed
 in a SIM900 mainframe.</p>
 <dl class="field-list simple">
@@ -348,7 +347,7 @@ instrument’s JSON snapshot.</p></li>
 </dl>
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.ask_module">
-<code class="sig-name descname">ask_module</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">cmd</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.ask_module"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.ask_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">ask_module</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.ask_module"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.ask_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write a command string to a module and return a response.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -366,7 +365,7 @@ of the module to ask from.</p></li>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.byte_to_bits">
-<em class="property">static </em><code class="sig-name descname">byte_to_bits</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">x</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.byte_to_bits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.byte_to_bits" title="Permalink to this definition">¶</a></dt>
+<em class="property"><span class="pre">static</span> </em><code class="sig-name descname"><span class="pre">byte_to_bits</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">x</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.byte_to_bits"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.byte_to_bits" title="Permalink to this definition">¶</a></dt>
 <dd><p>Convert an integer to a list of bits</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -384,7 +383,7 @@ represents 1 and <code class="docutils literal notranslate"><span class="pre">Fa
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.check_module_errors">
-<code class="sig-name descname">check_module_errors</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">raiseexc</span><span class="o">=</span><span class="default_value">True</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.check_module_errors"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.check_module_errors" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">check_module_errors</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">raiseexc</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.check_module_errors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.check_module_errors" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if any errors have occurred on module <code class="docutils literal notranslate"><span class="pre">i</span></code> and clear the status
 registers.</p>
 <dl class="field-list simple">
@@ -408,7 +407,7 @@ occurred.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.find_modules">
-<code class="sig-name descname">find_modules</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.find_modules"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.find_modules" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">find_modules</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.find_modules"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.find_modules" title="Permalink to this definition">¶</a></dt>
 <dd><p>Query the SIM900 mainframe for which slots have a SIM928 module present.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Returns</dt>
@@ -423,7 +422,7 @@ occurred.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.get_module_idn">
-<code class="sig-name descname">get_module_idn</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.get_module_idn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.get_module_idn" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_module_idn</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.get_module_idn"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.get_module_idn" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the vendor, model, serial number and firmware version of a module.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -438,7 +437,7 @@ of the module whose id is returned.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.get_module_status">
-<code class="sig-name descname">get_module_status</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.get_module_status"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.get_module_status" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_module_status</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.get_module_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.get_module_status" title="Permalink to this definition">¶</a></dt>
 <dd><p>Gets and clears the status bytes corresponding to the registers ESR,
 CESR and OVSR of module <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p>
 <dl class="field-list simple">
@@ -458,7 +457,7 @@ communication error and overload statuses of module <code class="docutils litera
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.get_voltage">
-<code class="sig-name descname">get_voltage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.get_voltage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.get_voltage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">get_voltage</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.get_voltage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.get_voltage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get the output voltage of a module.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -473,7 +472,7 @@ of the module to get the voltage of.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.reset_module">
-<code class="sig-name descname">reset_module</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.reset_module"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.reset_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">reset_module</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.reset_module"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.reset_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Sends the SIM Reset signal to module i.</p>
 <p>Causes a break signal (MARK level) to be asserted for 100 milliseconds
 to module i. Upon receiving the break signal the modul will flush its
@@ -489,7 +488,7 @@ of the module to reset.</p>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.set_smooth">
-<code class="sig-name descname">set_smooth</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">voltagedict</span></em>, <em class="sig-param"><span class="n">equitime</span><span class="o">=</span><span class="default_value">False</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.set_smooth"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.set_smooth" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_smooth</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">voltagedict</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">equitime</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.set_smooth"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.set_smooth" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the voltages as specified in <code class="docutils literal notranslate"><span class="pre">voltagedict`</span> <span class="pre">smoothly,</span>
 <span class="pre">by</span> <span class="pre">changing</span> <span class="pre">the</span> <span class="pre">output</span> <span class="pre">on</span> <span class="pre">each</span> <span class="pre">module</span> <span class="pre">at</span> <span class="pre">a</span> <span class="pre">rate</span>
 <span class="pre">``volt_#_step/smooth_timestep</span></code>.</p>
@@ -508,7 +507,7 @@ same time.</p></li>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.set_voltage">
-<code class="sig-name descname">set_voltage</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">voltage</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.set_voltage"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.set_voltage" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">set_voltage</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">voltage</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.set_voltage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.set_voltage" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the output voltage of a module.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
@@ -523,7 +522,7 @@ of the module to set the voltage of.</p></li>
 
 <dl class="py method">
 <dt id="qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.write_module">
-<code class="sig-name descname">write_module</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">i</span></em>, <em class="sig-param"><span class="n">cmd</span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.write_module"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.write_module" title="Permalink to this definition">¶</a></dt>
+<code class="sig-name descname"><span class="pre">write_module</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">i</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cmd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/StanfordResearchSystems/SIM928.html#SIM928.write_module"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.StanfordResearchSystems.SIM928.SIM928.write_module" title="Permalink to this definition">¶</a></dt>
 <dd><p>Write a command string to a module with NO response expected.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
