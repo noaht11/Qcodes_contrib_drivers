@@ -15,6 +15,7 @@ Subpackages
    qcodes_contrib_drivers.drivers.Aviosys
    qcodes_contrib_drivers.drivers.Bilt
    qcodes_contrib_drivers.drivers.BlueFors
+   qcodes_contrib_drivers.drivers.CopperMountain
    qcodes_contrib_drivers.drivers.Cryocon
    qcodes_contrib_drivers.drivers.Cryogenic
    qcodes_contrib_drivers.drivers.Gentec
