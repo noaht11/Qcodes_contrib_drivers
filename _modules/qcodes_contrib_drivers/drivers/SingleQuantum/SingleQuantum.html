@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum &mdash; qcodes_contrib_drivers 0.8.0+6.gd69c424 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum &mdash; qcodes_contrib_drivers 0.8.0+10.g92e3dce documentation</title>
   
 
   
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                0.8.0+6.gd69c424
+                0.8.0+10.g92e3dce
               </div>
             
           
@@ -192,7 +192,7 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">socket</span> <span class="o">=</span> <span class="n">socket</span><span class="o">.</span><span class="n">socket</span><span class="p">(</span>
             <span class="n">socket</span><span class="o">.</span><span class="n">AF_INET</span><span class="p">,</span> <span class="n">socket</span><span class="o">.</span><span class="n">SOCK_STREAM</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">socket</span><span class="o">.</span><span class="n">connect</span><span class="p">((</span><span class="bp">self</span><span class="o">.</span><span class="n">TCP_IP_ADR</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">TCP_IP_PORT</span><span class="p">))</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">socket</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="o">.</span><span class="mi">1</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">socket</span><span class="o">.</span><span class="n">settimeout</span><span class="p">(</span><span class="mf">.1</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">BUFFER</span> <span class="o">=</span> <span class="mi">10000000</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">shutdown</span> <span class="o">=</span> <span class="kc">False</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">labelProps</span> <span class="o">=</span> <span class="nb">dict</span><span class="p">()</span>
@@ -248,7 +248,7 @@
 
 <div class="viewcode-block" id="SQTalk.get_label"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.SingleQuantum.html#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.get_label">[docs]</a>    <span class="k">def</span> <span class="nf">get_label</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
         <span class="n">timeout</span> <span class="o">=</span> <span class="mi">10</span>
-        <span class="n">dt</span> <span class="o">=</span> <span class="o">.</span><span class="mi">1</span>
+        <span class="n">dt</span> <span class="o">=</span> <span class="mf">.1</span>
         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
             <span class="k">if</span> <span class="n">i</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">&gt;</span> <span class="n">timeout</span><span class="p">:</span>
