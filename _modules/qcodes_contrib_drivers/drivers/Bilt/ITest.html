@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>qcodes_contrib_drivers.drivers.Bilt.ITest &mdash; qcodes_contrib_drivers 0.8.0+17.g8207b74 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.Bilt.ITest &mdash; qcodes_contrib_drivers 0.8.0+20.gf7dd516 documentation</title>
   
 
   
   <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
+        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
         <script src="../../../../_static/jquery.js"></script>
         <script src="../../../../_static/underscore.js"></script>
         <script src="../../../../_static/doctools.js"></script>
@@ -62,7 +65,7 @@
             
             
               <div class="version">
-                0.8.0+17.g8207b74
+                0.8.0+20.gf7dd516
               </div>
             
           
@@ -177,7 +180,7 @@
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    A single channel of iTest.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">parent</span><span class="p">:</span> <span class="n">Instrument</span><span class="p">,</span>
                        <span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span>
                        <span class="n">chan_num</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
@@ -188,12 +191,12 @@
 <span class="sd">            chan_num: The number of the channel in question.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">parent</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
-        
+
         <span class="bp">self</span><span class="o">.</span><span class="n">chan_num</span> <span class="o">=</span> <span class="n">chan_num</span>
         <span class="c1"># Get channel id</span>
         <span class="n">i</span><span class="p">,</span> <span class="n">c</span> <span class="o">=</span> <span class="nb">round</span><span class="p">(</span><span class="n">chan_num</span><span class="o">/</span><span class="mf">4.</span><span class="p">)</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">chan_num</span><span class="o">%</span><span class="mi">4</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">chan_id</span> <span class="o">=</span> <span class="s1">&#39;i</span><span class="si">{}</span><span class="s1">;c</span><span class="si">{}</span><span class="s1">;&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">,</span><span class="n">c</span><span class="p">)</span>
-        
+
         <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;v&#39;</span><span class="p">,</span>
                            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Channel </span><span class="si">{}</span><span class="s1"> voltage&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;V&#39;</span><span class="p">,</span>
@@ -203,7 +206,7 @@
                            <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_set_voltage</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Numbers</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
                            <span class="p">)</span>
-           
+
         <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;i&#39;</span><span class="p">,</span>
                            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Channel </span><span class="si">{}</span><span class="s1"> current&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;A&#39;</span><span class="p">,</span>
@@ -211,7 +214,7 @@
                            <span class="n">get_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_get_current</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">get_parser</span><span class="o">=</span><span class="nb">float</span>
                            <span class="p">)</span>
-        
+
         <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;ramp_slope&#39;</span><span class="p">,</span>
                            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Channel </span><span class="si">{}</span><span class="s1"> ramp slope&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">unit</span><span class="o">=</span><span class="s1">&#39;V/ms&#39;</span><span class="p">,</span>
@@ -221,7 +224,7 @@
                            <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_set_ramp_slope</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Numbers</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
                            <span class="p">)</span>
-        
+
         <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;output_mode&#39;</span><span class="p">,</span>
                            <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Channel </span><span class="si">{}</span><span class="s1"> output mode&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">docstring</span><span class="o">=</span><span class="s1">&#39;Mode of the output {exp, ramp}.&#39;</span><span class="p">,</span>
@@ -231,7 +234,7 @@
                            <span class="n">set_parser</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
                            <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Enum</span><span class="p">(</span><span class="s1">&#39;ramp&#39;</span><span class="p">,</span> <span class="s1">&#39;exp&#39;</span><span class="p">)</span>
                            <span class="p">)</span>
-        
+
         <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;v_range&#39;</span><span class="p">,</span>
                            <span class="n">label</span> <span class="o">=</span> <span class="s1">&#39;Channel </span><span class="si">{}</span><span class="s1"> voltage range&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">docstring</span><span class="o">=</span><span class="s1">&#39;Range of the channel in volt.&#39;</span><span class="p">,</span>
@@ -239,25 +242,26 @@
                            <span class="n">set_parser</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
                            <span class="n">get_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_get_chan_range</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">get_parser</span><span class="o">=</span><span class="nb">float</span><span class="p">)</span>
-        
+
         <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;state&#39;</span><span class="p">,</span>
                            <span class="n">docstring</span><span class="o">=</span><span class="s1">&#39;State of the channel {on, off}.&#39;</span><span class="p">,</span>
                            <span class="n">get_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_get_chan_state</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_set_chan_state</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
-                           <span class="n">val_mapping</span><span class="o">=</span><span class="n">create_on_off_val_mapping</span><span class="p">(</span><span class="n">on_val</span><span class="o">=</span><span class="s1">&#39;on&#39;</span><span class="p">,</span> <span class="n">off_val</span><span class="o">=</span><span class="s1">&#39;off&#39;</span><span class="p">))</span>
-        
+                           <span class="n">val_mapping</span><span class="o">=</span><span class="n">create_on_off_val_mapping</span><span class="p">(</span><span class="n">on_val</span><span class="o">=</span><span class="s1">&#39;1&#39;</span><span class="p">,</span>
+                                                                 <span class="n">off_val</span><span class="o">=</span><span class="s1">&#39;0&#39;</span><span class="p">))</span>
+
         <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;pos_sat&#39;</span><span class="p">,</span>
                            <span class="n">get_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_get_chan_pos_sat</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">get_parser</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
                            <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_set_chan_pos_sat</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">set_parser</span><span class="o">=</span><span class="nb">str</span><span class="p">,)</span>
-        
+
         <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;neg_sat&#39;</span><span class="p">,</span>
                            <span class="n">get_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_get_chan_neg_sat</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">get_parser</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
                            <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_set_chan_neg_sat</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">set_parser</span><span class="o">=</span><span class="nb">str</span><span class="p">,)</span>
-    
+
         <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;bilt_name&#39;</span><span class="p">,</span>
                            <span class="n">set_cmd</span><span class="o">=</span><span class="n">partial</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_parent</span><span class="o">.</span><span class="n">_set_chan_name</span><span class="p">,</span> <span class="n">chan_num</span><span class="p">),</span>
                            <span class="n">set_parser</span><span class="o">=</span><span class="nb">str</span><span class="p">,</span>
@@ -277,7 +281,7 @@
                            <span class="n">get_parser</span><span class="o">=</span><span class="nb">float</span><span class="p">,</span>
                            <span class="n">set_cmd</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                            <span class="n">vals</span><span class="o">=</span><span class="n">vals</span><span class="o">.</span><span class="n">Numbers</span><span class="p">(</span><span class="mf">1e-3</span><span class="p">,</span> <span class="mi">10</span><span class="p">),</span>
-                           <span class="n">initial_value</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+                           <span class="n">initial_value</span><span class="o">=</span><span class="mf">1e-3</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">add_parameter</span><span class="p">(</span><span class="s1">&#39;synchronous_threshold&#39;</span><span class="p">,</span>
                            <span class="n">docstring</span><span class="o">=</span><span class="s1">&#39;Threshold to unblock communication in volt.&#39;</span><span class="p">,</span>
@@ -306,7 +310,7 @@
 <div class="viewcode-block" id="iTestMultiChannelParameter"><a class="viewcode-back" href="../../../../api/generated/qcodes_contrib_drivers.drivers.Bilt.html#qcodes_contrib_drivers.drivers.Bilt.ITest.iTestMultiChannelParameter">[docs]</a><span class="k">class</span> <span class="nc">iTestMultiChannelParameter</span><span class="p">(</span><span class="n">MultiChannelInstrumentParameter</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">channels</span><span class="p">,</span> <span class="n">param_name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="fm">__init__</span><span class="p">(</span><span class="n">channels</span><span class="p">,</span> <span class="n">param_name</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span></div>
 
@@ -315,7 +319,7 @@
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This is the QCoDeS python driver for the iTest device from Bilt.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    
+
     <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">name</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span>
                       <span class="n">address</span><span class="p">:</span><span class="nb">str</span><span class="p">,</span>
                       <span class="n">num_chans</span><span class="p">:</span><span class="nb">int</span><span class="o">=</span><span class="mi">16</span><span class="p">,</span>
@@ -326,7 +330,7 @@
                       <span class="o">**</span><span class="n">kwargs</span><span class="p">:</span> <span class="n">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Instantiate the instrument.</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            name: The instrument name used by qcodes</span>
 <span class="sd">            address: The VISA name of the resource</span>
@@ -340,7 +344,7 @@
 <span class="sd">                &quot;synchronous_threshold&quot;.</span>
 <span class="sd">            synchronous_delay: Time between to voltage measurement in second.</span>
 <span class="sd">            synchronous_threshold: Threshold to unblock communication in volt.</span>
-<span class="sd">            </span>
+
 <span class="sd">        Returns:</span>
 <span class="sd">            ITest object</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -348,19 +352,19 @@
                                <span class="n">terminator</span><span class="o">=</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">,</span>
                                <span class="n">device_clear</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
                                <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
-        
+
         <span class="bp">self</span><span class="o">.</span><span class="n">idn</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">get_idn</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">num_chans</span> <span class="o">=</span> <span class="n">num_chans</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">chan_range</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="bp">self</span><span class="o">.</span><span class="n">num_chans</span><span class="o">+</span><span class="mi">1</span><span class="p">)</span>
-        
+
         <span class="c1"># Create the channels</span>
         <span class="n">channels</span> <span class="o">=</span> <span class="n">ChannelList</span><span class="p">(</span><span class="n">parent</span><span class="o">=</span><span class="bp">self</span><span class="p">,</span>
                                <span class="n">name</span><span class="o">=</span><span class="s1">&#39;Channels&#39;</span><span class="p">,</span>
                                <span class="n">chan_type</span><span class="o">=</span><span class="n">iTestChannel</span><span class="p">,</span>
                                <span class="n">multichan_paramclass</span><span class="o">=</span><span class="n">iTestMultiChannelParameter</span><span class="p">)</span>
-        
+
         <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">chan_range</span><span class="p">:</span>
-            
+
             <span class="n">channel</span> <span class="o">=</span> <span class="n">iTestChannel</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s1">&#39;chan</span><span class="si">{:02}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span>
                                          <span class="n">chan_num</span><span class="o">=</span><span class="n">i</span><span class="p">)</span>
             <span class="n">channel</span><span class="o">.</span><span class="n">synchronous_enable</span><span class="p">(</span><span class="n">synchronous_enable</span><span class="p">)</span>
@@ -368,10 +372,10 @@
             <span class="n">channel</span><span class="o">.</span><span class="n">synchronous_threshold</span><span class="p">(</span><span class="n">synchronous_threshold</span><span class="p">)</span>
             <span class="n">channels</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">channel</span><span class="p">)</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">add_submodule</span><span class="p">(</span><span class="s1">&#39;ch</span><span class="si">{:02}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">i</span><span class="p">),</span><span class="n">channel</span><span class="p">)</span>
-        
+
         <span class="n">channels</span><span class="o">.</span><span class="n">lock</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">add_submodule</span><span class="p">(</span><span class="s1">&#39;channels&#39;</span><span class="p">,</span><span class="n">channels</span><span class="p">)</span>
-        
+
         <span class="k">if</span> <span class="n">init_start</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">channel</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">channels</span><span class="p">:</span>
                 <span class="n">channel</span><span class="o">.</span><span class="n">v</span><span class="o">.</span><span class="n">set</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
@@ -385,7 +389,7 @@
                            <span class="n">v_set</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set cmd for the chXX_v parameter</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan: The 1-indexed channel number</span>
 <span class="sd">            v_set: The target voltage</span>
@@ -403,7 +407,7 @@
     <span class="k">def</span> <span class="nf">_get_voltage</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get cmd for the chXX_v parameter</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan: The 1-indexed channel number</span>
 
@@ -411,14 +415,14 @@
 <span class="sd">            Voltage</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">chan_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chan_to_id</span><span class="p">(</span><span class="n">chan</span><span class="p">)</span>
-        
+
         <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ask</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">MEAS:VOLT?&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chan_id</span><span class="p">)))</span>
 
 
     <span class="k">def</span> <span class="nf">_get_current</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get cmd for the chXX_i parameter</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan: The 1-indexed channel number</span>
 
@@ -426,7 +430,7 @@
 <span class="sd">            Current</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">chan_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chan_to_id</span><span class="p">(</span><span class="n">chan</span><span class="p">)</span>
-        
+
         <span class="k">return</span> <span class="nb">float</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ask</span><span class="p">(</span><span class="s1">&#39;</span><span class="si">{}</span><span class="s1">MEAS:CURR?&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">chan_id</span><span class="p">)))</span>
 
 
@@ -434,7 +438,7 @@
                               <span class="n">slope</span><span class="p">:</span><span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set slope of chXX for ramp mode</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan The 1-indexed channel number</span>
 <span class="sd">            slope Slope of chXX in V/ms</span>
@@ -446,10 +450,10 @@
     <span class="k">def</span> <span class="nf">_get_ramp_slope</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get slope of chXX</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan: The 1-indexed channel number</span>
-<span class="sd">            </span>
+
 <span class="sd">        Returns:</span>
 <span class="sd">            chXX_slope parameter</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -461,30 +465,30 @@
                                    <span class="n">outf</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set how to perform output voltage update</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan: The 1-indexed channel number</span>
 <span class="sd">            ouf: Mode</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">chan_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chan_to_id</span><span class="p">(</span><span class="n">chan</span><span class="p">)</span>
-        
+
         <span class="k">if</span> <span class="n">outf</span><span class="o">==</span><span class="s1">&#39;exp&#39;</span><span class="p">:</span>
             <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;0&#39;</span>
         <span class="k">elif</span> <span class="n">outf</span><span class="o">==</span><span class="s1">&#39;ramp&#39;</span><span class="p">:</span>
             <span class="n">mode</span> <span class="o">=</span> <span class="s1">&#39;1&#39;</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Got unexpected output function mode: </span><span class="si">{}</span><span class="s1">.&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">mode</span><span class="p">))</span>
-        
+
         <span class="bp">self</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">chan_id</span> <span class="o">+</span> <span class="s1">&#39;trig:input &#39;</span> <span class="o">+</span> <span class="n">mode</span><span class="p">)</span>
 
 
     <span class="k">def</span> <span class="nf">_get_output_function</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get output volage update  function</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan: The 1-indexed channel number</span>
-<span class="sd">        </span>
+
 <span class="sd">        Returns:</span>
 <span class="sd">            mode</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -502,7 +506,7 @@
                               <span class="n">volt</span><span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set output voltage range</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan : The 1-indexed channel number</span>
 <span class="sd">            volt : Voltage range (1.2 or 12)</span>
@@ -514,15 +518,15 @@
     <span class="k">def</span> <span class="nf">_get_chan_range</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get output voltage range</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan: The 1-indexed channel number</span>
-<span class="sd">            </span>
+
 <span class="sd">        Returns:</span>
 <span class="sd">            volt: Output voltage range</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">chan_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chan_to_id</span><span class="p">(</span><span class="n">chan</span><span class="p">)</span>
-        
+
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ask</span><span class="p">(</span><span class="n">chan_id</span> <span class="o">+</span> <span class="s1">&#39;VOLT:RANGE?&#39;</span><span class="p">)[:</span><span class="o">-</span><span class="mi">2</span><span class="p">]</span>
 
 
@@ -554,23 +558,21 @@
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">ask</span><span class="p">(</span><span class="n">chan_id</span> <span class="o">+</span> <span class="s1">&#39;VOLT:SAT:NEG ?&#39;</span><span class="p">)</span>
 
 
-    <span class="k">def</span> <span class="nf">_get_chan_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="k">def</span> <span class="nf">_get_chan_state</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">chan</span><span class="p">:</span><span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">str</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Get channel power state</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan: The 1-indexed channel number</span>
-<span class="sd">            </span>
+
 <span class="sd">        Returns:</span>
-<span class="sd">            state: Power state </span>
+<span class="sd">            state: Power state</span>
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="n">chan_id</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">chan_to_id</span><span class="p">(</span><span class="n">chan</span><span class="p">)</span>
         <span class="n">state</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">ask</span><span class="p">(</span><span class="n">chan_id</span> <span class="o">+</span> <span class="s1">&#39;OUTP ?&#39;</span><span class="p">)</span>
-        
-        <span class="k">if</span> <span class="n">state</span> <span class="o">==</span> <span class="s1">&#39;1&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">elif</span> <span class="n">state</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">False</span>
+
+        <span class="k">if</span> <span class="n">state</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;1&#39;</span><span class="p">,</span> <span class="s1">&#39;0&#39;</span><span class="p">]</span> <span class="p">:</span>
+            <span class="k">return</span> <span class="n">state</span>
         <span class="k">else</span><span class="p">:</span>
             <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s1">&#39;Unknown state output: </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">state</span><span class="p">))</span>
 
@@ -579,7 +581,7 @@
                               <span class="n">state</span><span class="p">:</span><span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kc">None</span><span class="p">:</span>
         <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Set channel power state</span>
-<span class="sd">        </span>
+
 <span class="sd">        Args:</span>
 <span class="sd">            chan: The 1-indexed channel number</span>
 <span class="sd">            state: power state</span>
@@ -607,7 +609,7 @@
 <span class="sd">        to iX;c;</span>
 <span class="sd">        Args:</span>
 <span class="sd">            chan: The 1-indexed channel number</span>
-<span class="sd">            </span>
+
 <span class="sd">        Returns:</span>
 <span class="sd">            i,c: i=card number, c=channel number of card i</span>
 <span class="sd">        &quot;&quot;&quot;</span>

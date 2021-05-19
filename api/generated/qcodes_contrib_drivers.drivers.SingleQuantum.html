@@ -7,12 +7,14 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>qcodes_contrib_drivers.drivers.SingleQuantum package &mdash; qcodes_contrib_drivers 0.8.0+17.g8207b74 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.SingleQuantum package &mdash; qcodes_contrib_drivers 0.8.0+20.gf7dd516 documentation</title>
   
 
   
   <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
 
   
   
@@ -29,6 +31,7 @@
   
     
       <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
@@ -64,7 +67,7 @@
             
             
               <div class="version">
-                0.8.0+17.g8207b74
+                0.8.0+20.gf7dd516
               </div>
             
           
@@ -238,17 +241,17 @@
 <p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
 <p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
 <dl class="py class">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.ChannelArray">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></code><code class="sig-name descname"><span class="pre">ChannelArray</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#ChannelArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.ChannelArray" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/parameters/parameter.html#qcodes.instrument.parameter.ParameterWithSetpoints" title="(in QCoDeS v0.25.0+57.g23373b0d59)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.parameter.ParameterWithSetpoints</span></code></a></p>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.ChannelArray">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></span><span class="sig-name descname"><span class="pre">ChannelArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#ChannelArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.ChannelArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/parameters/parameter.html#qcodes.instrument.parameter.ParameterWithSetpoints" title="(in QCoDeS v0.25.0+225.g042c5e25ab)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.parameter.ParameterWithSetpoints</span></code></a></p>
 <p>Fetches the correct row from the matrix counters,  based on the channel
 This is a parameter with setpoints, where the setpoints are the time stamps
 :param channel: the channel number to select the row from the counters matrix
 :type channel: int</p>
 <p>Return (numpy_array): a numpy vector of length npts, containing the counts</p>
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.ChannelArray.get_raw">
-<code class="sig-name descname"><span class="pre">get_raw</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#ChannelArray.get_raw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.ChannelArray.get_raw" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.ChannelArray.get_raw">
+<span class="sig-name descname"><span class="pre">get_raw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#ChannelArray.get_raw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.ChannelArray.get_raw" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">get_raw</span></code> is called to perform the actual data acquisition from the
 instrument. This method should either be overwritten to perform the
 desired operation or alternatively for <code class="xref py py-class docutils literal notranslate"><span class="pre">Parameter</span></code> a
@@ -260,110 +263,110 @@ provide a <code class="docutils literal notranslate"><span class="pre">get</span
 </dd></dl>
 
 <dl class="py class">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></code><code class="sig-name descname"><span class="pre">CommunicationHandler</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_instrument</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TCP_IP_ADR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CONTROL_PORT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">COUNTS_PORT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12345</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></span><span class="sig-name descname"><span class="pre">CommunicationHandler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root_instrument</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">log</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TCP_IP_ADR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CONTROL_PORT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">COUNTS_PORT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12345</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/functions.html#object" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></a></p>
 <p>Handles the communication, creates JSON strings</p>
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.acquire_cnts_t">
-<code class="sig-name descname"><span class="pre">acquire_cnts_t</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.acquire_cnts_t"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.acquire_cnts_t" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.acquire_cnts_t">
+<span class="sig-name descname"><span class="pre">acquire_cnts_t</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.acquire_cnts_t"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.acquire_cnts_t" title="Permalink to this definition">¶</a></dt>
 <dd><p>Acquire n count measurments transposed.
 Return (numpy_array): Acquired counts with timestamp in first row.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.auto_cali_bias_currents">
-<code class="sig-name descname"><span class="pre">auto_cali_bias_currents</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.auto_cali_bias_currents"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.auto_cali_bias_currents" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.auto_cali_bias_currents">
+<span class="sig-name descname"><span class="pre">auto_cali_bias_currents</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.auto_cali_bias_currents"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.auto_cali_bias_currents" title="Permalink to this definition">¶</a></dt>
 <dd><p>Performs the automatic bias calibration. Make sure that no light reaches the detectors during this procedure.
 To check if this function has finished use self.auto_cali_finished() which return true or false.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.auto_cali_finished">
-<code class="sig-name descname"><span class="pre">auto_cali_finished</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.auto_cali_finished"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.auto_cali_finished" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.auto_cali_finished">
+<span class="sig-name descname"><span class="pre">auto_cali_finished</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.auto_cali_finished"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.auto_cali_finished" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if auto calibration of the bias currents to find a given dark count value has finished.
 Returns: True if finished, False otherwise</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.enable_detectors">
-<code class="sig-name descname"><span class="pre">enable_detectors</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.enable_detectors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.enable_detectors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.enable_detectors">
+<span class="sig-name descname"><span class="pre">enable_detectors</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">state</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.enable_detectors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.enable_detectors" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.error">
-<code class="sig-name descname"><span class="pre">error</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error_msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.error" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.error">
+<span class="sig-name descname"><span class="pre">error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">error_msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.error" title="Permalink to this definition">¶</a></dt>
 <dd><p>Called in case of an error</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_bias_current">
-<code class="sig-name descname"><span class="pre">get_bias_current</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.get_bias_current"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_bias_current" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_bias_current">
+<span class="sig-name descname"><span class="pre">get_bias_current</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.get_bias_current"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_bias_current" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_bias_voltage">
-<code class="sig-name descname"><span class="pre">get_bias_voltage</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.get_bias_voltage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_bias_voltage" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_bias_voltage">
+<span class="sig-name descname"><span class="pre">get_bias_voltage</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.get_bias_voltage"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_bias_voltage" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_measurement_periode">
-<code class="sig-name descname"><span class="pre">get_measurement_periode</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.get_measurement_periode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_measurement_periode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_measurement_periode">
+<span class="sig-name descname"><span class="pre">get_measurement_periode</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.get_measurement_periode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_measurement_periode" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get measurment periode in ms.
 Return (float): time</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_number_of_detectors">
-<code class="sig-name descname"><span class="pre">get_number_of_detectors</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.get_number_of_detectors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_number_of_detectors" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_number_of_detectors">
+<span class="sig-name descname"><span class="pre">get_number_of_detectors</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.get_number_of_detectors"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_number_of_detectors" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_trigger_level">
-<code class="sig-name descname"><span class="pre">get_trigger_level</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.get_trigger_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_trigger_level" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_trigger_level">
+<span class="sig-name descname"><span class="pre">get_trigger_level</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.get_trigger_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.get_trigger_level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_bias_current">
-<code class="sig-name descname"><span class="pre">set_bias_current</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_in_uA</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.set_bias_current"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_bias_current" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_bias_current">
+<span class="sig-name descname"><span class="pre">set_bias_current</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">current_in_uA</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.set_bias_current"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_bias_current" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_dark_counts_auto_iv">
-<code class="sig-name descname"><span class="pre">set_dark_counts_auto_iv</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dark_counts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.set_dark_counts_auto_iv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_dark_counts_auto_iv" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_dark_counts_auto_iv">
+<span class="sig-name descname"><span class="pre">set_dark_counts_auto_iv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dark_counts</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.set_dark_counts_auto_iv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_dark_counts_auto_iv" title="Permalink to this definition">¶</a></dt>
 <dd><p>Set the dark counts for the automatic detector calibration.
 After this command execute: self.auto_cali_bias_currents()</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_measurement_periode">
-<code class="sig-name descname"><span class="pre">set_measurement_periode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t_in_ms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.set_measurement_periode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_measurement_periode" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_measurement_periode">
+<span class="sig-name descname"><span class="pre">set_measurement_periode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t_in_ms</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.set_measurement_periode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_measurement_periode" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_trigger_level">
-<code class="sig-name descname"><span class="pre">set_trigger_level</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trigger_level_mV</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.set_trigger_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_trigger_level" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_trigger_level">
+<span class="sig-name descname"><span class="pre">set_trigger_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">trigger_level_mV</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#CommunicationHandler.set_trigger_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.CommunicationHandler.set_trigger_level" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 </dd></dl>
 
 <dl class="py class">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></code><code class="sig-name descname"><span class="pre">SQCounts</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">TCP_IP_ADR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TCP_IP_PORT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12345</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CNTS_BUFFER</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQCounts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></span><span class="sig-name descname"><span class="pre">SQCounts</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">TCP_IP_ADR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TCP_IP_PORT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12345</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">CNTS_BUFFER</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">100</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQCounts"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/threading.html#threading.Thread" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">threading.Thread</span></code></a></p>
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.close">
-<code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQCounts.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.close" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQCounts.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.close" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.get_n">
-<code class="sig-name descname"><span class="pre">get_n</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQCounts.get_n"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.get_n" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.get_n">
+<span class="sig-name descname"><span class="pre">get_n</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">n</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQCounts.get_n"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.get_n" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.run">
-<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQCounts.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.run" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQCounts.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQCounts.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method representing the thread’s activity.</p>
 <p>You may override this method in a subclass. The standard run() method
 invokes the callable object passed to the object’s constructor as the
@@ -374,37 +377,37 @@ from the args and kwargs arguments, respectively.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></code><code class="sig-name descname"><span class="pre">SQTalk</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">TCP_IP_ADR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TCP_IP_PORT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></span><span class="sig-name descname"><span class="pre">SQTalk</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">TCP_IP_ADR</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'localhost'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">TCP_IP_PORT</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">12000</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">error_callback</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <a class="reference external" href="https://docs.python.org/3.6/library/threading.html#threading.Thread" title="(in Python v3.6)"><code class="xref py py-class docutils literal notranslate"><span class="pre">threading.Thread</span></code></a></p>
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.add_labelProps">
-<code class="sig-name descname"><span class="pre">add_labelProps</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.add_labelProps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.add_labelProps" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.add_labelProps">
+<span class="sig-name descname"><span class="pre">add_labelProps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.add_labelProps"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.add_labelProps" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.check_error">
-<code class="sig-name descname"><span class="pre">check_error</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.check_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.check_error" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.check_error">
+<span class="sig-name descname"><span class="pre">check_error</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">data</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.check_error"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.check_error" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.close">
-<code class="sig-name descname"><span class="pre">close</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.close" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.close">
+<span class="sig-name descname"><span class="pre">close</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.close"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.close" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.get_all_labels">
-<code class="sig-name descname"><span class="pre">get_all_labels</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.get_all_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.get_all_labels" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.get_all_labels">
+<span class="sig-name descname"><span class="pre">get_all_labels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.get_all_labels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.get_all_labels" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.get_label">
-<code class="sig-name descname"><span class="pre">get_label</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.get_label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.get_label" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.get_label">
+<span class="sig-name descname"><span class="pre">get_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">label</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.get_label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.get_label" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.run">
-<code class="sig-name descname"><span class="pre">run</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.run" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.run">
+<span class="sig-name descname"><span class="pre">run</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.run"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.run" title="Permalink to this definition">¶</a></dt>
 <dd><p>Method representing the thread’s activity.</p>
 <p>You may override this method in a subclass. The standard run() method
 invokes the callable object passed to the object’s constructor as the
@@ -413,13 +416,13 @@ from the args and kwargs arguments, respectively.</p>
 </dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.send">
-<code class="sig-name descname"><span class="pre">send</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.send"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.send" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.send">
+<span class="sig-name descname"><span class="pre">send</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.send"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.send" title="Permalink to this definition">¶</a></dt>
 <dd></dd></dl>
 
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.sub_jsons">
-<code class="sig-name descname"><span class="pre">sub_jsons</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.sub_jsons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.sub_jsons" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.sub_jsons">
+<span class="sig-name descname"><span class="pre">sub_jsons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#SQTalk.sub_jsons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.SQTalk.sub_jsons" title="Permalink to this definition">¶</a></dt>
 <dd><p>Return sub json strings.
 {}{} will be returned as [{},{}]</p>
 </dd></dl>
@@ -427,17 +430,17 @@ from the args and kwargs arguments, respectively.</p>
 </dd></dl>
 
 <dl class="py class">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.TimeArray">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></code><code class="sig-name descname"><span class="pre">TimeArray</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#TimeArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.TimeArray" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/parameters/parameter.html#qcodes.instrument.parameter.Parameter" title="(in QCoDeS v0.25.0+57.g23373b0d59)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.parameter.Parameter</span></code></a></p>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.TimeArray">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></span><span class="sig-name descname"><span class="pre">TimeArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#TimeArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.TimeArray" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/parameters/parameter.html#qcodes.instrument.parameter.Parameter" title="(in QCoDeS v0.25.0+225.g042c5e25ab)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.parameter.Parameter</span></code></a></p>
 <p>Fetches the row with time stamps, currently channel 0
 This parameter is used as the setpoints for the channelarray
 :param channel: the channel number to select the row from the counters matrix (channel 0 is the timestamp)
 :type channel: int</p>
 <p>Return (numpy_array): a numpy vector of length npts, containing the time stamps</p>
 <dl class="py method">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.TimeArray.get_raw">
-<code class="sig-name descname"><span class="pre">get_raw</span></code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#TimeArray.get_raw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.TimeArray.get_raw" title="Permalink to this definition">¶</a></dt>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.TimeArray.get_raw">
+<span class="sig-name descname"><span class="pre">get_raw</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#TimeArray.get_raw"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.TimeArray.get_raw" title="Permalink to this definition">¶</a></dt>
 <dd><p><code class="docutils literal notranslate"><span class="pre">get_raw</span></code> is called to perform the actual data acquisition from the
 instrument. This method should either be overwritten to perform the
 desired operation or alternatively for <code class="xref py py-class docutils literal notranslate"><span class="pre">Parameter</span></code> a
@@ -449,9 +452,9 @@ provide a <code class="docutils literal notranslate"><span class="pre">get</span
 </dd></dl>
 
 <dl class="py class">
-<dt id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.WebSQControlqcode">
-<em class="property"><span class="pre">class</span> </em><code class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></code><code class="sig-name descname"><span class="pre">WebSQControlqcode</span></code><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#WebSQControlqcode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.WebSQControlqcode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.25.0+57.g23373b0d59)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
+<dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.WebSQControlqcode">
+<em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></span><span class="sig-name descname"><span class="pre">WebSQControlqcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#WebSQControlqcode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.WebSQControlqcode" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.25.0+225.g042c5e25ab)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
 <p>The instrument.</p>
 <p>IMPORTANT: the QCoDeS parameter ‘counters’ updates the time stamp and counters from the detectors.
 Always call ‘counters’ if you want to fetch the next ‘npts’ counts.</p>
