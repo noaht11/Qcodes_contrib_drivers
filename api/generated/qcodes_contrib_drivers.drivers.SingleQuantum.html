@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>qcodes_contrib_drivers.drivers.SingleQuantum package &mdash; qcodes_contrib_drivers 0.8.0+20.gf7dd516 documentation</title>
+  <title>qcodes_contrib_drivers.drivers.SingleQuantum package &mdash; qcodes_contrib_drivers 0.9.0+1.g301a8c3 documentation</title>
   
 
   
@@ -67,7 +67,7 @@
             
             
               <div class="version">
-                0.8.0+20.gf7dd516
+                0.9.0+1.g301a8c3
               </div>
             
           
@@ -243,7 +243,7 @@
 <dl class="py class">
 <dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.ChannelArray">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></span><span class="sig-name descname"><span class="pre">ChannelArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#ChannelArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.ChannelArray" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/parameters/parameter.html#qcodes.instrument.parameter.ParameterWithSetpoints" title="(in QCoDeS v0.25.0+225.g042c5e25ab)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.parameter.ParameterWithSetpoints</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/parameters/parameter.html#qcodes.instrument.parameter.ParameterWithSetpoints" title="(in QCoDeS v0.25.0+227.g3d92c9d7a4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.parameter.ParameterWithSetpoints</span></code></a></p>
 <p>Fetches the correct row from the matrix counters,  based on the channel
 This is a parameter with setpoints, where the setpoints are the time stamps
 :param channel: the channel number to select the row from the counters matrix
@@ -432,7 +432,7 @@ from the args and kwargs arguments, respectively.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.TimeArray">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></span><span class="sig-name descname"><span class="pre">TimeArray</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">channel</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#TimeArray"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.TimeArray" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/parameters/parameter.html#qcodes.instrument.parameter.Parameter" title="(in QCoDeS v0.25.0+225.g042c5e25ab)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.parameter.Parameter</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/parameters/parameter.html#qcodes.instrument.parameter.Parameter" title="(in QCoDeS v0.25.0+227.g3d92c9d7a4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.parameter.Parameter</span></code></a></p>
 <p>Fetches the row with time stamps, currently channel 0
 This parameter is used as the setpoints for the channelarray
 :param channel: the channel number to select the row from the counters matrix (channel 0 is the timestamp)
@@ -454,7 +454,7 @@ provide a <code class="docutils literal notranslate"><span class="pre">get</span
 <dl class="py class">
 <dt class="sig sig-object py" id="qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.WebSQControlqcode">
 <em class="property"><span class="pre">class</span> </em><span class="sig-prename descclassname"><span class="pre">qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.</span></span><span class="sig-name descname"><span class="pre">WebSQControlqcode</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">address</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">port</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../../_modules/qcodes_contrib_drivers/drivers/SingleQuantum/SingleQuantum.html#WebSQControlqcode"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#qcodes_contrib_drivers.drivers.SingleQuantum.SingleQuantum.WebSQControlqcode" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.25.0+225.g042c5e25ab)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
+<dd><p>Bases: <a class="reference external" href="https://qcodes.github.io/Qcodes/api/instrument/base.html#qcodes.instrument.base.Instrument" title="(in QCoDeS v0.25.0+227.g3d92c9d7a4)"><code class="xref py py-class docutils literal notranslate"><span class="pre">qcodes.instrument.base.Instrument</span></code></a></p>
 <p>The instrument.</p>
 <p>IMPORTANT: the QCoDeS parameter ‘counters’ updates the time stamp and counters from the detectors.
 Always call ‘counters’ if you want to fetch the next ‘npts’ counts.</p>
