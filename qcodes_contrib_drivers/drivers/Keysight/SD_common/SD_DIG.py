@@ -15,7 +15,7 @@ class SD_DIG(SD_Module):
     This driver makes use of the Python library provided by Keysight as part of the SD1 Software package (v.2.01.00).
     """
 
-    def __init__(self, name, chassis, slot, channels, triggers, **kwargs):
+    def __init__(self, name, chassis, slot, channels, triggers, legacy_channel_numbering: bool = True, **kwargs):
         """ Initialises a generic Signadyne digitizer and its parameters
 
             Args:
@@ -29,8 +29,11 @@ class SD_DIG(SD_Module):
         # store card-specifics
         self.n_channels = channels
         self.n_triggers = triggers
+        self.legacy_channel_numbering = legacy_channel_numbering
 
         self.SD_AIN = self.SD_module
+
+        index_offset = 0 if legacy_channel_numbering else 1
 
         #
         # Create a set of internal variables to aid set/get cmds in params
@@ -38,30 +41,36 @@ class SD_DIG(SD_Module):
 
         # Create distinct parameters for each of the digitizer channels
 
+        # If NOT using legacy channel numbering, create an extra array index,
+        # so that the indexes match the channel numbers
+        param_arr_len = self.n_channels + index_offset
+
         # For channelInputConfig
-        self.__full_scale = [1] * self.n_channels  # By default, full scale = 1V
-        self.__impedance = [0] * self.n_channels  # By default, Hi-z
-        self.__coupling = [0] * self.n_channels  # By default, DC coupling
+        self.__full_scale = [1] * param_arr_len  # By default, full scale = 1V
+        self.__impedance = [0] * param_arr_len  # By default, Hi-z
+        self.__coupling = [0] * param_arr_len  # By default, DC coupling
         # For channelPrescalerConfig
-        self.__prescaler = [0] * self.n_channels  # By default, no prescaling
+        self.__prescaler = [0] * param_arr_len  # By default, no prescaling
         # For channelTriggerConfig
-        self.__trigger_mode = [keysightSD1.SD_AIN_TriggerMode.RISING_EDGE] * self.n_channels
-        self.__trigger_threshold = [0] * self.n_channels  # By default, threshold at 0V
-        # For DAQ config
-        self.__points_per_cycle = [0] * self.n_channels
-        self.__n_cycles = [0] * self.n_channels
-        self.__trigger_delay = [0] * self.n_channels
-        self.__trigger_mode = [0] * self.n_channels
-        # For DAQ trigger Config
-        self.__digital_trigger_mode = [0] * self.n_channels
-        self.__digital_trigger_source = [0] * self.n_channels
-        self.__analog_trigger_mask = [0] * self.n_channels
-        # For DAQ trigger External Config
-        self.__external_source = [0] * self.n_channels
-        self.__trigger_behaviour = [0] * self.n_channels
+        self.__trigger_mode = [keysightSD1.SD_AIN_TriggerMode.RISING_EDGE] * param_arr_len
+        self.__trigger_threshold = [0] * param_arr_len  # By default, threshold at 0V
+        # For DAQconfig
+        self.__points_per_cycle = [0] * param_arr_len
+        self.__n_cycles = [0] * param_arr_len
+        self.__trigger_delay = [0] * param_arr_len
+        self.__trigger_mode = [0] * param_arr_len
+        # For DAQdigitalTriggerConfig
+        self.__digital_trigger_source = [0] * param_arr_len
+        self.__digital_trigger_behaviour = [0] * param_arr_len
+        # For DAQanalogTriggerConfig
+        self.__analog_trigger_mask = [0] * param_arr_len
+        # For DAQtriggerExternalConfig
+        self.__ext_trigger_source = [0] * param_arr_len
+        self.__ext_trigger_behaviour = [0] * param_arr_len
+        self.__ext_trigger_sync = [0] * param_arr_len
         # For DAQ read
-        self.__n_points = [0] * self.n_channels
-        self.__timeout = [-1] * self.n_channels
+        self.__n_points = [0] * param_arr_len
+        self.__timeout = [-1] * param_arr_len
 
         #
         # Create internal parameters
@@ -103,6 +112,8 @@ class SD_DIG(SD_Module):
                            vals=Enum(0, 1))
 
         for n in range(self.n_channels):
+            n = n + index_offset
+
             # For channelInputConfig
             self.add_parameter(
                 'full_scale_{}'.format(n),
@@ -159,7 +170,7 @@ class SD_DIG(SD_Module):
                 docstring='The trigger threshold for channel {}'.format(n)
             )
 
-            # For DAQ config
+            # For DAQconfig
             self.add_parameter(
                 'points_per_cycle_{}'.format(n),
                 label='Points per cycle for channel {}'.format(n),
@@ -192,15 +203,7 @@ class SD_DIG(SD_Module):
                 docstring='The trigger mode for DAQ {}'.format(n)
             )
 
-            # For DAQ trigger Config
-            self.add_parameter(
-                'digital_trigger_mode_{}'.format(n),
-                label='Digital trigger mode for DAQ {}'.format(n),
-                vals=Ints(),
-                set_cmd=partial(self.set_digital_trigger_mode, channel=n),
-                docstring='The digital trigger mode for DAQ {}'.format(n)
-            )
-
+            # For DAQdigitalTriggerConfig
             self.add_parameter(
                 'digital_trigger_source_{}'.format(n),
                 label='Digital trigger source for DAQ {}'.format(n),
@@ -210,6 +213,15 @@ class SD_DIG(SD_Module):
             )
 
             self.add_parameter(
+                'digital_trigger_behaviour_{}'.format(n),
+                label='Digital trigger behaviour for DAQ {}'.format(n),
+                vals=Ints(),
+                set_cmd=partial(self.set_digital_trigger_behaviour, channel=n),
+                docstring='The digital trigger behaviour for DAQ {}'.format(n)
+            )
+
+            # For DAQanalogTriggerConfig
+            self.add_parameter(
                 'analog_trigger_mask_{}'.format(n),
                 label='Analog trigger mask for DAQ {}'.format(n),
                 vals=Ints(),
@@ -217,13 +229,13 @@ class SD_DIG(SD_Module):
                 docstring='The analog trigger mask for DAQ {}'.format(n)
             )
 
-            # For DAQ trigger External Config
+            # For DAQtriggerExternalConfig
             self.add_parameter(
                 'ext_trigger_source_{}'.format(n),
                 label='External trigger source for DAQ {}'.format(n),
                 vals=Ints(),
                 set_cmd=partial(self.set_ext_trigger_source, channel=n),
-                docstring='The trigger source for DAQ {}'.format(n)
+                docstring='The external trigger source for DAQ {}'.format(n)
             )
 
             self.add_parameter(
@@ -231,7 +243,15 @@ class SD_DIG(SD_Module):
                 label='External trigger behaviour for DAQ {}'.format(n),
                 vals=Ints(),
                 set_cmd=partial(self.set_ext_trigger_behaviour, channel=n),
-                docstring='The trigger behaviour for DAQ {}'.format(n)
+                docstring='The external trigger behaviour for DAQ {}'.format(n)
+            )
+
+            self.add_parameter(
+                'ext_trigger_sync_{}'.format(n),
+                label='External trigger sync for DAQ {}'.format(n),
+                vals=Ints(),
+                set_cmd=partial(self.set_ext_trigger_sync, channel=n),
+                docstring='The external trigger sync for DAQ {}'.format(n)
             )
 
             # For DAQ read
@@ -554,7 +574,7 @@ class SD_DIG(SD_Module):
         """
         return self.__trigger_threshold[channel]
 
-    # DAQConfig
+    # DAQconfig
     def set_points_per_cycle(self, n_points, channel, verbose=False):
         """ Sets the number of points to be collected per trigger
 
@@ -616,19 +636,21 @@ class SD_DIG(SD_Module):
         value_name = 'set_DAQ_trigger_mode {}'.format(mode)
         return result_parser(value, value_name, verbose)
 
-    # DAQ trigger Config
-    def set_digital_trigger_mode(self, mode, channel, verbose=False):
+    # DAQdigitalTriggerConfig
+    def set_digital_trigger_behaviour(self, behaviour, channel, verbose=False):
         """
 
         Args:
-            channel (int)       : the input channel you are configuring
-            mode  (int)         : the trigger mode you are using
+            channel   (int)     : the input channel you are configuring
+            beahviour (int)     : the trigger behaviour you are using
         """
-        self.__digital_trigger_mode[channel] = mode
-        value = self.SD_AIN.DAQtriggerConfig(channel, self.__digital_trigger_mode[channel],
-                                             self.__digital_trigger_source[channel],
-                                             self.__analog_trigger_mask[channel])
-        value_name = 'set_digital_trigger_mode {}'.format(mode)
+        self.__digital_trigger_behaviour[channel] = behaviour
+        # value = self.SD_AIN.DAQtriggerConfig(channel, self.__digital_trigger_mode[channel],
+        #                                      self.__digital_trigger_source[channel],
+        #                                      self.__analog_trigger_mask[channel])
+        value = self.SD_AIN.DAQdigitalTriggerConfig(channel, self.__digital_trigger_source[channel],
+                                                    self.__digital_trigger_behaviour[channel])
+        value_name = 'set_digital_trigger_behaviour {}'.format(behaviour)
         return result_parser(value, value_name, verbose)
 
     def set_digital_trigger_source(self, source, channel, verbose=False):
@@ -639,12 +661,12 @@ class SD_DIG(SD_Module):
             source  (int)         : the trigger source you are using
         """
         self.__digital_trigger_source[channel] = source
-        value = self.SD_AIN.DAQtriggerConfig(channel, self.__digital_trigger_mode[channel],
-                                             self.__digital_trigger_source[channel],
-                                             self.__analog_trigger_mask[channel])
+        value = self.SD_AIN.DAQdigitalTriggerConfig(channel, self.__digital_trigger_source[channel],
+                                                    self.__digital_trigger_behaviour[channel])
         value_name = 'set_digital_trigger_source {}'.format(source)
         return result_parser(value, value_name, verbose)
 
+    # DAQanalogTriggerConfig
     def set_analog_trigger_mask(self, mask, channel, verbose=False):
         """
 
@@ -653,40 +675,57 @@ class SD_DIG(SD_Module):
             mask  (int)         : the trigger mask you are using
         """
         self.__analog_trigger_mask[channel] = mask
-        value = self.SD_AIN.DAQtriggerConfig(channel, self.__digital_trigger_mode[channel],
-                                             self.__digital_trigger_source[channel],
-                                             self.__analog_trigger_mask[channel])
+        # value = self.SD_AIN.DAQtriggerConfig(channel, self.__digital_trigger_mode[channel],
+        #                                      self.__digital_trigger_source[channel],
+        #                                      self.__analog_trigger_mask[channel])
+        value = self.SD_AIN.DAQanalogTriggerConfig(channel, self.__analog_trigger_mask[channel])
         value_name = 'set_analog_trigger_mask {}'.format(mask)
         return result_parser(value, value_name, verbose)
 
-    # DAQ trigger External Config
+    # DAQtriggerExternalConfig
     def set_ext_trigger_source(self, source, channel, verbose=False):
-        """ Sets the trigger source
+        """ Sets the external trigger source
 
         Args:
             channel (int)       : the input channel you are configuring
             source  (int)       : the trigger source you are using
         """
-        self.__external_source[channel] = source
-        value = self.SD_AIN.DAQtriggerExternalConfig(channel, self.__external_source[channel],
-                                                     self.__trigger_behaviour[channel])
+        self.__ext_trigger_source[channel] = source
+        value = self.SD_AIN.DAQtriggerExternalConfig(channel, self.__ext_trigger_source[channel],
+                                                     self.__ext_trigger_behaviour[channel],
+                                                     self.__ext_trigger_sync[channel])
         value_name = 'set_ext_trigger_source {}'.format(source)
         return result_parser(value, value_name, verbose)
 
     def set_ext_trigger_behaviour(self, behaviour, channel, verbose=False):
-        """ Sets the trigger source
+        """ Sets the external trigger behaviour
 
         Args:
             channel (int)       : the input channel you are configuring
             behaviour  (int)    : the trigger behaviour you are using
         """
-        self.__external_behaviour[channel] = behaviour
-        value = self.SD_AIN.DAQtriggerExternalConfig(channel, self.__external_source[channel],
-                                                     self.__trigger_behaviour[channel])
+        self.__ext_trigger_behaviour[channel] = behaviour
+        value = self.SD_AIN.DAQtriggerExternalConfig(channel, self.__ext_trigger_source[channel],
+                                                     self.__ext_trigger_behaviour[channel],
+                                                     self.__ext_trigger_sync[channel])
         value_name = 'set_ext_trigger_behaviour {}'.format(behaviour)
         return result_parser(value, value_name, verbose)
 
-    # DAQ read
+    def set_ext_trigger_sync(self, sync, channel, verbose=False):
+        """ Sets the external trigger sync
+
+        Args:
+            channel (int)       : the input channel you are configuring
+            sync    (int)       : the trigger sync you are using
+        """
+        self.__ext_trigger_sync[channel] = sync
+        value = self.SD_AIN.DAQtriggerExternalConfig(channel, self.__ext_trigger_source[channel],
+                                                     self.__ext_trigger_behaviour[channel],
+                                                     self.__ext_trigger_sync[channel])
+        value_name = 'set_ext_trigger_sync {}'.format(sync)
+        return result_parser(value, value_name, verbose)
+
+    # DAQread
     def set_n_points(self, n_points, channel):
         """ Sets the trigger source
 

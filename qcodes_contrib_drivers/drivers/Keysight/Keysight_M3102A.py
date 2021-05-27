@@ -17,7 +17,7 @@ class Keysight_M3102A(SD_DIG):
         slot: slot number where the device is plugged in
     """
     def __init__(self, name: str, chassis: int, slot: int, **kwargs):
-        super().__init__(name, chassis, slot, channels=4, triggers=8, **kwargs)
+        super().__init__(name, chassis, slot, channels = 4, triggers = 8, legacy_channel_numbering = False, **kwargs)
 
         module_name = "M3102A"
         if self.module_name != module_name:
