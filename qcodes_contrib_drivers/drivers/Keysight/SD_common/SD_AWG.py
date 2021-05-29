@@ -46,6 +46,7 @@ class SD_AWG(SD_Module):
         # store card-specifics
         self.channels: int = channels
         self.triggers: int = triggers
+        self.legacy_channel_numbering: bool = legacy_channel_numbering
 
         # Open the device, using the specified chassis and slot number
         awg_name = self.awg.getProductNameBySlot(chassis, slot)
@@ -294,7 +295,9 @@ class SD_AWG(SD_Module):
         Stops the AWGs and sets the waveform of all channels to 'No Signal'
         """
 
+        index_offset = 0 if self.legacy_channel_numbering else 1
         for i in range(self.channels):
+            i = i + index_offset
             awg_response = self.awg.AWGstop(i)
             result_parser(awg_response, f'AWGstop({i})')
             channel_response = self.awg.channelWaveShape(i, 0)
