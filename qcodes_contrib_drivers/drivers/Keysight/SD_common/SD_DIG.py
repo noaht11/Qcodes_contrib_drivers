@@ -645,9 +645,6 @@ class SD_DIG(SD_Module):
             beahviour (int)     : the trigger behaviour you are using
         """
         self.__digital_trigger_behaviour[channel] = behaviour
-        # value = self.SD_AIN.DAQtriggerConfig(channel, self.__digital_trigger_mode[channel],
-        #                                      self.__digital_trigger_source[channel],
-        #                                      self.__analog_trigger_mask[channel])
         value = self.SD_AIN.DAQdigitalTriggerConfig(channel, self.__digital_trigger_source[channel],
                                                     self.__digital_trigger_behaviour[channel])
         value_name = 'set_digital_trigger_behaviour {}'.format(behaviour)
@@ -675,9 +672,6 @@ class SD_DIG(SD_Module):
             mask  (int)         : the trigger mask you are using
         """
         self.__analog_trigger_mask[channel] = mask
-        # value = self.SD_AIN.DAQtriggerConfig(channel, self.__digital_trigger_mode[channel],
-        #                                      self.__digital_trigger_source[channel],
-        #                                      self.__analog_trigger_mask[channel])
         value = self.SD_AIN.DAQanalogTriggerConfig(channel, self.__analog_trigger_mask[channel])
         value_name = 'set_analog_trigger_mask {}'.format(mask)
         return result_parser(value, value_name, verbose)
